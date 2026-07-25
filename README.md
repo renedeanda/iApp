@@ -107,6 +107,7 @@ You do **not** need: a paid developer account to learn, an iPhone (the Simulator
    xcodegen generate            # creates the Xcode project from project.yml
    open Seed.xcodeproj          # opens in Xcode — press ⌘R to run in the Simulator
    ```
+   (When you're ready to make it *yours*, use `make bootstrap NAME=YourApp BUNDLE=com.example.yourapp` instead — it renames every `Seed` token first. See `templates/swift/README.md`.)
    You should see a themed, dark-mode-aware starter app with onboarding, settings, and a paywall — all running locally.
 4. **Or make the RN template run:**
    ```sh
@@ -212,7 +213,7 @@ Each step writes a numbered decision doc. The docs are short. Their power is tha
 
 ## Adding features with recipes
 
-`recipes/` is a cookbook of ~40 feature guides, each with the same skeleton: **What it adds → When to use → When NOT to use → How (harvest / wire / verify) → Gotchas.**
+`recipes/` is a cookbook of nearly 50 feature guides, each with the same skeleton: **What it adds → When to use → When NOT to use → How (harvest / wire / verify) → Gotchas.**
 
 The "When NOT to use" section is always first-class. A few examples:
 
