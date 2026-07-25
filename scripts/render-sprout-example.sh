@@ -67,6 +67,14 @@ for k, v in subs.items():
 open(p, "w").write(s)
 PY
 
+# Slim the example AFTER the render is complete (the rename script
+# walks these dirs, so they must exist while it runs): agent-skill
+# mirrors, hooks, and per-app CI ship with real rendered apps but are
+# noise in a browsing example — and would pollute agent skill discovery
+# in sessions opened at the repo root. The template remains the
+# reference for the complete render.
+rm -rf "$EX/.claude" "$EX/.agents" "$EX/.github" "$EX/.githooks"
+
 # Restore hand-written files.
 for f in DECISIONS EXAMPLE.md; do
   [ -e "$KEEP/$f" ] && mv "$KEEP/$f" "$EX/"

@@ -1,5 +1,9 @@
 # Kindling
 
+[![CI](https://github.com/renedeanda/iApp/actions/workflows/ci.yml/badge.svg)](https://github.com/renedeanda/iApp/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2a9d8f.svg)](LICENSE)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-e07a3c.svg)](docs/CONTRIBUTING.md)
+
 **An open-source planning hub + starter scaffolds for shipping polished iOS apps quickly — design-first, AI-first, covering both Swift and React Native.**
 
 Kindling is the system behind a real portfolio of shipped App Store apps, generalized so anyone can use it. It is two things in one repo:
