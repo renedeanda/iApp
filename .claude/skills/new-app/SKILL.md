@@ -54,6 +54,8 @@ Writes 17 ADRs (000–016) into `drafts/<app-name>/DECISIONS/` + a `seed-icon.sv
 
    Writes `DECISIONS/016-spec.md`.
 
+   **Ambition check (part of step 0, before synthesis):** classify the idea's rung on the ladder in [docs/AMBITIOUS_APPS.md](../../../docs/AMBITIOUS_APPS.md) — solo → device-sync → invited-people sharing → Game Center-style competition → SharePlay → strangers/feeds. If the JTBDs imply *strangers seeing each other's content* (rung 6), the wizard must, via `AskUserQuestion`: (a) surface the guide's overhead list (accounts + in-app deletion, hosting bills that scale with success, UGC moderation, data-controller obligations, ops), and (b) ask **the downgrade question** — "does the promise survive with invited-people-only?" If the user confirms rung 6, the backend choice, modeled cost at 1k/10k MAU, account-deletion plan, and moderation plan are captured later in `DECISIONS/008-data-model-and-sync.md`, and `DECISIONS/003-monetization.md` must justify how the bill gets paid (Tier 3 pressure). Rungs 1–5 proceed normally — note the rung in `016-spec.md`.
+
    **Synthesis (before writing 016 to disk):** the wizard surfaces a draft `000-mission.md` sentence (≤14 words) derived from fields 1+2, and a draft `013-anti-list.md` of 3–5 entries derived from field 6 + portfolio-wide `docs/NOT_FOR.md`. User confirms or edits each via `AskUserQuestion`. These synthesized drafts are written to disk *after* user confirmation as part of steps 2 and 5 below (no re-elicitation — the synthesized drafts become the defaults the user can override).
 
 1. **Pre-flight** — read `portfolio/PORTFOLIO.md` + `REUSE_INDEX.md` + `docs/NOT_FOR.md` + `docs/NAMING.md`.

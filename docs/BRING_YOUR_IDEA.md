@@ -46,6 +46,15 @@ There are **no wrong answers** — vague ones are fine, the session will sharpen
 
 (Everything on that list is a ready-made recipe or a built-in service in this repo — checking a box is most of the work.)
 
+**12. Other people.** Does your idea involve people seeing or touching *each other's* stuff? Check the closest:
+
+☐ No — it's just for the one person using it
+☐ Sharing with specific people they invite (a partner, family, a friend)
+☐ Competing with people they know (scores, streaks, games)
+☐ Strangers — public posts, feeds, discovery, chat with people they've never met
+
+> The first three are wonderfully cheap to build — Apple's built-in services handle them with no servers and no sign-ups. The last one is a genuinely bigger commitment (accounts, hosting bills, content moderation). It's absolutely buildable — but read [AMBITIOUS_APPS.md](AMBITIOUS_APPS.md) first, and expect your session to ask: *"does the idea still work if it's invite-only?"* Usually it does, and ships a year sooner.
+
 ## Part 4 — Bringing it to a session
 
 You'll pair with an AI coding agent that knows this repo's system. Setup, from absolute zero:

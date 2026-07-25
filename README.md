@@ -205,7 +205,7 @@ Rule of thumb from shipping both: **utilities and deep-native experiences go Swi
 
 Whether AI-driven or manual, the sequence is the same, and the ordering is the point — **the design checkpoints come before any tech question**:
 
-1. **Spec / JTBD intake** — who is this for, what job does it do, what's the evidence anyone needs it? (Source-grounding rule: no evidence, no app.)
+1. **Spec / JTBD intake** — who is this for, what job does it do, what's the evidence anyone needs it? (Source-grounding rule: no evidence, no app.) This step also classifies the idea's **ambition rung** — solo → synced → shared-with-invited-people → competitive → strangers-and-feeds — and if the idea needs a real backend, surfaces the true cost of that path first ([docs/AMBITIOUS_APPS.md](docs/AMBITIOUS_APPS.md)).
 2. **Mission** — one sentence, ≤14 words. Everything else derives from it.
 3. **Anti-list** — what this app will *never* do, written before feature brainstorms make you sentimental.
 4. **Visual identity** — one of eight: brutalist / glassmorphic / warm-minimal / typographic-led / hand-drawn / maximalist-collage / kinetic-type / monochrome-luxe. Declared, not defaulted.
@@ -283,6 +283,9 @@ It's built from solo-developer experience, but the discipline (ADRs, reuse index
 
 **Why are all the services disabled by default?**
 Because every service you enable is a promise: an entitlement, a privacy disclosure, a maintenance surface. Opting in deliberately keeps the app honest about what it needs.
+
+**What if my idea needs accounts, a backend, or multiplayer?**
+Read [docs/AMBITIOUS_APPS.md](docs/AMBITIOUS_APPS.md) before you commit to that. Short version: Apple's built-in services (CloudKit sharing, Game Center, SharePlay) cover far more "multiplayer" than people expect — sharing with invited people, competing with friends — with zero servers and zero monthly bill. A true backend (strangers, feeds, realtime chat) is absolutely buildable, but it's a permanent commitment: accounts with in-app deletion, hosting bills that scale with success, content moderation, and privacy obligations. The wizard's intake step now classifies your idea's "ambition rung" and asks the money question early, not after you've built it.
 
 **iOS only?**
 The Swift template targets iOS (with Mac Catalyst opt-in). The RN template is iOS-first but Expo keeps the Android door open. The *planning* system is platform-agnostic.
