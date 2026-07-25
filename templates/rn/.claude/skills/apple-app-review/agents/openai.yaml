@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple App Review"
+  short_description: "Catch App Review risks before submission"
+  default_prompt: "Audit this iOS app and its archive for current App Store Review risks, run the project's deterministic release validators where available, and return an evidence-based ship/block report."

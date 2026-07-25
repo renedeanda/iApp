@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript compile check
+        run: npx tsc --noEmit
+
+      - name: ESLint
+        run: npx expo lint
+
+      - name: Prettier check
+        run: npx prettier --check .
+
+      - name: Jest
+        run: npx jest --ci --reporters=default
+
+  prebuild-ios:
+    runs-on: macos-15
+    timeout-minutes: 25
+    needs: test
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Expo prebuild (iOS)
+        run: npx expo prebuild --clean --platform ios --no-install
+
+      - name: Verify expo config plugins applied
+        run: |
+          if [ -d "ios" ]; then
+            echo "iOS prebuild succeeded — config plugins ran cleanly."
+          else
+            echo "iOS directory missing after prebuild." && exit 1
+          fi

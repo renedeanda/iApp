@@ -1,0 +1,31 @@
+# Force LF line endings on every file iApp ships, regardless of
+# the developer's local autocrlf setting. CI is Linux-only; shells
+# (xcodegen, prebuild, etc.) refuse CRLF.
+
+* text=auto eol=lf
+
+*.js     text eol=lf
+*.jsx    text eol=lf
+*.ts     text eol=lf
+*.tsx    text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+*.sh     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.plist  text eol=lf
+
+# Binary — never normalize, never diff.
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.icns   binary
+*.ico    binary
+*.ttf    binary
+*.otf    binary
+*.woff   binary
+*.woff2  binary
+*.mp4    binary
+*.mov    binary
+*.zip    binary

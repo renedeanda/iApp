@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#
+# Pre-commit hook for the Seed RN template.
+# Activate once per checkout:
+#   git config core.hooksPath .githooks
+#
+# Steps (silent on success, loud on failure):
+# 1. TypeScript compile check.
+# 2. ESLint (via expo lint).
+# 3. Prettier --check.
+#
+# Skip via `git commit --no-verify` ONLY when the user has a hard
+# reason (e.g., docs-only commits don't need typecheck). Never skip
+# in CI.
+
+set -euo pipefail
+
+if [ -f "package.json" ] && command -v npx >/dev/null 2>&1; then
+  npx tsc --noEmit
+  npx expo lint
+  npx prettier --check .
+fi

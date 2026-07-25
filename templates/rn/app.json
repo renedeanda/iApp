@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "{{APP_NAME}}",
+    "slug": "seed",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "seed",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.seed",
+      "buildNumber": "1",
+      "infoPlist": {
+        "MinimumOSVersion": "18.0",
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleAllowMixedLocalizations": true,
+        "UIBackgroundModes": ["remote-notification"]
+      },
+      "privacyManifests": {
+        "NSPrivacyTracking": false,
+        "NSPrivacyAccessedAPITypes": [
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+            "NSPrivacyAccessedAPITypeReasons": ["CA92.1"]
+          }
+        ]
+      }
+    },
+    "android": {
+      "package": "com.example.seed",
+      "versionCode": 1,
+      "minSdkVersion": 34
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-localization",
+      "expo-splash-screen"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      }
+    }
+  }
+}
