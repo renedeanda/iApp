@@ -228,7 +228,7 @@ Each step writes a numbered decision doc. The docs are short. Their power is tha
 
 **Already have designs?** If you've mocked your app up — Figma, Sketch, Canva, slides, or paper — export the screens as images and the wizard *looks at them*: your colors propose the palette, your type proposes the specimen, your screen order drafts the first-sixty-seconds flow. [docs/BRING_YOUR_MOCKUPS.md](docs/BRING_YOUR_MOCKUPS.md) has the two-minute export steps for every common tool.
 
-**Want to see the output first?** [`examples/sprout/`](examples/sprout/EXAMPLE.md) is a complete rendered result — a small fictional app with its nine worked ADRs, filled-in constitution, and departed palette — regenerated from the template by script so it never drifts.
+**Want to see the output first?** [`examples/sprout/`](examples/sprout/EXAMPLE.md) is a complete rendered result — a small fictional app with its eleven worked ADRs, filled-in constitution, and departed palette — regenerated from the template by script so it never drifts.
 
 ## Adding features with recipes
 

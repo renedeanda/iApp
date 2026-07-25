@@ -10,7 +10,7 @@ Apps shipped from Kindling's templates and discipline — or built with its appr
 
 ## The worked example
 
-**[Sprout](examples/sprout/EXAMPLE.md)** — the fictional reference app rendered from the Swift template with nine worked ADRs, so you can see exactly what the wizard produces before running it.
+**[Sprout](examples/sprout/EXAMPLE.md)** — the fictional reference app rendered from the Swift template with eleven worked ADRs, so you can see exactly what the wizard produces before running it.
 
 ## Community apps
 

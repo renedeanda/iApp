@@ -46,7 +46,7 @@ struct AppIconPickerView: View {
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .fill(option.swatchField)
                 Image(systemName: "app.fill") // replace with the app's mark glyph
-                    .font(.system(size: 32))
+                    .font(IconSize.medium)
                     .foregroundStyle(option.swatchMark)
                 if option == current {
                     RoundedRectangle(cornerRadius: 20, style: .continuous)

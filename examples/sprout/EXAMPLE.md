@@ -6,7 +6,7 @@ This folder is **what Kindling produces**: the Swift template rendered exactly a
 
 | Look at | What it shows |
 |---|---|
-| `DECISIONS/` | Nine worked ADRs — what good wizard answers look like (mission, palette departure, motion restraint, anti-list, abridged spec) |
+| `DECISIONS/` | Eleven worked ADRs — what good wizard answers look like (mission, palette departure, motion restraint, anti-list, abridged spec) |
 | `CLAUDE.md` | The per-app constitution with every `{{placeholder}}` filled from those ADRs |
 | `Sprout/Theme/AppTheme.swift` | The Sage seed *departed* — diff it against `templates/swift/Seed/Theme/AppTheme.swift` to see exactly what a palette decision changes |
 | Everything else | Identical in shape to the template — which is the point: the wizard's work is naming, palette, and decisions; the engineering is inherited |
