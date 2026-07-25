@@ -1,0 +1,44 @@
+# SOURCE: proven in a shipped production app.
+#
+# Both lanes are COMMENTED OUT by default (docs/HOUSEKEEPING.md). The
+# template builds and ships via Xcode / Xcode Cloud without fastlane;
+# these lanes are for when you want scripted TestFlight + App Store
+# pushes. Uncomment after your first manual TestFlight upload (which
+# establishes the app record + provisioning).
+#
+# Before uncommenting you need:
+#   - App Store Connect API key  (see docs/APP_STORE_CHECKLIST.md
+#     TODO(asc-api))
+#   - signing set up (Match, or manual)
+#   - fastlane/Appfile filled in
+
+default_platform(:ios)
+
+platform :ios do
+  # desc "Build + upload to TestFlight"
+  # lane :beta do
+  #   # The .xcodeproj is generated — regenerate before building.
+  #   sh("cd .. && xcodegen generate")
+  #   build_app(
+  #     scheme: "Seed",
+  #     export_method: "app-store"
+  #   )
+  #   upload_to_testflight(
+  #     skip_waiting_for_build_processing: true
+  #   )
+  # end
+
+  # desc "Build + submit to the App Store"
+  # lane :release do
+  #   sh("cd .. && xcodegen generate")
+  #   build_app(
+  #     scheme: "Seed",
+  #     export_method: "app-store"
+  #   )
+  #   upload_to_app_store(
+  #     submit_for_review: false,   # flip to true once you trust the pipeline
+  #     automatic_release: false,
+  #     force: true                 # skip the HTML preview confirmation
+  #   )
+  # end
+end

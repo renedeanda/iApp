@@ -1,0 +1,9 @@
+---
+# Gem isolation for the Seed template (per docs/HOUSEKEEPING.md).
+# Keeps fastlane's gems in vendor/bundle/ instead of the system Ruby,
+# so a child app's tooling never collides with another's.
+#
+# Active by default — harmless when fastlane isn't installed yet
+# (`bundle install` is what populates vendor/bundle/).
+BUNDLE_PATH: "vendor/bundle"
+BUNDLE_JOBS: "4"

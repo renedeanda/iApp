@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Minimal Info.plist for the Seed template.
+
+  Most keys come from project.yml's info.properties block (XcodeGen
+  generates the final Info.plist from there). This file holds only
+  what XcodeGen can't synthesize cleanly: usage description strings
+  (loaded from InfoPlist.xcstrings via NS*UsageDescription keys),
+  custom URL schemes, document types, and any feature-conditional
+  keys the wizard appends when DECISIONS/004 toggles them on.
+
+  Pattern: app-side properties live in project.yml; only the
+  string-load + structural keys live here. Shape proven in a
+  shipped production app.
+-->
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Seed</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<true/>
+	</dict>
+
+	<!-- Usage strings load from InfoPlist.xcstrings; wizard uncomments
+	     each block when DECISIONS/004 enables the corresponding service.
+
+	<key>NSCameraUsageDescription</key>
+	<string>$(NS_CAMERA_USAGE_DESCRIPTION)</string>
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(NS_PHOTO_LIBRARY_USAGE_DESCRIPTION)</string>
+
+	<key>NSMicrophoneUsageDescription</key>
+	<string>$(NS_MICROPHONE_USAGE_DESCRIPTION)</string>
+
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(NS_LOCATION_WHEN_IN_USE_USAGE_DESCRIPTION)</string>
+
+	<key>NSCalendarsUsageDescription</key>
+	<string>$(NS_CALENDARS_USAGE_DESCRIPTION)</string>
+
+	<key>NSContactsUsageDescription</key>
+	<string>$(NS_CONTACTS_USAGE_DESCRIPTION)</string>
+
+	<key>NSFaceIDUsageDescription</key>
+	<string>$(NS_FACE_ID_USAGE_DESCRIPTION)</string>
+
+	-->
+</dict>
+</plist>

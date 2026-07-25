@@ -1,0 +1,19 @@
+# SOURCE: proven in a shipped production app.
+#
+# Code-signing via fastlane match — OPTIONAL, opt-in only. Most solo
+# developers use Xcode's automatic signing and never need this.
+#
+# Use match when:
+#   - more than one machine / person builds release artifacts
+#   - you want signing certs + profiles in a private git repo, encrypted
+#
+# To enable: create a PRIVATE repo for the certs, set git_url below,
+# then `bundle exec fastlane match appstore`.
+#
+# Leave this file as-is (all commented) if you're using automatic signing.
+
+# git_url("git@github.com:youruser/your-certificates-repo.git")
+# storage_mode("git")
+# type("appstore")           # appstore | adhoc | development | enterprise
+# app_identifier(["com.example.seed"])
+# readonly(true)             # CI machines should be readonly

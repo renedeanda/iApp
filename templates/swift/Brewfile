@@ -1,0 +1,6 @@
+# Project tooling pinned via Homebrew. `make bootstrap` installs these.
+# Keep this list minimal — any addition needs justification.
+
+brew "xcodegen"     # project.yml -> .xcodeproj on demand
+brew "swiftlint"    # linter (config in .swiftlint.yml)
+brew "swiftformat"  # formatter (config in .swiftformat)

@@ -1,0 +1,25 @@
+# Light, opinionated. Proven in a shipped production app.
+
+--swiftversion 5.9
+--indent 4
+--maxwidth 120
+--wraparguments before-first
+--wrapcollections before-first
+--wrapparameters before-first
+--wrapreturntype if-multiline
+--closingparen balanced
+--commas inline
+--trimwhitespace always
+--linebreaks lf
+--ranges no-space
+--operatorfunc spaced
+--elseposition same-line
+--importgrouping testable-bottom
+--self remove
+--header strip
+
+# Sort imports.
+--rules sortImports,unusedArguments,redundantReturn,redundantSelf,redundantParens,blankLinesAroundMark
+
+# Don't aggressively reformat existing files unrelated to current PR.
+--exclude **/Generated/**,**/_Disabled/**,**/_HapticVocabulary/**,**/_TypographySpecimens/**

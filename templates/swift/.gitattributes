@@ -1,0 +1,11 @@
+# Soft-resolve project file conflicts so two concurrent PRs don't blow up.
+*.pbxproj merge=union
+
+# Xcode emits LF; never let Windows clients rewrite the catalogs.
+*.xcstrings text eol=lf
+*.swift    text eol=lf
+*.plist    text eol=lf
+*.yml      text eol=lf
+*.entitlements text eol=lf
+*.xcconfig text eol=lf
+*.storekit text eol=lf
