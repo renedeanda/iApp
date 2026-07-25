@@ -68,14 +68,15 @@ git init && git add -A && git commit -m "Sprout: initial scaffold from iApp"
 
 1. Open `Sprout/Theme/AppTheme.swift`. You'll see tokens like:
    ```swift
-   static let accent = dynamic(light: "#C97B4A", dark: "#E0956A")
+   static let surface = dynamic(light: 0xF7F2EA, dark: 0x1B1712)
    ```
+   Colors are hex *integers*: a catalog value like `#EAEBE0` becomes `0xEAEBE0`.
 2. Pick a seed from [`portfolio/PALETTE_CATALOG.md`](../portfolio/PALETTE_CATALOG.md) (back in the iApp repo) — say **Sage**.
-3. Replace the accent and surface tokens with the seed's values, then *change something on purpose* — nudge the accent's saturation or hue. That's the "departure delta" habit: the catalog proposes, you decide.
+3. Replace the accent and surface tokens with the seed's values (light *and* dark — every token carries both), then *change something on purpose* — nudge the accent's saturation or hue. That's the "departure delta" habit: the catalog proposes, you decide.
 4. **⌘R.** The whole app re-skins — buttons, links, onboarding — because every view reads tokens instead of hardcoding colors.
 5. Run the tests: **⌘U** (Product → Test). `ThemeContrastTests` will *fail your build* if your new text/background pairing dropped below AAA contrast. If it fails, darken the text token or lighten the surface until it passes. This is the guardrail system working for you.
 
-Write down what you picked and why in `DECISIONS/002-palette.md` — two sentences is plenty. Future-you will thank you.
+Write down what you picked and why — two sentences is plenty. The template copy doesn't include a `DECISIONS/` folder (the wizard normally creates it), so make one: copy `DECISIONS/002-palette.md` from the iApp repo into `~/MyFirstApp/DECISIONS/` and fill in your values. Future-you will thank you.
 
 ## Part 4 — Turn on your first service (10 minutes)
 
@@ -84,7 +85,7 @@ Everything optional ships dormant in `Sprout/Services/_Disabled/`. Example — h
 1. Move `HapticManager.swift` from `Services/_Disabled/` up into `Services/`.
 2. Open it and follow the one-line header comment (uncomment the import if noted).
 3. Run `xcodegen generate` if you moved files outside Xcode, then **⌘R**.
-4. Call a pattern from a button action, e.g. `HapticManager.shared.play(.success)` — run on a **real iPhone** to feel it (Simulator can't do haptics).
+4. Call a pattern from a button action, e.g. `HapticManager.shared.play(.completionRing)` (the 3 starter patterns are `bloomOpen`, `completionRing`, `reminderSoft`) — run on a **real iPhone** to feel it (Simulator can't do haptics).
 
 The same move-up-and-enable ritual applies to notifications, CloudKit, analytics, biometrics — each names the entitlement or Info.plist key it needs. Enable only what your app's mission demands.
 
