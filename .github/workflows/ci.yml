@@ -1,0 +1,60 @@
+name: CI
+
+# iApp repo-level CI. Distinct from the CI that ships *inside*
+# each template (templates/{swift,rn}/.github/workflows/) — that one
+# runs in the generated child app. This one verifies the templates
+# themselves still produce working apps.
+#
+# Manual-only by design: run it on demand from the Actions tab before
+# merging a templates/ change, or before flipping a phase box in
+# DECISIONS/005. It does NOT run automatically on push or PR.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-rn-template:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: 'templates/rn/.nvmrc'
+
+      - name: Verify RN template
+        run: ./scripts/verify-rn-template.sh
+
+  verify-swift-template:
+    runs-on: macos-15
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install xcodegen
+        run: brew install xcodegen
+
+      - name: Verify Swift template
+        run: ./scripts/verify-swift-template.sh
+
+  verify-recipes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check recipe sources
+        # Structural check: verifies every recipe's cited source path
+        # resolves inside this repo (templates/ etc.).
+        run: ./scripts/check-recipe-sources.sh
