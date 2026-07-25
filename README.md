@@ -77,7 +77,14 @@ iApp/
 
 ## Complete beginner? Start here
 
-Never built an iOS app before? You can still use this repo — it's arguably *most* useful before habits form. Here's the honest on-ramp.
+Never built an iOS app before? You can still use this repo — it's arguably *most* useful before habits form. Two companions were written specifically for you:
+
+- **[docs/FIRST_APP_TUTORIAL.md](docs/FIRST_APP_TUTORIAL.md)** — a complete walkthrough from clone to your own renamed, re-themed app running on the Simulator (60–90 min, zero experience assumed).
+- **[docs/GLOSSARY.md](docs/GLOSSARY.md)** — every piece of iOS jargon you'll meet, decoded.
+
+And if you're in an AI session, just run **`/start`** — it asks where you are and walks you down the right path interactively.
+
+Here's the honest on-ramp.
 
 ### What you need
 
@@ -157,6 +164,7 @@ Other skills you'll use over an app's life:
 
 | Skill | What it does |
 |---|---|
+| `/start` | The front door — asks your experience level and routes you (tutorial, wizard, recipes, or shipping) |
 | `/pick-palette` | Proposes 3 seeds matching your visual identity; checks color distance against your shipped apps |
 | `/earn-haptic` | Unlocks a 4th+ haptic pattern — with a written justification |
 | `/wire-first-screen` | Applies your motion + delight decisions as real code on the first screen |
@@ -262,6 +270,9 @@ The repo carries release muscle, not just build muscle:
 
 **Do I need Claude/AI to use this?**
 No. The AI skills are accelerators. Every artifact they produce is a plain file you can write by hand, and the templates build with standard tooling.
+
+**Does it work with agents other than Claude Code?**
+Yes. Claude Code reads `CLAUDE.md` natively; Codex and other AGENTS.md-reading agents get the same constitution via [`AGENTS.md`](AGENTS.md), and the skills are plain Markdown contracts any capable agent can execute (mirrored at `.agents/skills/`).
 
 **Can I use just the template and ignore the planning system?**
 Yes — `templates/swift` and `templates/rn` are self-contained. But try the decision docs once; the 30 minutes of writing routinely kills weeks of building the wrong thing.
