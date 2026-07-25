@@ -1,0 +1,27 @@
+{
+  "sourceLanguage" : "en",
+  "version" : "1.0",
+  "strings" : {
+    "widget.title" : {
+      "comment" : "SOURCE: proven in a shipped production app. This file is the WIDGET EXTENSION's OWN string catalog — widget-surface strings MUST live here, not in Seed/Localizable.xcstrings. The widget runtime loads from the extension's bundle, not the host app's — a trap we hit in production. WidgetLocalizationParityTests enforces it.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Seed" } }
+      }
+    },
+    "widget.display_name" : {
+      "comment" : "Shown in the widget gallery picker.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Seed" } }
+      }
+    },
+    "widget.description" : {
+      "comment" : "Shown under the widget name in the gallery.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "A glanceable summary on your Home Screen." } }
+      }
+    }
+  }
+}

@@ -1,0 +1,668 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "appearance.dark": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dark"
+          }
+        }
+      }
+    },
+    "appearance.light": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light"
+          }
+        }
+      }
+    },
+    "appearance.system": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System"
+          }
+        }
+      }
+    },
+    "about.app.name": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
+          }
+        }
+      }
+    },
+    "about.app.tagline": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tagline"
+          }
+        }
+      }
+    },
+    "about.app.tagline.value": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A new app. Built for restraint."
+          }
+        }
+      }
+    },
+    "about.version": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        }
+      }
+    },
+    "about.version.a11yHint": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App version. Tap repeatedly to access developer settings."
+          }
+        }
+      }
+    },
+    "debug.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debug"
+          }
+        }
+      }
+    },
+    "debug.section.premium": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Premium"
+          }
+        }
+      }
+    },
+    "debug.forcePremium": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Force Premium"
+          }
+        }
+      }
+    },
+    "debug.forcePremium.footer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Overrides StoreKit purchase state. Auto-expires in 24 hours and clears on app update."
+          }
+        }
+      }
+    },
+    "debug.section.simulate": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simulate"
+          }
+        }
+      }
+    },
+    "debug.sim.ai": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI Unavailable"
+          }
+        }
+      }
+    },
+    "debug.sim.cloudkit": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CloudKit Failure"
+          }
+        }
+      }
+    },
+    "debug.revealEggs": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reveal All Easter Eggs"
+          }
+        }
+      }
+    },
+    "debug.section.reset": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset"
+          }
+        }
+      }
+    },
+    "debug.resetOnboarding": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset Onboarding"
+          }
+        }
+      }
+    },
+    "debug.printAnalyticsStack": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Print Analytics Stack"
+          }
+        }
+      }
+    },
+    "debug.clearAllData": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear All Data"
+          }
+        }
+      }
+    },
+    "debug.clearAllData.cancel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "debug.clearAllData.confirm": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear Everything"
+          }
+        }
+      }
+    },
+    "debug.clearAllData.confirm.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear all data?"
+          }
+        }
+      }
+    },
+    "debug.clearAllData.confirm.message": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This permanently removes all app data. The first-launch state is preserved so the version-change clearer doesn't loop."
+          }
+        }
+      }
+    },
+    "home.tab": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Home"
+          }
+        }
+      }
+    },
+    "home.placeholder.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hello, restraint."
+          }
+        }
+      }
+    },
+    "home.placeholder.body": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Replace this view at /new-app --commit time per DECISIONS/010-first-sixty-seconds.md."
+          }
+        }
+      }
+    },
+    "quickAction.primary.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New"
+          }
+        }
+      }
+    },
+    "quickAction.secondary.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recent"
+          }
+        }
+      }
+    },
+    "settings.about": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About"
+          }
+        }
+      }
+    },
+    "settings.appearance.label": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appearance"
+          }
+        }
+      }
+    },
+    "settings.appearance.section": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display"
+          }
+        }
+      }
+    },
+    "settings.developer.menu": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debug Menu"
+          }
+        }
+      }
+    },
+    "settings.developer.section": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Developer"
+          }
+        }
+      }
+    },
+    "settings.tab": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "settings.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "common.cancel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "common.ok": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "settings.data.section": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data"
+          }
+        }
+      }
+    },
+    "settings.deleteAllData": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete All Data"
+          }
+        }
+      }
+    },
+    "settings.deleteAllData.footer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permanently removes only this app's data saved on this device and in iCloud."
+          }
+        }
+      }
+    },
+    "settings.deleteAllData.confirm.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete app data?"
+          }
+        }
+      }
+    },
+    "settings.deleteAllData.confirm.message": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This cannot be undone. Only app-owned data saved by this app will be deleted from this device and iCloud where available. It will not delete Photos, Contacts, Files outside this app, or other apps' data."
+          }
+        }
+      }
+    },
+    "settings.deleteAllData.confirm.button": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete App Data"
+          }
+        }
+      }
+    },
+    "settings.deleteAllData.result.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete All Data"
+          }
+        }
+      }
+    },
+    "settings.deleteAllData.success": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All app data has been deleted."
+          }
+        }
+      }
+    },
+    "settings.deleteAllData.pendingCloud": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your local data was deleted. iCloud deletion will retry before sync resumes."
+          }
+        }
+      }
+    },
+    "settings.data.manage": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data & Backup"
+          }
+        }
+      }
+    },
+    "settings.data.manage.footer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deletion controls for app-owned data."
+          }
+        }
+      }
+    },
+    "settings.deleteAllData.noAccount": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your data on this device was deleted. iCloud isn't reachable right now — to remove iCloud data too, sign in to iCloud and delete again."
+          }
+        }
+      }
+    },
+    "settings.deleteAllData.error": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deletion didn't finish — some data may remain. Please try again."
+          }
+        }
+      }
+    },
+    "intent.quick_action.short_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quick Action"
+          }
+        }
+      }
+    },
+    "intent.quick_action.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quick Action"
+          }
+        }
+      }
+    },
+    "intent.quick_action.description": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perform a quick action without opening the app."
+          }
+        }
+      }
+    },
+    "intent.quick_action.note_param": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Note"
+          }
+        }
+      }
+    },
+    "intent.quick_action.confirmation": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
+          }
+        }
+      }
+    },
+    "intent.begin.short_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begin"
+          }
+        }
+      }
+    },
+    "intent.begin.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begin"
+          }
+        }
+      }
+    },
+    "intent.begin.description": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Sprout and begin its primary action."
+          }
+        }
+      }
+    },
+    "intent.focus_filter.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprout Focus Filter"
+          }
+        }
+      }
+    },
+    "intent.focus_filter.description": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose how Sprout behaves while this Focus is active."
+          }
+        }
+      }
+    },
+    "intent.focus_filter.minimal_param": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimal Mode"
+          }
+        }
+      }
+    },
+    "intent.focus_filter.repr.minimal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimal Mode"
+          }
+        }
+      }
+    },
+    "intent.focus_filter.repr.full": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Full App"
+          }
+        }
+      }
+    },
+    "onboarding.1.title": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Meet Sprout"}}}},
+    "onboarding.1.body": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"A focused tool that helps you reach a useful result without getting in your way."}}}},
+    "onboarding.2.title": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Make it yours"}}}},
+    "onboarding.2.body": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Try a real choice now and see the experience respond immediately."}}}},
+    "onboarding.3.title": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Feel the payoff"}}}},
+    "onboarding.3.body": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"The onboarding demo should mirror the app’s primary success moment—without asking for your data."}}}},
+    "onboarding.4.title": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Private by default"}}}},
+    "onboarding.4.body": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Explain what stays on device, what syncs, and when the app will ask for permission."}}}},
+    "onboarding.demo.choice.1": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"First choice"}}}},
+    "onboarding.demo.choice.2": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Second choice"}}}},
+    "onboarding.demo.choice.3": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Third choice"}}}},
+    "onboarding.demo.try": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Try It"}}}},
+    "onboarding.demo.done": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Done"}}}},
+    "onboarding.get_started": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Get Started"}}}},
+    "onboarding.next": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Next"}}}},
+    "onboarding.previous": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Previous"}}}},
+    "onboarding.progress": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Page %lld of %lld"}}}},
+    "onboarding.skip": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Skip"}}}},
+    "settings.replayOnboarding": {"localizations":{"en":{"stringUnit":{"state":"translated","value":"Replay Onboarding"}}}}
+  }
+}

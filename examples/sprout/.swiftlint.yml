@@ -1,0 +1,55 @@
+# Opinionated but pragmatic. Proven in a shipped production app.
+
+excluded:
+  - .build
+  - .swiftpm
+  - DerivedData
+  - Sprout/Services/_Disabled
+  - Sprout/Utilities/_HapticVocabulary
+  - Sprout/Theme/_TypographySpecimens
+
+disabled_rules:
+  - line_length            # let .swiftformat handle width
+  - identifier_name        # too many false positives for view modifiers
+  - trailing_whitespace    # .swiftformat already enforces
+  - todo                   # TODO markers are tracked separately
+
+opt_in_rules:
+  - force_unwrapping
+  - redundant_self_in_closure
+  - unused_import
+  - empty_count
+  - explicit_init
+  - first_where
+  - last_where
+  - sorted_first_last
+  - sorted_imports
+  - prefer_zero_over_explicit_init
+
+force_unwrapping:
+  severity: error
+
+# Hard limits that match CLAUDE.md rules:
+file_length:
+  warning: 400
+  error: 600
+
+type_body_length:
+  warning: 250
+  error: 400
+
+function_body_length:
+  warning: 50
+  error: 80
+
+# Per CLAUDE.md "Views <= 300 lines" — enforced for SwiftUI files.
+type_name:
+  max_length:
+    warning: 40
+    error: 60
+
+# Disable cyclomatic_complexity for engine files which legitimately
+# branch heavily (Sendable pure logic).
+cyclomatic_complexity:
+  warning: 12
+  error: 20

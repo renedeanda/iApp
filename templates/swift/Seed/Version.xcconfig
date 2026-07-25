@@ -1,0 +1,6 @@
+// Single source of truth for app + widget + tests version.
+// bin/bump-version <patch|minor|major> edits this file and tags the commit.
+// Never bump version in project.yml directly.
+
+MARKETING_VERSION = 1.0.0
+CURRENT_PROJECT_VERSION = 1

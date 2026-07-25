@@ -1,0 +1,4 @@
+Resources directory — wizard populates with bundled assets per app
+(e.g., JSON catalogs, .caf chime files for SoundService, fonts).
+
+Placeholder so the directory survives empty checkouts.

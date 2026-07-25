@@ -1,0 +1,46 @@
+{
+  "app": {
+    "tagline": "Built with Kindling."
+  },
+  "tabs": {
+    "home": "Home",
+    "settings": "Settings"
+  },
+  "home": {
+    "title": "Welcome",
+    "subtitle": "This is the starting point your wizard chose for you.",
+    "primaryCTA": "Get started"
+  },
+  "settings": {
+    "title": "Settings",
+    "appearance": "Appearance",
+    "appearanceSystem": "System",
+    "appearanceLight": "Light",
+    "appearanceDark": "Dark",
+    "about": "About",
+    "version": "Version",
+    "cancel": "Cancel",
+    "data": "Data",
+    "deleteAllData": "Delete All Data",
+    "deleteAllDataSubtitle": "Permanently remove only this app's data saved on this device and in iCloud.",
+    "deleteAllDataConfirmTitle": "Delete app data?",
+    "deleteAllDataConfirmMessage": "This cannot be undone. Only app-owned data saved by this app will be deleted from this device and iCloud where available. It will not delete Photos, Contacts, Files outside this app, or other apps' data.",
+    "deleteAllDataConfirmButton": "Delete App Data",
+    "deleteAllDataResultTitle": "Delete All Data",
+    "deleteAllDataSuccess": "All app data has been deleted.",
+    "deleteAllDataPendingCloud": "Your local data was deleted. iCloud deletion will retry before sync resumes.",
+    "deleteAllDataNoAccount": "Your data on this device was deleted. iCloud isn't reachable right now — to remove iCloud data too, sign in to iCloud and delete again.",
+    "deleteAllDataError": "Deletion didn't finish — some data may remain. Please try again.",
+    "back": "Back",
+    "dataAndBackup": "Data & Backup",
+    "dataAndBackupSubtitle": "Deletion controls for app-owned data."
+  },
+  "empty": {
+    "title": "Nothing here yet",
+    "subtitle": "Add your first item to get started."
+  },
+  "notFound": {
+    "title": "This screen doesn't exist.",
+    "goHome": "Go to home"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@example/expo-icloud-sync",
+  "version": "0.1.0",
+  "description": "Generic CloudKit private-database sync as an Expo module. Custom record zone + server change tokens + CKAsset binary support. Reusable across apps; designed to be lifted to npm.",
+  "main": "index.ts",
+  "private": true,
+  "license": "MIT",
+  "keywords": ["expo", "cloudkit", "icloud", "sync", "react-native", "expo-module"],
+  "peerDependencies": {
+    "expo": "*",
+    "react-native": "*"
+  }
+}

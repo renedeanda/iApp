@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/kindling/docs/schemas/launch-packet.v1.schema.json",
+  "title": "Kindling launch packet (v1)",
+  "description": "The typed handoff between an app scaffold (Kindling /new-app --commit) and your release tooling. Everything a launch needs, in one versioned document, so the ideate-to-ship seam is a contract instead of a folder convention. Lives in Kindling at docs/schemas/. Evolve behind schemaVersion.",
+  "type": "object",
+  "required": ["schemaVersion", "app", "commands", "paths"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the packet was written (ISO 8601)."
+    },
+    "generatedBy": {
+      "type": "string",
+      "description": "Tool + version that wrote the packet, e.g. 'Kindling /new-app --commit'."
+    },
+    "app": {
+      "type": "object",
+      "required": ["name", "bundleId"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "appId": {
+          "type": "string",
+          "description": "Lowercase short id used in filenames (the .release.json appId)."
+        },
+        "bundleId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9.-]+$"
+        },
+        "mission": {
+          "type": "string",
+          "description": "One-sentence mission from DECISIONS/000."
+        },
+        "platforms": {
+          "type": "array",
+          "items": { "enum": ["ios", "ipados", "macos", "watchos", "visionos", "tvos"] },
+          "minItems": 1
+        },
+        "tech": { "enum": ["swift", "react-native", "mixed"] },
+        "repository": {
+          "type": "string",
+          "description": "owner/name of the app's GitHub repo."
+        },
+        "shippingBranch": { "type": "string" }
+      }
+    },
+    "commands": {
+      "type": "object",
+      "required": ["archive"],
+      "additionalProperties": false,
+      "properties": {
+        "build": { "type": "string" },
+        "test": { "type": "string" },
+        "archive": { "type": "string" }
+      }
+    },
+    "paths": {
+      "type": "object",
+      "required": ["metadata", "screenshots"],
+      "additionalProperties": false,
+      "properties": {
+        "metadata": {
+          "type": "string",
+          "description": "Repo-relative path to the app-store metadata JSON (the Kindling launch-packet convention: Marketing/AppStoreMetadata/<app>-app-store-metadata.json)."
+        },
+        "screenshots": {
+          "type": "string",
+          "description": "Repo-relative path to the final screenshots root (locale/device folders)."
+        },
+        "privacyManifest": { "type": "string" },
+        "launchContext": {
+          "type": "string",
+          "description": "Repo-relative path to RELEASE.md (the app's release context doc).",
+          "default": "RELEASE.md"
+        }
+      }
+    },
+    "locales": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "app": { "type": "array", "items": { "type": "string" } },
+        "metadata": { "type": "array", "items": { "type": "string" } },
+        "screenshots": { "type": "array", "items": { "type": "string" } }
+      },
+      "description": "The three localization planes; release tooling should flag divergence."
+    },
+    "monetization": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tier": {
+          "type": "string",
+          "description": "Portfolio pricing-ladder tier from DECISIONS/003."
+        },
+        "productIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "StoreKit product ids claimed in MONETIZATION_MATRIX.md."
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "dataCollected": {
+          "type": "boolean",
+          "description": "Whether any collection is planned (drives the App Privacy plan)."
+        },
+        "analytics": {
+          "type": "string",
+          "description": "Analytics provider if any, e.g. 'telemetrydeck'."
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ageRatingAnswered": { "type": "boolean" },
+        "reviewNotesDrafted": { "type": "boolean" },
+        "decisionsPath": {
+          "type": "string",
+          "description": "Repo-relative path to the DECISIONS/ ADR folder."
+        }
+      }
+    }
+  }
+}

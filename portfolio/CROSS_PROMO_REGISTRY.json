@@ -1,0 +1,21 @@
+{
+  "_comment": "Single source of truth for your studio's in-app cross-promotion list. Replace studioName/studioURL and the sample apps below with your own. Each app vendors a copy (Swift: PortfolioRegistry.swift parses this as CrossPromoRegistry.json in the app bundle; RN: import a .ts mirror) and renders ONLY entries with a non-empty appStoreURL — so unreleased apps auto-hide and appear the moment they go live. An app excludes itself by bundleID. Apple-compliant: plain links, no incentivization, no interruptive modal. 'Made with care' is a separate single link (studioURL) shown in every app regardless of this list.",
+  "studioName": "Your Studio",
+  "studioURL": "https://example.com",
+  "apps": [
+    {
+      "id": "sample-notes",
+      "name": "Sample Notes",
+      "tagline": "A warm notes app that respects your time",
+      "bundleID": "com.example.samplenotes",
+      "appStoreURL": "https://apps.apple.com/us/app/id0000000000"
+    },
+    {
+      "id": "sample-timer",
+      "name": "Sample Timer",
+      "tagline": "A single-purpose countdown that makes any short task feel finite",
+      "bundleID": "com.example.sampletimer",
+      "appStoreURL": ""
+    }
+  ]
+}

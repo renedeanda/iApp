@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{APP_NAME}} — {{TAGLINE}}</title>
+<meta name="description" content="{{TAGLINE}}. {{ONE_SENTENCE_DESCRIPTION}}">
+<style>
+  /* Palette: replace with your app's AppTheme tokens. House rule: no pure #000/#FFF. */
+  :root {
+    --surface: #F7F2EA; --surface-2: #EFE7D8; --text: #2C2520; --muted: #756A5E; --accent: #B4753A;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --surface: #1B1712; --surface-2: #272019; --text: #F0EBE3; --muted: #C4BCB2; --accent: #D4956A; }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+         background: var(--surface); color: var(--text); line-height: 1.6; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 24px 96px; text-align: center; }
+  .icon { width: 120px; height: 120px; border-radius: 27px; margin: 24px auto 16px; display: block;
+          box-shadow: 0 8px 32px rgba(0,0,0,.18); }
+  h1 { font-size: 2.2rem; letter-spacing: -0.02em; }
+  .tagline { font-size: 1.25rem; color: var(--muted); margin: 8px 0 28px; }
+  .store-badge { display: inline-block; margin: 4px 0 40px; padding: 14px 28px; border-radius: 14px;
+                 background: var(--accent); color: var(--surface); font-weight: 600; text-decoration: none; }
+  .shots { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 0 0 48px; }
+  .shots img { width: 200px; max-width: 44vw; border-radius: 18px; background: var(--surface-2); }
+  section { text-align: left; background: var(--surface-2); border-radius: 16px; padding: 24px 28px; margin: 16px 0; }
+  section h2 { font-size: 1.05rem; margin-bottom: 8px; }
+  section p { color: var(--muted); }
+  footer { margin-top: 48px; font-size: .9rem; color: var(--muted); }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <!-- Export a 1024px icon from your app's icon_master.svg and drop it here as icon.png -->
+  <img class="icon" src="icon.png" alt="{{APP_NAME}} app icon">
+  <h1>{{APP_NAME}}</h1>
+  <p class="tagline">{{TAGLINE}}</p>
+
+  <!-- Replace # with your App Store URL when live; until then link your TestFlight public link -->
+  <a class="store-badge" href="#">Download on the App Store</a>
+
+  <!-- Real captures only — same rule as the store listing. Two or three, no more. -->
+  <div class="shots">
+    <img src="screenshot-1.png" alt="{{SCREENSHOT_1_DESCRIPTION}}">
+    <img src="screenshot-2.png" alt="{{SCREENSHOT_2_DESCRIPTION}}">
+  </div>
+
+  <section>
+    <h2>What it is</h2>
+    <p>{{ONE_SENTENCE_DESCRIPTION}} {{SECOND_SENTENCE_IF_NEEDED}}</p>
+  </section>
+
+  <section>
+    <h2>Private by design</h2>
+    <p>{{APP_NAME}} keeps your data on your device{{AND_ICLOUD_IF_APPLICABLE}}. No accounts, no tracking, no ads.</p>
+  </section>
+
+  <footer>
+    <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a>
+    <p>© {{YEAR}} {{YOUR_NAME_OR_STUDIO}}</p>
+  </footer>
+</main>
+</body>
+</html>

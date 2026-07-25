@@ -1,0 +1,14 @@
+{
+  "appId": "seed",
+  "displayName": "Seed",
+  "bundleId": "com.example.seed",
+  "platforms": ["ios"],
+  "shippingBranch": "main",
+  "buildCommand": "npm run ios",
+  "testCommand": "npm test",
+  "archiveCommand": "npm run archive",
+  "metadataPath": "Marketing/AppStoreMetadata/seed-app-store-metadata.json",
+  "screenshotsPath": "Marketing/AppStoreScreenshots/graphics",
+  "appStoreConnectAppId": "",
+  "expectedArchiveProducts": ["Seed.app"]
+}

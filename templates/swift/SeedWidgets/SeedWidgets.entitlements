@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SOURCE: proven in a shipped production app.
+  The widget extension shares ONE entitlement with the host app: the
+  App Group. That's the bridge WidgetSharedData reads through. The
+  group id must match Seed/Seed.entitlements exactly.
+  Wizard substitutes Seed -> <appname> at /new-app --commit.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>com.apple.security.application-groups</key>
+    <array>
+        <string>group.com.example.seed</string>
+    </array>
+</dict>
+</plist>

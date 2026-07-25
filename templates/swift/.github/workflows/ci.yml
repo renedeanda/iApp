@@ -1,0 +1,57 @@
+name: CI
+
+# workflow_dispatch only — child apps inherit Kindling's manual-CI
+# policy (per Kindling DECISIONS/005 gap 9). Run from the Actions
+# tab when verifying templates / before a release / after a long
+# gap. We don't pay GitHub Actions minutes on every push, and we
+# don't accept the noise of code-signing failures on automatic runs.
+# Local builds (Makefile, xcodegen + xcodebuild) remain the
+# development loop.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: macos-15
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Homebrew dependencies
+        run: brew bundle --quiet
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build (iPhone 17 Simulator)
+        run: |
+          xcodebuild \
+            -scheme Seed \
+            -destination 'platform=iOS Simulator,name=iPhone 17' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            clean build
+
+      - name: Test (8 housekeeping tests + suite)
+        run: |
+          xcodebuild \
+            -scheme Seed \
+            -destination 'platform=iOS Simulator,name=iPhone 17' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            test
+
+      - name: SwiftLint
+        run: swiftlint --strict
+
+      - name: SwiftFormat check
+        run: swiftformat --lint .

@@ -1,0 +1,99 @@
+name: CI
+
+# Kindling repo-level CI. Distinct from the CI that ships *inside*
+# each template (templates/{swift,rn}/.github/workflows/) — that one
+# runs in the generated child app. This one verifies the templates
+# themselves still produce working apps.
+#
+# Runs automatically on PRs that touch the load-bearing paths, and on
+# demand from the Actions tab. The recipe-citation gate is cheap and
+# runs on every PR; the template verifies run when their inputs change.
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  changes:
+    # Path filter without a third-party action: expose which areas the
+    # PR touches so the expensive template verifies only run when needed
+    # (manual dispatch runs everything).
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      rn: ${{ steps.filter.outputs.rn }}
+      swift: ${{ steps.filter.outputs.swift }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Detect changed areas
+        id: filter
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "rn=true" >> "$GITHUB_OUTPUT"; echo "swift=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          BASE="${{ github.event.pull_request.base.sha }}"
+          CHANGED=$(git diff --name-only "$BASE"...HEAD)
+          echo "$CHANGED" | grep -qE '^(templates/rn/|scripts/verify-rn)' && echo "rn=true" >> "$GITHUB_OUTPUT" || echo "rn=false" >> "$GITHUB_OUTPUT"
+          echo "$CHANGED" | grep -qE '^(templates/swift/|scripts/verify-swift|scripts/render-sprout)' && echo "swift=true" >> "$GITHUB_OUTPUT" || echo "swift=false" >> "$GITHUB_OUTPUT"
+
+  verify-rn-template:
+    needs: changes
+    if: needs.changes.outputs.rn == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: 'templates/rn/.nvmrc'
+
+      - name: Verify RN template
+        run: ./scripts/verify-rn-template.sh
+
+  verify-swift-template:
+    needs: changes
+    if: needs.changes.outputs.swift == 'true'
+    runs-on: macos-15
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install xcodegen
+        run: brew install xcodegen
+
+      - name: Verify Swift template
+        run: ./scripts/verify-swift-template.sh
+
+      - name: Sprout example is in sync with the template
+        run: |
+          bash scripts/render-sprout-example.sh
+          git diff --exit-code examples/sprout || {
+            echo "examples/sprout drifted from templates/swift — run scripts/render-sprout-example.sh and commit." >&2
+            exit 1
+          }
+
+  verify-recipes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check recipe sources
+        # Structural check: verifies every recipe's cited source path
+        # resolves inside this repo (templates/ etc.).
+        run: ./scripts/check-recipe-sources.sh

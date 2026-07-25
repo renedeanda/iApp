@@ -1,0 +1,4 @@
+interface:
+  display_name: "Record App Store Video"
+  short_description: "Capture review demos and App Store previews"
+  default_prompt: "Use $record-app-store-video to plan, capture, and validate a polished app video."
