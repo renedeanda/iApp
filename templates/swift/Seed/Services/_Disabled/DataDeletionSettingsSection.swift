@@ -1,5 +1,5 @@
 // SOURCE: proven in a shipped production app —
-// Settings -> Data deletion UX, generalized for the iApp template.
+// Settings -> Data deletion UX, generalized for the Kindling template.
 //
 // Move this beside Views/Settings/SettingsView.swift when
 // DataDeletionService graduates, then add `DataDeletionSettingsSection()`

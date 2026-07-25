@@ -1,5 +1,5 @@
 // SOURCE: proven in a shipped production app — the iCloud
-// data-deletion pattern, generalized for the iApp template.
+// data-deletion pattern, generalized for the Kindling template.
 //
 // These apps have no accounts; App Review nevertheless expects in-app deletion
 // of the user's iCloud-stored app data (a real App Review rejection we hit cited 5.1.1(v)).

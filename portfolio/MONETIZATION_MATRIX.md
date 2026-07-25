@@ -1,6 +1,6 @@
 # Monetization Matrix
 
-Per-app pricing decisions + the 5-tier ladder `/pick-monetization` uses for new apps. Strategic framing lives in [DECISIONS/003-monetization.md](../DECISIONS/003-monetization.md); this doc captures the operational tables, market data, and decision logic. iApp ships it as a starter — the ladder and market data are ready to use; the per-app table is yours to fill.
+Per-app pricing decisions + the 5-tier ladder `/pick-monetization` uses for new apps. Strategic framing lives in [DECISIONS/003-monetization.md](../DECISIONS/003-monetization.md); this doc captures the operational tables, market data, and decision logic. Kindling ships it as a starter — the ladder and market data are ready to use; the per-app table is yours to fill.
 
 Three rules govern every decision:
 

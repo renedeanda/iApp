@@ -1,6 +1,6 @@
 # Portfolio
 
-The single source of truth for **your** shipped (or shipping) apps. iApp ships this file as a starter — fill it in as your apps ship. `/new-app --commit` updates it via PR whenever a new app ships, and several skills read it:
+The single source of truth for **your** shipped (or shipping) apps. Kindling ships this file as a starter — fill it in as your apps ship. `/new-app --commit` updates it via PR whenever a new app ships, and several skills read it:
 
 - `/pick-palette` checks new palette picks against your **claimed palettes** below (ΔE2000 ≥ 15 rule).
 - `/positioning-check` compares a new app's mission against every mission below.

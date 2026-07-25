@@ -1,6 +1,6 @@
 ---
 name: validate-template
-description: Verify a template (or a freshly-rendered child app from /new-app --commit) builds clean and passes all 8 housekeeping tests. Used inside /new-app --commit step 5; also runs in CI on every iApp PR touching templates/.
+description: Verify a template (or a freshly-rendered child app from /new-app --commit) builds clean and passes all 8 housekeeping tests. Used inside /new-app --commit step 5; also runs in CI on every Kindling PR touching templates/.
 ---
 
 # /validate-template
@@ -10,7 +10,7 @@ The end-to-end check that a generated repo actually works. Runs the Swift OR RN 
 ## When to use
 
 - Automatic — inside `/new-app --commit` step 5, after templates are rendered into the new repo.
-- Manual — when an iApp PR touches `templates/` and you want to verify the change before push.
+- Manual — when an Kindling PR touches `templates/` and you want to verify the change before push.
 - Periodically — the end-to-end smoke test re-runs this.
 
 ## When NOT to use
@@ -20,8 +20,8 @@ The end-to-end check that a generated repo actually works. Runs the Swift OR RN 
 
 ## Swift validation (when template = swift)
 
-1. `cp -r templates/swift/ /tmp/iapp-verify/`
-2. `cd /tmp/iapp-verify/`
+1. `cp -r templates/swift/ /tmp/kindling-verify/`
+2. `cd /tmp/kindling-verify/`
 3. `make bootstrap NAME=VerifyApp BUNDLE=com.example.verify`
    - Runs `scripts/rename-template.sh` (substitutes Seed → VerifyApp throughout)
    - Runs `xcodegen generate`
@@ -41,15 +41,15 @@ The end-to-end check that a generated repo actually works. Runs the Swift OR RN 
 
 ## RN validation (when template = rn)
 
-1. `cp -r templates/rn/ /tmp/iapp-verify-rn/`
-2. `cd /tmp/iapp-verify-rn/`
+1. `cp -r templates/rn/ /tmp/kindling-verify-rn/`
+2. `cd /tmp/kindling-verify-rn/`
 3. `npm install`
 4. `npx tsc --noEmit` (strict TypeScript)
 5. `npx jest` (test suite passes)
 6. `npx expo prebuild --clean --platform ios --no-install`
    - Verifies Expo config plugins (withWidgetExtension, withICloudEntitlements, withAppGroup) generate valid native projects.
 
-## Additional iApp-specific checks (regardless of template)
+## Additional Kindling-specific checks (regardless of template)
 
 7. **Reliability matrix sync** — every `// SOURCE:` header in template files points to a row in REUSE_INDEX, and no header points to a row flagged ⚠️.
 8. **Privacy manifest API coverage** — every required-reason API actually used in template code is declared in `PrivacyInfo.xcprivacy`.
@@ -67,7 +67,7 @@ RN tsc:                     n/a (--swift-only)
 RN jest:                    n/a
 Expo prebuild:              n/a
 
-iApp-specific:
+Kindling-specific:
   Reliability matrix sync:  ✓ all SOURCE headers valid
   Privacy manifest:         ✓ all declared
   ⚠️-source quarantine:     ✓ no code from flagged sources

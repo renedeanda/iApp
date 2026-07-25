@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# SessionStart hook for child apps generated from the iApp RN template.
+# SessionStart hook for child apps generated from the Kindling RN template.
 # Two jobs:
 #   1) Print a briefing banner so Claude orients fast.
 #   2) Bootstrap node_modules so lint/typecheck/jest can run.
@@ -40,7 +40,7 @@ COMMON COMMANDS
   /translate <lang>   Fill missing translations (replaces en-fallback stubs)
   /app-store-graphics Generate App Store screenshots
 
-GUARDRAILS  (see the iApp repo's portfolio/REUSE_INDEX.md)
+GUARDRAILS  (see the Kindling repo's portfolio/REUSE_INDEX.md)
   ✅ iCloud sync → modules/icloud-sync/ (production-proven pattern, genericized)
   ✅ Rolling-64 notifications → src/services/NotificationService.ts (production-proven)
   ✅ RN widgets (multi-language i18n) → follow the widget-extension recipe
@@ -49,7 +49,7 @@ GUARDRAILS  (see the iApp repo's portfolio/REUSE_INDEX.md)
   ⚠️  Universal Purchase NOT supported between iOS and Android in RN
 
 WHEN IN DOUBT
-  CLAUDE.md  →  DECISIONS/  →  iApp repo
+  CLAUDE.md  →  DECISIONS/  →  Kindling repo
 ====================================================================
 EOF
 

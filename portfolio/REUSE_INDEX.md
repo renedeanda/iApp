@@ -2,7 +2,7 @@
 
 The single source of truth for "where do I copy this feature from?" Cross-referenced by `/reliability-check`, `/new-app`, every recipe, and every template's `// SOURCE:` header.
 
-In iApp's starter state, the gold-standard source for every feature is **the template itself** — the scaffolds under `templates/swift/` and `templates/rn/` were distilled from multiple shipped production apps and are CI-verified. As *your* apps ship and improve on a pattern, this index evolves: your app becomes the gold-standard source for that feature, and `sync-from-portfolio` propagates the improvement back into the template.
+In Kindling's starter state, the gold-standard source for every feature is **the template itself** — the scaffolds under `templates/swift/` and `templates/rn/` were distilled from multiple shipped production apps and are CI-verified. As *your* apps ship and improve on a pattern, this index evolves: your app becomes the gold-standard source for that feature, and `sync-from-portfolio` propagates the improvement back into the template.
 
 **Rule:** never harvest a feature from a source that's flagged ⚠️ for that feature, even if the code "looks fine." A flag exists because a WIP state caused a real shipped problem (record it in [RECENT_LEARNINGS.md](RECENT_LEARNINGS.md)).
 

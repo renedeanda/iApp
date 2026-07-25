@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Session-start hook for iApp.
+# Session-start hook for Kindling.
 # Prints a short banner so every session starts with the most-important
 # context without scrolling.
 set -e
@@ -9,7 +9,7 @@ LAST_COMMIT=$(git log -1 --format='%h %s' 2>/dev/null || echo "unknown")
 
 cat <<EOF
 ====================================================================
-iApp session — read CLAUDE.md first, then proceed.
+Kindling session — read CLAUDE.md first, then proceed.
 
 Active branch: ${BRANCH}
 Last commit:   ${LAST_COMMIT}

@@ -2,8 +2,8 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
@@ -11,7 +11,7 @@ Data model decisions baked in late cause migration pain. Sync strategy decisions
 
 ## Decision
 
-**iApp has no data model and no sync.** It's docs-on-disk in a git repo. The git history *is* the change log; GitHub *is* the persistence layer; no app reads or writes structured data from iApp.
+**Kindling has no data model and no sync.** It's docs-on-disk in a git repo. The git history *is* the change log; GitHub *is* the persistence layer; no app reads or writes structured data from Kindling.
 
 For child apps, this ADR is the worked example. The shape:
 
@@ -78,7 +78,7 @@ URLForUbiquityContainerIdentifier → no required-reason needed
 
 ## Options considered
 
-For iApp itself:
+For Kindling itself:
 
 - **Persist generated app metadata in a JSON manifest** — rejected. Git history is the source of truth for "what apps have we generated?"; `portfolio/PORTFOLIO.md` is the human-readable index. A separate JSON would drift from the markdown.
 - **Use GitHub Issues for ADR drafts** — rejected. Drafts live in the local `drafts/<app-name>/` folder per the sleep rule (CLAUDE.md taste rule 6). GitHub Issues would publish drafts prematurely.
@@ -86,7 +86,7 @@ For iApp itself:
 
 ## Consequences
 
-- **Unlocks:** iApp stays grep-able and git-history-able forever.
+- **Unlocks:** Kindling stays grep-able and git-history-able forever.
 - **Forecloses:** no real-time wizard state, no shared draft session. Each `/new-app --draft` is a solo session writing local files.
 - **Cost to revisit:** small if we ever add real state (would be a new top-level dir + ADR 008 supersession).
 

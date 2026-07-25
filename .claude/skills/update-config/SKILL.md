@@ -1,13 +1,13 @@
 ---
 name: update-config
-description: Manage iApp's .claude/settings.json — permission allowlist, hooks, env vars. Use when adding new bash commands the wizard needs, configuring SessionStart behavior, or troubleshooting hook failures.
+description: Manage Kindling's .claude/settings.json — permission allowlist, hooks, env vars. Use when adding new bash commands the wizard needs, configuring SessionStart behavior, or troubleshooting hook failures.
 ---
 
-> SOURCE: universal update-config skill, scoped to iApp's settings
+> SOURCE: universal update-config skill, scoped to Kindling's settings
 
 # /update-config
 
-iApp's `.claude/settings.json` controls what bash commands run without prompting and what fires on SessionStart. This skill makes safe edits to that file.
+Kindling's `.claude/settings.json` controls what bash commands run without prompting and what fires on SessionStart. This skill makes safe edits to that file.
 
 ## When to use
 

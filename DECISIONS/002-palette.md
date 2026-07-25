@@ -2,20 +2,20 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
-iApp itself is a docs-only repo — it has no UI, no rendered app, no user-facing surface. So why does it need a palette ADR?
+Kindling itself is a docs-only repo — it has no UI, no rendered app, no user-facing surface. So why does it need a palette ADR?
 
-Because every child app the wizard generates needs one. The iApp ADR 002 is the **template** every child fills in. The shape, not the values.
+Because every child app the wizard generates needs one. The Kindling ADR 002 is the **template** every child fills in. The shape, not the values.
 
 ## Decision
 
-**iApp as a docs-only repo has no palette of its own.** This ADR exists as a *worked example of structure* for child apps to copy.
+**Kindling as a docs-only repo has no palette of its own.** This ADR exists as a *worked example of structure* for child apps to copy.
 
-For documentation surfaces that need styling (GitHub README badges, a future GitHub Pages site), iApp uses a warm orange on cream — consistent with the warm-minimal template default (`#E07A3C` on `#FAF4EC`), so the repo's public face matches what the scaffold ships.
+For documentation surfaces that need styling (GitHub README badges, a future GitHub Pages site), Kindling uses a warm orange on cream — consistent with the warm-minimal template default (`#E07A3C` on `#FAF4EC`), so the repo's public face matches what the scaffold ships.
 
 For child apps, this ADR is the template. Each fills in a **light and a dark** token table — `Seed/Theme/AppTheme.swift` resolves them per appearance via `dynamic(light:dark:)`, and `/pick-palette` designs both (taste rule 5: dark is not an afterthought). The structure to fill in:
 
@@ -68,18 +68,18 @@ already claimed in your PORTFOLIO.md):
 
 ## Options considered
 
-For iApp's own doc styling:
+For Kindling's own doc styling:
 
 - **No styling at all** — rejected. README badge color and a future GitHub Pages site need *something*, and "system default GitHub gray" is the worst possible "no palette" choice.
 - **A neutral grayscale** — rejected. Inconsistent with "warm palettes are the template default."
-- **A unique claimed palette for iApp** — rejected. iApp isn't a product; it's infrastructure. Claiming a palette is overreach.
-- **Match the template's warm-minimal default** — accepted. Visitors landing on iApp see the same warm-orange-on-cream feel the scaffold ships, which is honest advertising.
+- **A unique claimed palette for Kindling** — rejected. Kindling isn't a product; it's infrastructure. Claiming a palette is overreach.
+- **Match the template's warm-minimal default** — accepted. Visitors landing on Kindling see the same warm-orange-on-cream feel the scaffold ships, which is honest advertising.
 
 ## Consequences
 
 - **Unlocks:** this ADR's *shape* is what every child app's `DECISIONS/002-palette.md` fills in. The wizard's `/pick-palette` skill writes a file exactly like this.
-- **Forecloses:** iApp can't claim a unique palette without superseding this ADR.
-- **Cost to revisit:** small for iApp's borrowed styling; large for the *shape* (would require updating every child app's ADR 002).
+- **Forecloses:** Kindling can't claim a unique palette without superseding this ADR.
+- **Cost to revisit:** small for Kindling's borrowed styling; large for the *shape* (would require updating every child app's ADR 002).
 
 ## Verification
 

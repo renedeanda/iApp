@@ -3,7 +3,7 @@ name: session-continue
 description: Resume work after a session limit / restart. Reads recent git history, working-tree state, and unchecked DECISIONS items to reconstruct context and pick up where the previous session left off. Use as the first thing in a session that follows a limit hit.
 ---
 
-> SOURCE: pattern adapted from `iApp:.claude/skills/session-continue`.
+> SOURCE: pattern adapted from `Kindling:.claude/skills/session-continue`.
 
 # /session-continue
 

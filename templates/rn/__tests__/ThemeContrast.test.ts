@@ -1,9 +1,9 @@
-// SOURCE: iApp template — RN counterpart to
+// SOURCE: Kindling template — RN counterpart to
 //         swift template's ThemeContrastTests.swift
 //
 // Verifies the warm-minimal palette ships AAA contrast (WCAG 2.1
 // 7.0:1) for the text/background pair in both light and dark schemes.
-// Apple's HIG and the iApp design philosophy both require AAA
+// Apple's HIG and the Kindling design philosophy both require AAA
 // on primary copy.
 
 import { lightPalette, darkPalette } from '@/theme/AppTheme';

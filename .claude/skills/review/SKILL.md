@@ -1,6 +1,6 @@
 ---
 name: review
-description: Auto-healing code/doc review for iApp. Scans 16 categories (count bugs, cross-ref integrity, CLAUDE.md rule violations, API naming, etc.), fixes what can be auto-fixed, reports what remains. Use after completing a phase.
+description: Auto-healing code/doc review for Kindling. Scans 16 categories (count bugs, cross-ref integrity, CLAUDE.md rule violations, API naming, etc.), fixes what can be auto-fixed, reports what remains. Use after completing a phase.
 ---
 
 > SOURCE: pattern proven in a shipped production app's skill set

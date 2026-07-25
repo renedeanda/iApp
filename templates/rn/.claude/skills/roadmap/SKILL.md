@@ -3,7 +3,7 @@ name: roadmap
 description: Session starter for the RN child app. Reads CLAUDE.md, DECISIONS/005-launch-readiness.md, recent git history, and open PRs. Outputs a prioritized work list. Use as the first thing in a fresh session.
 ---
 
-> SOURCE: pattern adapted from `iApp:.claude/skills/roadmap`, RN-paths-flavored.
+> SOURCE: pattern adapted from `Kindling:.claude/skills/roadmap`, RN-paths-flavored.
 
 # /roadmap
 
@@ -18,7 +18,7 @@ Reconstruct what to work on next in a fresh session inside this child app. Outpu
 ## When NOT to use
 
 - Mid-task — `roadmap` resets context; you don't want that when you're in flow.
-- Inside iApp itself — use that repo's `/roadmap` instead.
+- Inside Kindling itself — use that repo's `/roadmap` instead.
 
 ## Steps
 

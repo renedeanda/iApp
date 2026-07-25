@@ -1,16 +1,16 @@
-# CLAUDE.md — iApp
+# CLAUDE.md — Kindling
 
 > Read this first, every session.
 
-## What iApp is
+## What Kindling is
 
-iApp is a planning hub + two runnable starter scaffolds (Swift, React Native) for building a portfolio of opinionated, polished iOS apps. It exists so that every new app idea inherits gold-standard services, taste rules, and decision discipline from day one — instead of being hand-forked from whichever previous project is closest.
+Kindling is a planning hub + two runnable starter scaffolds (Swift, React Native) for building a portfolio of opinionated, polished iOS apps. It exists so that every new app idea inherits gold-standard services, taste rules, and decision discipline from day one — instead of being hand-forked from whichever previous project is closest.
 
 It was distilled from shipping a real portfolio of iOS apps (native and RN, free and paid, minimal and deep) and open-sourced so anyone can bootstrap with the same system.
 
 ## Your portfolio at a glance
 
-Your shipped apps live in [portfolio/PORTFOLIO.md](portfolio/PORTFOLIO.md) — iApp ships it as a starter table you fill in as apps ship. Several skills read it: palette clash checks, mission positioning checks, visual-identity diversity checks, and monetization mix all key off that file. Keep it current; it is the portfolio's memory.
+Your shipped apps live in [portfolio/PORTFOLIO.md](portfolio/PORTFOLIO.md) — Kindling ships it as a starter table you fill in as apps ship. Several skills read it: palette clash checks, mission positioning checks, visual-identity diversity checks, and monetization mix all key off that file. Keep it current; it is the portfolio's memory.
 
 ## Taste rules — non-negotiable
 
@@ -34,7 +34,7 @@ These rules apply to every app generated from this repo. The `/new-app` wizard r
 
 ## Maturity matrix — what enforces what
 
-iApp has three layers, and each layer has a different enforcement guarantee. Knowing which layer you're looking at tells you what trusts what.
+Kindling has three layers, and each layer has a different enforcement guarantee. Knowing which layer you're looking at tells you what trusts what.
 
 | Layer | What it is | Enforcement strength | Examples |
 |---|---|---|---|
@@ -83,7 +83,7 @@ Pointer to [docs/NOT_FOR.md](docs/NOT_FOR.md). Short version: no ads, no social 
 ### To start a new app
 
 1. `/new-app --draft` — answer the 21 design-first questions (starting with spec/JTBD intake), write 17 ADRs (000–016) into `drafts/<app-name>/`. Sleep on it.
-2. Next day: `/new-app --commit <app-name>` — wizard renders templates, generates app icon + first-pass App Store graphics, creates a GitHub repo, pushes the initial branch, and opens a PR back to iApp that claims the palette and adds the new app to `PORTFOLIO.md`.
+2. Next day: `/new-app --commit <app-name>` — wizard renders templates, generates app icon + first-pass App Store graphics, creates a GitHub repo, pushes the initial branch, and opens a PR back to Kindling that claims the palette and adds the new app to `PORTFOLIO.md`.
 
 ### To add a feature to an existing app
 
@@ -91,7 +91,7 @@ Pointer to [docs/NOT_FOR.md](docs/NOT_FOR.md). Short version: no ads, no social 
 2. The recipe cites the gold-standard source (usually a template path in this repo) — open it, adapt it, validate it.
 3. If the feature lives in a `Services/_Disabled/` file in the current app, move it up and uncomment imports.
 
-### To evolve iApp itself
+### To evolve Kindling itself
 
 - New service pattern proven in one of your child apps → propose via the `sync-from-portfolio` skill, which diffs the child file against the template version and prepares a PR.
 - New visual identity discovered → add to [docs/VISUAL_IDENTITIES.md](docs/VISUAL_IDENTITIES.md).

@@ -2,18 +2,18 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
 The first sixty seconds of an app determine retention more than any feature that comes after. A new user's experience between "tap launch icon" and "I get what this is" is the product. Every app's mission has to be felt in that window.
 
-iApp has no first-launch experience (it's a docs repo). But child apps absolutely need this ADR, and it has to be written *before* tech is picked — because the felt-quality of those 60 seconds shapes what the app *is*, not what framework renders it.
+Kindling has no first-launch experience (it's a docs repo). But child apps absolutely need this ADR, and it has to be written *before* tech is picked — because the felt-quality of those 60 seconds shapes what the app *is*, not what framework renders it.
 
 ## Decision
 
-**iApp's "first sixty seconds" equivalent is the first sixty seconds of a developer landing on the GitHub repo.** That experience:
+**Kindling's "first sixty seconds" equivalent is the first sixty seconds of a developer landing on the GitHub repo.** That experience:
 
 - Second 0-5: README.md hero — "The thick scaffold every new app boots from, with design discipline built in"
 - Second 5-15: Quick tour tree → reader sees PORTFOLIO/DECISIONS/recipes/templates/.claude/docs and can navigate
@@ -21,7 +21,7 @@ iApp has no first-launch experience (it's a docs repo). But child apps absolutel
 - Second 30-45: Either CLAUDE.md or the templates themselves
 - Second 45-60: Reader knows whether to fork, contribute, or move on
 
-That's the developer's onboarding to iApp. No surprises. README.md is calibrated for it.
+That's the developer's onboarding to Kindling. No surprises. README.md is calibrated for it.
 
 For child apps, this ADR is the screen-by-screen narration:
 
@@ -65,11 +65,11 @@ Frame-by-frame narration:
 
 ## Options considered
 
-For iApp's own first-sixty-seconds:
+For Kindling's own first-sixty-seconds:
 
-- **Polish a GitHub Pages / marketing site instead** — rejected for now. iApp's audience lands on GitHub, not on a marketing site. README does the work.
+- **Polish a GitHub Pages / marketing site instead** — rejected for now. Kindling's audience lands on GitHub, not on a marketing site. README does the work.
 - **A getting-started GIF / video at the top of README** — rejected. The "60 seconds" here is reading, not watching. Static, fast, indexable.
-- **Skip this ADR for iApp (it has no first-launch)** — rejected. The ADR isn't optional in the child-app sequence, and writing iApp's own version forced a useful framing (the developer's first 60 seconds on the GitHub page).
+- **Skip this ADR for Kindling (it has no first-launch)** — rejected. The ADR isn't optional in the child-app sequence, and writing Kindling's own version forced a useful framing (the developer's first 60 seconds on the GitHub page).
 
 ## Consequences
 
@@ -79,7 +79,7 @@ For iApp's own first-sixty-seconds:
 
 ## Cross-references
 
-- [README.md](../README.md) — iApp's actual "first 60 seconds" surface
+- [README.md](../README.md) — Kindling's actual "first 60 seconds" surface
 - [docs/HOUSEKEEPING.md](../docs/HOUSEKEEPING.md) — three launch styles (Soft / Instant / Plain)
 - [docs/NOT_FOR.md](../docs/NOT_FOR.md) §9 — forced onboarding metadata
 - [docs/WHATS_ALLOWED.md](../docs/WHATS_ALLOWED.md) — notification permission timing

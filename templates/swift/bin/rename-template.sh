@@ -6,7 +6,7 @@
 # id, "iCloud.com.example.seed" container, and
 # "group.com.example.seed" app-group throughout the tree with
 # the new app's chosen values. Called by `make bootstrap` and by the
-# iApp wizard at /new-app --commit time.
+# Kindling wizard at /new-app --commit time.
 #
 # Substitution order matters — more-specific tokens first so we don't
 # replace a substring of a longer token.

@@ -3,7 +3,7 @@ name: review
 description: Auto-healing code review for this Swift app. Scans 14 SwiftUI/SwiftData-flavored categories (force-unwraps, @MainActor, theme leaks, a11y, l10n, platform guards, etc.), fixes what can be auto-fixed, builds + tests in a heal loop, reports what remains. Use after completing a feature or before opening a PR.
 ---
 
-> SOURCE: pattern adapted from the iApp root skill `review`, scoped to a Swift child app.
+> SOURCE: pattern adapted from the Kindling root skill `review`, scoped to a Swift child app.
 
 # /review
 
@@ -17,7 +17,7 @@ Auto-healing audit pass. After a feature's commits land, run `/review` to catch 
 ## When NOT to use
 
 - Mid-feature — wait until the feature is logically complete.
-- Inside the iApp repo itself — use that repo's `/review`.
+- Inside the Kindling repo itself — use that repo's `/review`.
 
 ## The 14 audit categories
 

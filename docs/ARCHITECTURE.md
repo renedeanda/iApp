@@ -1,6 +1,6 @@
 # Architecture — How the Repo Fits Together
 
-iApp has three interacting layers. This doc explains how they relate and how a fresh Claude session navigates them.
+Kindling has three interacting layers. This doc explains how they relate and how a fresh Claude session navigates them.
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
@@ -54,7 +54,7 @@ mission (sentence)
                            └─→ tech choice → monetization → feature toggles
                                  └─→ reliability-check (is the harvest source production-grade?)
                                        └─→ render templates with substitutions
-                                             └─→ git push + PR back to iApp (claim palette, add portfolio row)
+                                             └─→ git push + PR back to Kindling (claim palette, add portfolio row)
 ```
 
 ### Bottom-up — adding a feature to an existing app
@@ -70,13 +70,13 @@ mission (sentence)
                └── verify: xcodebuild + WidgetLocalizationParityTests + WidgetEdgeToEdgeTests
 ```
 
-### Sideways — evolving iApp itself
+### Sideways — evolving Kindling itself
 
 ```
 new pattern proven in a child app
    └─→ /sync-from-portfolio
          ├── diffs the child's file against the template version
-         ├── shows the delta as a PR to iApp
+         ├── shows the delta as a PR to Kindling
          └── on merge, the next /new-app inherits the improvement
 ```
 
@@ -84,12 +84,12 @@ new pattern proven in a child app
 
 ### 1. Templates ↔ Children
 
-Templates are *forks-by-copy*, not *forks-by-symlink*. When `/new-app --commit` renders the Swift template, it copies the file tree into the new repo with name/bundle/palette substitutions. There is no runtime dependency from the child back to iApp.
+Templates are *forks-by-copy*, not *forks-by-symlink*. When `/new-app --commit` renders the Swift template, it copies the file tree into the new repo with name/bundle/palette substitutions. There is no runtime dependency from the child back to Kindling.
 
 This means:
 
 - Children can diverge from the template without breaking. Each app evolves its own way.
-- iApp evolving the template does *not* automatically update children. Sync happens via `/sync-from-portfolio`, which is explicit and reviewable.
+- Kindling evolving the template does *not* automatically update children. Sync happens via `/sync-from-portfolio`, which is explicit and reviewable.
 - Each templated file ships with a `// SOURCE: <template path>@<sha>` header comment so `git diff` against the original is one command.
 
 ### 2. Portfolio brain ↔ DECISIONS
@@ -101,7 +101,7 @@ The portfolio docs describe *what exists*. The DECISIONS docs describe *what to 
 - `REUSE_INDEX.md` answers "where do I copy from?"
 - `RECENT_LEARNINGS.md` is the changelog of taste decisions.
 
-When a new app finishes `/new-app --commit`, three files get updated in iApp via a PR:
+When a new app finishes `/new-app --commit`, three files get updated in Kindling via a PR:
 
 1. `PORTFOLIO.md` — new row.
 2. `PALETTE_CATALOG.md` — chosen seed marked claimed (with departure delta linked).

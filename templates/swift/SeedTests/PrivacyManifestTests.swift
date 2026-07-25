@@ -40,7 +40,7 @@ struct PrivacyManifestTests {
     /// the manifest then silently doesn't ship and App Store Connect can't
     /// see it. The host target (and every embedded extension) pins it
     /// explicitly; this guards that pin against accidental removal. Per the
-    /// iApp maturity matrix, a rule that must hold needs an enforcer.
+    /// Kindling maturity matrix, a rule that must hold needs an enforcer.
     @Test func manifestIsPinnedInProjectYml() throws {
         let projectYml = URL(fileURLWithPath: #filePath)
             .deletingLastPathComponent()

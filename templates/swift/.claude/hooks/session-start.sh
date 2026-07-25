@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# SessionStart hook for child apps generated from the iApp Swift template.
+# SessionStart hook for child apps generated from the Kindling Swift template.
 # Wizard substitutes {{PLACEHOLDERS}} at /new-app --commit time.
 set -e
 
@@ -31,13 +31,13 @@ COMMON COMMANDS
   /translate <lang>   Fill missing translations
   /app-store-graphics Generate App Store screenshots
 
-GUARDRAILS  (see portfolio/REUSE_INDEX.md in the iApp repo this app came from)
+GUARDRAILS  (see portfolio/REUSE_INDEX.md in the Kindling repo this app came from)
   ✅ Harvest widgets from the template's own SeedWidgets/ scaffold ONLY
   ✅ Apple Intelligence gating: Services/_Disabled/OnDeviceAIService.swift
   ⚠️  Widget/Live-Activity l10n lives in the EXTENSION's own xcstrings
   ⚠️  Only harvest from production-grade sources (REUSE_INDEX discipline)
 
 WHEN IN DOUBT
-  CLAUDE.md  →  DECISIONS/  →  the iApp repo this app was generated from
+  CLAUDE.md  →  DECISIONS/  →  the Kindling repo this app was generated from
 ====================================================================
 EOF

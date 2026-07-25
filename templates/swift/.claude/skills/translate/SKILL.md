@@ -3,7 +3,7 @@ name: translate
 description: Translate missing localization keys for a specific tier-1 language. Diffs the en entries in Localizable.xcstrings against the target locale, translates only the missing values, validates format specifiers, and writes back. Use before App Store submission and any time new keys land.
 ---
 
-> SOURCE: pattern adapted from the iApp root skill `translate`.
+> SOURCE: pattern adapted from the Kindling root skill `translate`.
 
 # /translate
 

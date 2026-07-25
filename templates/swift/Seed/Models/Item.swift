@@ -1,4 +1,4 @@
-// SOURCE: iApp template — placeholder example.
+// SOURCE: Kindling template — placeholder example.
 //
 // The wizard replaces this with the app's real model types at
 // /new-app --commit time, per DECISIONS/008-data-model-and-sync.md.

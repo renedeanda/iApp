@@ -18,11 +18,11 @@ Eleven skills ship with this template. They cover the most common session-level 
 
 ## Provenance
 
-Each `SKILL.md` carries a `> SOURCE:` line near the top noting which iApp-root skill it was adapted from. When iApp's master skill evolves, run `sync-from-portfolio` from iApp to propagate the change here — children never silently inherit template changes.
+Each `SKILL.md` carries a `> SOURCE:` line near the top noting which Kindling-root skill it was adapted from. When Kindling's master skill evolves, run `sync-from-portfolio` from Kindling to propagate the change here — children never silently inherit template changes.
 
 ## What's NOT here (and why)
 
-The wizard-only skills (`new-app`, `pick-*`, `design-icon`, `positioning-check`, `reliability-check`, `sync-from-portfolio`, `validate-template`) live in iApp-root only — they only make sense before this app exists.
+The wizard-only skills (`new-app`, `pick-*`, `design-icon`, `positioning-check`, `reliability-check`, `sync-from-portfolio`, `validate-template`) live in Kindling-root only — they only make sense before this app exists.
 
 Swift-only skills (`pbxproj-check`, `platform-check`, `add-widget` Swift flavor, `dev-premium-toggle`, `haptic-check`) are intentionally omitted — they don't apply to an Expo/RN app.
 

@@ -15,7 +15,7 @@ Pick the tech stack for a new app based on mission + native-feature requirements
 ## When NOT to use
 
 - For an existing app — tech is decided.
-- For non-iOS targets — iApp is iOS-only.
+- For non-iOS targets — Kindling is iOS-only.
 
 ## Pre-positioning logic
 

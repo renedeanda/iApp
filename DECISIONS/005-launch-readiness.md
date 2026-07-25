@@ -2,18 +2,18 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
 Every child app eventually reaches "ready for TestFlight," then "ready for App Store submission," then "ready for first-week feedback." Without an explicit ADR per app, these milestones blur into "we shipped something." That blur is how features ship half-finished.
 
-iApp itself doesn't go to TestFlight — its launch criterion is an end-to-end smoke test where it generates a child app. This ADR captures iApp's *own* launch criteria (when is the wizard trustworthy for new apps?) and templates the shape for child apps.
+Kindling itself doesn't go to TestFlight — its launch criterion is an end-to-end smoke test where it generates a child app. This ADR captures Kindling's *own* launch criteria (when is the wizard trustworthy for new apps?) and templates the shape for child apps.
 
 ## Decision
 
-**iApp is "launch-ready" when every layer lands green, ending with an end-to-end smoke test.** Specifically:
+**Kindling is "launch-ready" when every layer lands green, ending with an end-to-end smoke test.** Specifically:
 
 - [x] **Foundations**: CLAUDE.md, docs/, root config
 - [x] **Portfolio brain**: PORTFOLIO, PALETTE_CATALOG, MONETIZATION_MATRIX, REUSE_INDEX, RECENT_LEARNINGS starter scaffolds
@@ -65,7 +65,7 @@ Deliberate non-gaps, also worth recording:
 
 ## Consequences
 
-- **Unlocks:** clear criterion for "iApp is open for business" (= the smoke test passes). Child apps inherit the same discipline.
+- **Unlocks:** clear criterion for "Kindling is open for business" (= the smoke test passes). Child apps inherit the same discipline.
 - **Forecloses:** launching prematurely. The wizard will refuse to run `/new-app` against a state where this ADR's checklist is incomplete.
 - **Cost to revisit:** small.
 

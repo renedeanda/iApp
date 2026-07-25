@@ -17,7 +17,7 @@ The gate that prevents propagating WIP / broken patterns into new child apps. Ru
 ## When NOT to use
 
 - For features not in the REUSE_INDEX matrix — those are novel, not harvested.
-- For pure-template iApp code — those have `// SOURCE:` headers, not REUSE_INDEX lookups.
+- For pure-template Kindling code — those have `// SOURCE:` headers, not REUSE_INDEX lookups.
 
 ## The matrix (lives in portfolio/REUSE_INDEX.md)
 

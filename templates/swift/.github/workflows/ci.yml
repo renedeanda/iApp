@@ -1,7 +1,7 @@
 name: CI
 
-# workflow_dispatch only — child apps inherit iApp's manual-CI
-# policy (per iApp DECISIONS/005 gap 9). Run from the Actions
+# workflow_dispatch only — child apps inherit Kindling's manual-CI
+# policy (per Kindling DECISIONS/005 gap 9). Run from the Actions
 # tab when verifying templates / before a release / after a long
 # gap. We don't pay GitHub Actions minutes on every push, and we
 # don't accept the noise of code-signing failures on automatic runs.

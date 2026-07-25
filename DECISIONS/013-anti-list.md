@@ -2,8 +2,8 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
@@ -11,13 +11,13 @@ Per CLAUDE.md taste rule 7: NOT_FOR.md rejects **manipulative implementations**,
 
 ## Decision
 
-**iApp's anti-list (what this repo refuses to be):**
+**Kindling's anti-list (what this repo refuses to be):**
 
 1. **Not a SaaS.** No backend, no signup, no per-user state. The git repo is the state. (See ADR 003, ADR 008.)
-2. **Not multi-tenant.** iApp is a brain for *one* portfolio at a time — yours. Fork it and make it your own; it isn't built to serve N portfolios from one instance.
+2. **Not multi-tenant.** Kindling is a brain for *one* portfolio at a time — yours. Fork it and make it your own; it isn't built to serve N portfolios from one instance.
 3. **Not a public-product-style starter.** No "deploy to Vercel" button, no auto-generated landing page, no "share your app idea with Twitter" feature. The wizard is for the developer's own use first.
 4. **Not a comprehensive iOS template.** Opinions are encoded — no AdMob, no infinite scroll, no shame-driven streaks (NOT_FOR.md). Developers who want those need a different template.
-5. **Not finished.** iApp evolves with each new app in your portfolio via `/sync-from-portfolio`. The current state is always a snapshot.
+5. **Not finished.** Kindling evolves with each new app in your portfolio via `/sync-from-portfolio`. The current state is always a snapshot.
 
 ### Child app ADR 013 shape
 
@@ -74,9 +74,9 @@ For each portfolio anti-pattern, confirm the positive framing this app uses:
 
 ## Options considered
 
-For iApp itself:
+For Kindling itself:
 
-- **Skip this ADR for iApp** — rejected. The ADR isn't optional in the child-app sequence, and writing iApp's own version (anti-SaaS, anti-multi-tenant, anti-generic-starter) forces useful framing for what iApp is *deliberately not*.
+- **Skip this ADR for Kindling** — rejected. The ADR isn't optional in the child-app sequence, and writing Kindling's own version (anti-SaaS, anti-multi-tenant, anti-generic-starter) forces useful framing for what Kindling is *deliberately not*.
 - **Combine 013 with 000 (mission)** — rejected. Mission says what an app IS in one sentence; anti-list says what it ISN'T in 3-5 bullets. Different scopes, different reviews.
 
 ## Consequences

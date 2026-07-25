@@ -8,7 +8,7 @@ import { paletteFor, spacing, radius } from '@/theme/AppTheme';
  * instead of pulling palette + scheme + typography separately.
  *
  * Source pattern: the consumer shape proven in a shipped production
- * RN app, simplified — the iApp default theme has no premium
+ * RN app, simplified — the Kindling default theme has no premium
  * tiers, so this hook only returns colors + scale.
  */
 export function useTheme() {

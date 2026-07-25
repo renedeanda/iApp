@@ -1,4 +1,4 @@
-// SOURCE: iApp template — RN counterpart to
+// SOURCE: Kindling template — RN counterpart to
 //         swift template's AppIconAssetTests.swift
 //
 // Verifies that once the wizard runs `/generate-icons`, the standard

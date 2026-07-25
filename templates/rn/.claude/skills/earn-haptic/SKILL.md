@@ -3,7 +3,7 @@ name: earn-haptic
 description: Unlock a 4th, 5th, 6th, 7th, or 8th haptic pattern in this RN app. Writes an addendum to DECISIONS/012-haptic-vocabulary.md justifying the new pattern. Soft cap 8; hard cap 10 with stricter justification.
 ---
 
-> SOURCE: pattern adapted from `iApp:.claude/skills/earn-haptic`; haptic types remapped from the 24-pattern Swift reference catalog to `expo-haptics` primitives.
+> SOURCE: pattern adapted from `Kindling:.claude/skills/earn-haptic`; haptic types remapped from the 24-pattern Swift reference catalog to `expo-haptics` primitives.
 
 # /earn-haptic
 
@@ -22,7 +22,7 @@ Add a haptic pattern beyond the 3 starters. RN-side, this maps onto one of `expo
 
 ## Soft cap
 
-8 patterns per app. iApp's haptic discipline rule.
+8 patterns per app. Kindling's haptic discipline rule.
 
 ## Hard cap
 

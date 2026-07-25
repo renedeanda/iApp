@@ -1,4 +1,4 @@
-// SOURCE: iApp template
+// SOURCE: Kindling template
 // Dev-premium-toggle debug menu reached via 7-tap from AboutView. Spec in docs/HOUSEKEEPING.md.
 
 import SwiftUI

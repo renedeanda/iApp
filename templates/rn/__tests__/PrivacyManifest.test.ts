@@ -1,4 +1,4 @@
-// SOURCE: iApp template — RN counterpart to
+// SOURCE: Kindling template — RN counterpart to
 //         swift template's PrivacyManifestTests.swift
 //
 // Verifies app.json's privacyManifests block declares every

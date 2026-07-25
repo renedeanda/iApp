@@ -142,7 +142,7 @@ Means Xcode Cloud Just Works without checking the `.xcodeproj` into git.
 4. `xcodebuild test`.
 5. (Optional) Upload dSYMs to TelemetryDeck.
 
-`.github/workflows/recipe-accuracy.yml` (iApp repo only): nightly check that every source-path reference in `recipes/**/*.md` still resolves.
+`.github/workflows/recipe-accuracy.yml` (Kindling repo only): nightly check that every source-path reference in `recipes/**/*.md` still resolves.
 
 `.github/workflows/release.yml` — commented template for tag → TestFlight via Xcode Cloud or fastlane.
 

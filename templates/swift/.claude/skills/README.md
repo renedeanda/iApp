@@ -18,10 +18,10 @@ Eleven skills ship with this template — the same core set the RN template ship
 
 ## Provenance
 
-Each `SKILL.md` carries a `> SOURCE:` line noting the iApp-root skill it was adapted from. When iApp's master skill evolves, run `sync-from-portfolio` from iApp to propagate the change — children never silently inherit template changes.
+Each `SKILL.md` carries a `> SOURCE:` line noting the Kindling-root skill it was adapted from. When Kindling's master skill evolves, run `sync-from-portfolio` from Kindling to propagate the change — children never silently inherit template changes.
 
 ## What's NOT here (and why)
 
-The wizard-only skills (`new-app`, `pick-*`, `design-icon`, `positioning-check`, `reliability-check`, `sync-from-portfolio`, `validate-template`) live in the iApp root only — they only make sense before this app exists.
+The wizard-only skills (`new-app`, `pick-*`, `design-icon`, `positioning-check`, `reliability-check`, `sync-from-portfolio`, `validate-template`) live in the Kindling root only — they only make sense before this app exists.
 
 The fuller Pass-B Swift kit (`theme-check`, `a11y-audit`, `platform-check`, `l10n-audit`, `pbxproj-check`, `design-audit`, `add-widget`, `plan-status`, `deferred-check`) is deferred to a later harvest pass — their categories are covered at a coarser grain by `review` until the standalone RN-and-Swift-flavored implementations are proven in a child app. This matches the RN template's skill scope, so the two stay consistent.

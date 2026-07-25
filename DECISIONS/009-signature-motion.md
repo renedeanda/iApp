@@ -2,18 +2,18 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
 Every well-made app has *one* signature motion that distinguishes it (Liquid Glass under floating bars; a concentric ring bloom on completion; hard-cut sheet transitions). Picking the motion deliberately — before tech, before palette — forces the app to commit to a felt-quality.
 
-iApp has no UI. But the ADR exists as a worked example for child apps.
+Kindling has no UI. But the ADR exists as a worked example for child apps.
 
 ## Decision
 
-**iApp has no signature motion** (no UI to apply motion to).
+**Kindling has no signature motion** (no UI to apply motion to).
 
 For child apps, this ADR is one of the **six design-first checkpoints** (CLAUDE.md taste rule 3) that precede tech. Shape:
 
@@ -70,7 +70,7 @@ Claimed motions in portfolio/PORTFOLIO.md must be REFERENCED here, not duplicate
 
 ## Options considered
 
-For iApp itself, "no motion" was the only option. The interesting decision is the **structure of the ADR for child apps**, not iApp's own answer.
+For Kindling itself, "no motion" was the only option. The interesting decision is the **structure of the ADR for child apps**, not Kindling's own answer.
 
 For that structure:
 

@@ -1,4 +1,4 @@
-// SOURCE: iApp template — RN counterpart to
+// SOURCE: Kindling template — RN counterpart to
 //         swift template's LocalizationParityTests.swift
 //
 // Verifies every tier-1 locale JSON has exactly the same key set as

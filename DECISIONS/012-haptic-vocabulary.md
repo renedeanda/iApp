@@ -2,18 +2,18 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
 Per CLAUDE.md taste rule 2, and a lesson learned in production: haptics are bandwidth-limited. A shipped app carried 24 patterns; after 8, users stopped distinguishing them. Every new app picks **3 starter haptics** and earns more via `/earn-haptic` (soft cap 8).
 
-iApp has no UI = no haptics. ADR exists as a worked example.
+Kindling has no UI = no haptics. ADR exists as a worked example.
 
 ## Decision
 
-**iApp has no haptics** (no UI).
+**Kindling has no haptics** (no UI).
 
 The Swift template ships:
 - `Seed/Utilities/_HapticVocabulary/HapticPatterns.full.swift` — the full 24-pattern vocabulary distilled from a shipped production app. Reference, not active.
@@ -67,7 +67,7 @@ Adding a 4th haptic requires:
 
 ## Options considered
 
-For iApp itself: not applicable.
+For Kindling itself: not applicable.
 
 For the *shape* of child app ADR 012:
 

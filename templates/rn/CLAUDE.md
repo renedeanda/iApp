@@ -15,7 +15,7 @@
 
 ## Palette
 
-The bespoke departure from the **{{PALETTE_SEED}}** seed (per the iApp repo's `portfolio/PALETTE_CATALOG.md`). Full hex tokens live in [`theme/AppTheme.ts`](theme/AppTheme.ts); rationale + ΔE2000 matrix in [`DECISIONS/002-palette.md`](DECISIONS/002-palette.md).
+The bespoke departure from the **{{PALETTE_SEED}}** seed (per the Kindling repo's `portfolio/PALETTE_CATALOG.md`). Full hex tokens live in [`theme/AppTheme.ts`](theme/AppTheme.ts); rationale + ΔE2000 matrix in [`DECISIONS/002-palette.md`](DECISIONS/002-palette.md).
 
 {{PALETTE_TOKENS}}
 
@@ -63,9 +63,9 @@ If `DECISIONS/008-data-model-and-sync.md` says yes:
 
 Always check `NotificationService.pendingCount()` before scheduling more — iOS caps at 64. Eight slots of headroom is the safe floor.
 
-## Taste rules — inherited from iApp
+## Taste rules — inherited from Kindling
 
-(See the iApp repo's root `CLAUDE.md` for the canonical seven rules.)
+(See the Kindling repo's root `CLAUDE.md` for the canonical seven rules.)
 
 1. **Services default off.** Every service ships dormant in `src/services/_Disabled/` (or commented-imported in `app/_layout.tsx`). Wizard graduates per `DECISIONS/004-native-feature-checklist.md`.
 2. **Haptics are earned.** 3 starter; 4th+ via `/earn-haptic`. Soft cap 8.
@@ -73,7 +73,7 @@ Always check `NotificationService.pendingCount()` before scheduling more — iOS
 4. **Visual identity novelty is a feature.** This app's `{{VISUAL_IDENTITY}}` is the choice.
 5. **Palettes are departure points.** Final hex tokens in `theme/AppTheme.ts`.
 6. **Sleep is required** before major decisions.
-7. **NOT_FOR rejects manipulative patterns, not engagement.** Read the iApp repo's `docs/NOT_FOR.md` AND `docs/WHATS_ALLOWED.md`.
+7. **NOT_FOR rejects manipulative patterns, not engagement.** Read the Kindling repo's `docs/NOT_FOR.md` AND `docs/WHATS_ALLOWED.md`.
 
 ## Code-quality rules
 
@@ -83,7 +83,7 @@ Always check `NotificationService.pendingCount()` before scheduling more — iOS
 - **Components ≤ 250 lines.** Hard limit; extract subviews.
 - **One Context per concern.** ThemeContext doesn't own subscription state; a SubscriptionContext does.
 - **No new third-party deps without an ADR.** Pre-approved: anything `expo-*`, `@react-navigation/*`, `react-native-iap`, `react-native-reanimated`, `react-native-gesture-handler`, `react-native-safe-area-context`, `react-native-screens`, `i18next`, `react-i18next`. Everything else needs `DECISIONS/NNN-dependency-<name>.md`.
-- **Reliability discipline.** Before harvesting a service from your portfolio, check the iApp repo's `portfolio/REUSE_INDEX.md`. This template's `modules/icloud-sync/` is the gold-standard for iCloud sync; `src/services/NotificationService.ts` for rolling-window notifications.
+- **Reliability discipline.** Before harvesting a service from your portfolio, check the Kindling repo's `portfolio/REUSE_INDEX.md`. This template's `modules/icloud-sync/` is the gold-standard for iCloud sync; `src/services/NotificationService.ts` for rolling-window notifications.
 
 ## Common tasks (slash commands)
 
@@ -120,7 +120,7 @@ Each command edits `app.json`'s `version` + iOS `buildNumber` + Android `version
 
 1. **Mission** — can you state it in one sentence?
 2. **Restraint** — does this feature earn its weight?
-3. **Reliability** — is the source you're harvesting from production-grade? (See the iApp repo's `portfolio/REUSE_INDEX.md`.)
+3. **Reliability** — is the source you're harvesting from production-grade? (See the Kindling repo's `portfolio/REUSE_INDEX.md`.)
 4. **Taste** — would Jobs/Ive approve of the seam being invisible?
 5. **Sleep** — have you slept on the decision?
 

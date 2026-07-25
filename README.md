@@ -1,8 +1,8 @@
-# iApp
+# Kindling
 
 **An open-source planning hub + starter scaffolds for shipping polished iOS apps quickly — design-first, AI-first, covering both Swift and React Native.**
 
-iApp is the system behind a real portfolio of shipped App Store apps, generalized so anyone can use it. It is two things in one repo:
+Kindling is the system behind a real portfolio of shipped App Store apps, generalized so anyone can use it. It is two things in one repo:
 
 1. **A planning brain.** Decision-doc templates, a palette catalog, a monetization ladder, a reuse index, and a changelog of hard-won lessons — the discipline that keeps a growing portfolio of apps coherent instead of chaotic.
 2. **Two runnable starter templates.** A Swift/SwiftUI scaffold and an Expo/React Native scaffold, each pre-wired with production-grade services — CloudKit sync, StoreKit 2, App Intents, widgets, Live Activities, Apple Intelligence, notifications, haptics, analytics, biometrics — all shipped **off by default** so each new app opts in deliberately.
@@ -13,7 +13,7 @@ It is **AI-first**: open this repo in a [Claude Code](https://claude.com/claude-
 
 ## Table of contents
 
-- [Why iApp exists](#why-iapp-exists)
+- [Why Kindling exists](#why-kindling-exists)
 - [What makes it different](#what-makes-it-different)
 - [Quick tour of the repo](#quick-tour-of-the-repo)
 - [Complete beginner? Start here](#complete-beginner-start-here)
@@ -33,14 +33,14 @@ It is **AI-first**: open this repo in a [Claude Code](https://claude.com/claude-
 
 ---
 
-## Why iApp exists
+## Why Kindling exists
 
 Most app ideas die in one of two ways:
 
 - **Death by blank project.** You open Xcode, stare at `ContentView.swift`, wire up the same settings screen, paywall, and dark mode you've built five times before, and run out of steam before the interesting part.
 - **Death by drift.** Your second app forks your first, your third forks your second, and soon the same `SubscriptionManager` exists in four mildly-different broken versions and none of your apps feel related.
 
-iApp fixes both. Every new app starts from the same thick, tested scaffold — and every new app goes through the same short set of *design* decisions first, so it ships with a mission, a distinct visual identity, and restraint built in.
+Kindling fixes both. Every new app starts from the same thick, tested scaffold — and every new app goes through the same short set of *design* decisions first, so it ships with a mission, a distinct visual identity, and restraint built in.
 
 ## What makes it different
 
@@ -55,7 +55,7 @@ iApp fixes both. Every new app starts from the same thick, tested scaffold — a
 ## Quick tour of the repo
 
 ```
-iApp/
+Kindling/
 ├── CLAUDE.md            # the constitution — taste rules, design philosophy, code rules
 ├── DECISIONS/           # numbered ADR (decision doc) library, copied into every child app
 ├── portfolio/           # YOUR portfolio's memory (starter state: fill in as you ship)
@@ -106,8 +106,8 @@ You do **not** need: a paid developer account to learn, an iPhone (the Simulator
 
 1. **Clone this repo** (install [git](https://git-scm.com) if you don't have it):
    ```sh
-   git clone https://github.com/<owner>/iApp.git
-   cd iApp
+   git clone https://github.com/<owner>/Kindling.git
+   cd Kindling
    ```
 2. **Pick a lane.** If you want to learn Apple's native stack (recommended if you only care about iOS), take the Swift template. If you know some JavaScript or want Android later, take the React Native template. See [Choosing Swift vs React Native](#choosing-swift-vs-react-native).
 3. **Make the Swift template run:**
@@ -129,7 +129,7 @@ You do **not** need: a paid developer account to learn, an iPhone (the Simulator
 
 ### Learning the underlying platforms
 
-iApp gives you a working app to *modify*, which is the fastest way to learn — but pair it with real fundamentals:
+Kindling gives you a working app to *modify*, which is the fastest way to learn — but pair it with real fundamentals:
 
 - **Swift path:** Apple's free [Develop in Swift](https://developer.apple.com/tutorials/develop-in-swift) tutorials, then [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) (free, community favorite).
 - **RN path:** the official [React Native docs](https://reactnative.dev/docs/getting-started) and [Expo docs](https://docs.expo.dev) — Expo's own tutorial is genuinely good.
@@ -141,10 +141,14 @@ iApp gives you a working app to *modify*, which is the fastest way to learn — 
 
 This is the intended flow. You need [Claude Code](https://claude.com/claude-code) (CLI, desktop, or web).
 
+First, set up the two-repo layout — Kindling is the workshop; **your app gets its own private repo beside it**, so your code never lives in a clone of this one (full rationale: [docs/YOUR_OWN_REPO.md](docs/YOUR_OWN_REPO.md)):
+
 ```sh
-git clone <this repo>
-cd iApp
-claude   # open a Claude Code session in the repo
+mkdir -p ~/code && cd ~/code
+git clone <this repo> kindling
+git clone <your-blank-private-repo>   # create it on GitHub first: private, README only
+cd kindling
+claude   # open the session in Kindling — the wizard renders your app into the sibling folder
 ```
 
 Then, inside the session:
@@ -240,7 +244,7 @@ Each recipe cites its gold-standard source — usually a path inside this repo's
 
 ## The portfolio layer
 
-This is the part most starter kits don't have: iApp assumes you'll ship **more than one app**, and gives your portfolio a memory.
+This is the part most starter kits don't have: Kindling assumes you'll ship **more than one app**, and gives your portfolio a memory.
 
 - [`portfolio/PORTFOLIO.md`](portfolio/PORTFOLIO.md) — your shipped apps: mission, tech, identity, claimed palette, claimed motion. Skills read this to keep new apps *distinct* (no palette clashes, no mission overlaps, no identity monoculture).
 - [`portfolio/MONETIZATION_MATRIX.md`](portfolio/MONETIZATION_MATRIX.md) — a 5-tier pricing ladder (pure-free gift → small lifetime IAP → standard IAP → subscription with lifetime escape → premium upfront) with the market data behind it, and a portfolio-mix check so you don't end up with five subscriptions and no funnel.
@@ -251,7 +255,7 @@ When one of your apps improves on a template pattern, the `sync-from-portfolio` 
 
 ## The philosophy: what we don't build
 
-iApp is opinionated. The templates and wizard will actively resist:
+Kindling is opinionated. The templates and wizard will actively resist:
 
 - Ads and ad-mediation SDKs
 - Infinite scroll and engagement-maximizing notification strategies
@@ -307,7 +311,7 @@ The Swift template assumes current-generation Xcode and a recent iOS minimum; th
 
 ## Built with this system
 
-This isn't theoretical: iApp was distilled from **[Delightful Apps](https://delightfulapps.com)** — a real indie portfolio of shipped native and React Native iOS apps whose services, taste rules, and paid-for lessons became these templates. Apps built by the community live in **[SHOWCASE.md](SHOWCASE.md)** — when you ship, add yours.
+This isn't theoretical: Kindling was distilled from **[Delightful Apps](https://delightfulapps.com)** — a real indie portfolio of shipped native and React Native iOS apps whose services, taste rules, and paid-for lessons became these templates. Apps built by the community live in **[SHOWCASE.md](SHOWCASE.md)** — when you ship, add yours.
 
 ## Contributing
 

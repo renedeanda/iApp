@@ -9,7 +9,7 @@ type Props = {
 };
 
 /**
- * Generic empty state. iApp UX rule: every list/collection
+ * Generic empty state. Kindling UX rule: every list/collection
  * surface ships an empty state with a CTA. This component is the
  * default shape — customize colors / icons via the theme tokens.
  */

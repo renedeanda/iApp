@@ -3,7 +3,7 @@ name: earn-haptic
 description: Unlock a 4th, 5th, 6th, 7th, or 8th haptic pattern in this Swift app. Moves the pattern from the _HapticVocabulary/ reference into the compiled set and writes an addendum to DECISIONS/012-haptic-vocabulary.md. Soft cap 8; hard cap 10.
 ---
 
-> SOURCE: pattern adapted from the iApp root skill `earn-haptic`.
+> SOURCE: pattern adapted from the Kindling root skill `earn-haptic`.
 
 # /earn-haptic
 
@@ -23,7 +23,7 @@ Add a haptic pattern beyond the 3 starters. The full 24-pattern vocabulary (dist
 
 ## Soft cap 8 · hard cap 10
 
-iApp's haptic discipline. Beyond 8, the addendum must justify hard. Beyond 10, refuse.
+Kindling's haptic discipline. Beyond 8, the addendum must justify hard. Beyond 10, refuse.
 
 ## Steps
 

@@ -2,18 +2,18 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
 Per docs/VISUAL_IDENTITIES.md + CLAUDE.md taste rule 4: visual identity is novelty-encouraged. The wizard offers eight canonical identities (brutalist / glassmorphic / warm-minimal / typographic-led / hand-drawn / maximalist-collage / kinetic-type / monochrome-luxe). Templates default to warm-minimal but the default is a starting point, not a destination.
 
-iApp is a docs repo. Identity still matters — the felt-quality of browsing the README + docs.
+Kindling is a docs repo. Identity still matters — the felt-quality of browsing the README + docs.
 
 ## Decision
 
-**iApp's visual identity is *infrastructural-clean*** — which isn't one of the eight, and that's deliberate. The eight are for *products*; iApp is *infrastructure*.
+**Kindling's visual identity is *infrastructural-clean*** — which isn't one of the eight, and that's deliberate. The eight are for *products*; Kindling is *infrastructure*.
 
 Concretely, "infrastructural-clean" means:
 
@@ -23,22 +23,22 @@ Concretely, "infrastructural-clean" means:
 - **One-sentence declarations over multi-paragraph framings.** Mission is one sentence. Anti-list is bullets. ADRs cap sections deliberately.
 - **No decorative visuals.** No banners, no animated SVGs, no GIF demos. The text is the product.
 
-If iApp ever publishes a GitHub Pages site (deferred per ADR 010), that site uses the template's warm-minimal palette — matching what the scaffold ships, not claiming a unique identity.
+If Kindling ever publishes a GitHub Pages site (deferred per ADR 010), that site uses the template's warm-minimal palette — matching what the scaffold ships, not claiming a unique identity.
 
 ### Why not one of the eight
 
-| Identity | Why iApp isn't this |
+| Identity | Why Kindling isn't this |
 |---|---|
-| Brutalist | Closest fit (utilitarian, type-led), but iApp doesn't reject softness as a *principle* — it just doesn't have UI to apply softness to. |
+| Brutalist | Closest fit (utilitarian, type-led), but Kindling doesn't reject softness as a *principle* — it just doesn't have UI to apply softness to. |
 | Glassmorphic | No chrome to apply Liquid Glass to. |
-| Warm-minimal | Borrowed for hypothetical GitHub Pages; not iApp's primary identity. |
-| Typographic-led | Tempting (docs are text) but typographic-led is about *expressive* typography (serif drama, light/heavy contrast). iApp's text is functional, not expressive. |
+| Warm-minimal | Borrowed for hypothetical GitHub Pages; not Kindling's primary identity. |
+| Typographic-led | Tempting (docs are text) but typographic-led is about *expressive* typography (serif drama, light/heavy contrast). Kindling's text is functional, not expressive. |
 | Hand-drawn | Wrong audience. |
 | Maximalist-collage | Wrong everything. |
 | Kinetic-type | No type animation; this is static Markdown. |
 | Monochrome-luxe | Wrong audience (developers don't pay $50 for utility infrastructure). |
 
-The eight identities are validated by *shipping product apps with the identity*. iApp is not a product. Forcing one of the eight would be cosmetic.
+The eight identities are validated by *shipping product apps with the identity*. Kindling is not a product. Forcing one of the eight would be cosmetic.
 
 ### Child app ADR 015 shape
 
@@ -128,18 +128,18 @@ Mission always wins. The mix is a tie-breaker.
 
 ## Options considered
 
-For iApp itself:
+For Kindling itself:
 
 - **Force into brutalist** — rejected. Brutalist belongs to product apps that ship it. Claiming it for infrastructure dilutes the proof.
-- **Force into warm-minimal** — rejected. Warm-minimal is the template default for *apps*; iApp isn't an app.
+- **Force into warm-minimal** — rejected. Warm-minimal is the template default for *apps*; Kindling isn't an app.
 - **Force into typographic-led** — rejected (see table above).
-- **Claim "infrastructural-clean" as a ninth identity** — rejected. Adding to VISUAL_IDENTITIES.md requires a shipped *product* app as proof. iApp is infrastructure, doesn't qualify. The honest answer is "this identity is for products only; iApp doesn't claim one."
+- **Claim "infrastructural-clean" as a ninth identity** — rejected. Adding to VISUAL_IDENTITIES.md requires a shipped *product* app as proof. Kindling is infrastructure, doesn't qualify. The honest answer is "this identity is for products only; Kindling doesn't claim one."
 
 ## Consequences
 
 - **Unlocks:** the eight-identity list stays clean — only product apps with shipped proof appear there.
-- **Forecloses:** iApp claiming visual primacy. Cleanly demarcates "this is infrastructure, not a product."
-- **Cost to revisit:** small. If iApp ever becomes a product (unlikely), this ADR gets superseded.
+- **Forecloses:** Kindling claiming visual primacy. Cleanly demarcates "this is infrastructure, not a product."
+- **Cost to revisit:** small. If Kindling ever becomes a product (unlikely), this ADR gets superseded.
 
 ## Cross-references
 

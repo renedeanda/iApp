@@ -2,8 +2,8 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
@@ -11,7 +11,7 @@ Localization decisions made late are expensive. Every UI string baked in English
 
 ## Decision
 
-**iApp repo: English-only.** Docs, ADRs, CLAUDE.md, recipes — all in English. The audience is developers reading code + docs; localizing docs is a different problem than localizing apps and outside iApp's scope.
+**Kindling repo: English-only.** Docs, ADRs, CLAUDE.md, recipes — all in English. The audience is developers reading code + docs; localizing docs is a different problem than localizing apps and outside Kindling's scope.
 
 **Portfolio-wide tier-1 locale set** (which every child app's template ships with day 1):
 
@@ -60,7 +60,7 @@ Translation workflow:
 
 - **Just English at launch, localize later** — rejected. A pattern lived through repeatedly: localizing late means re-extracting strings with lost context. Day-1 localization is harder for the first sprint, much cheaper over the app's life.
 - **English + Spanish only** — rejected. Tier-1 means broadly tier-1 to App Store reach, not pick-favorites. The 7-locale set covers ~85% of paid App Store revenue worldwide.
-- **Localize iApp docs themselves** — rejected. Audience is English-speaking developers. Localizing docs is a different discipline (technical writing translation, glossary management); out of scope.
+- **Localize Kindling docs themselves** — rejected. Audience is English-speaking developers. Localizing docs is a different discipline (technical writing translation, glossary management); out of scope.
 
 ## Consequences
 

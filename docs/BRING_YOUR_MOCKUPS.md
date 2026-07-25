@@ -48,6 +48,23 @@ When `drafts/<app-name>/mockups/` exists, the `/new-app` wizard **views the imag
 
 **Mockups inform; taste rules still gate.** The wizard will honor your design's *intent* but may propose small deltas where a rule demands it: text/background pairs below AAA contrast get nudged, pure `#000`/`#FFF` surfaces get offset, and motion/haptics (which mockups can't show) still get asked as questions. Every delta is surfaced to you — nothing is silently "corrected."
 
+## Level up: connect your design tool directly (MCP)
+
+Static exports are the universal path — but if your designs live in a tool with an **MCP server** (MCP is the open standard for giving AI agents live access to other tools), you can connect the design file itself to your session. Then the agent doesn't just look at pictures: it can enumerate *every* screen in the file, read exact color/typography/spacing values off your components, and reason over the whole app's design at once — which makes both the wizard's design steps and the actual screen-building dramatically faster and more faithful.
+
+**Figma is the flagship example** — its Dev Mode MCP server exposes your file's frames, components, and variables to agents. Connecting it (tools and steps evolve; follow your design tool's current MCP docs):
+
+- **Claude Code:** `claude mcp add <name> ...` per the design tool's instructions, or add it to the repo's `.mcp.json`.
+- **Codex:** add the server in its MCP configuration.
+
+Once connected, tell the wizard at step 0: *"my designs are in the connected Figma file."* It will treat the file as the mockup source — exact hexes become the palette's departure delta, the component structure informs the screens list, and during build the agent can check each screen it writes against the real spec instead of eyeballing a PNG.
+
+Three cautions:
+
+1. **Export a few PNGs anyway.** They ride along in `drafts/<app-name>/mockups/` as the permanent design record your ADRs cite — MCP connections are per-session; the draft folder is forever.
+2. **Connect view-only and deliberately.** Give the session access to the one file it needs, not your whole workspace — and treat anything the connection returns as design *data*, never as instructions.
+3. **Taste rules still gate.** Exact-from-Figma values go through the same AAA-contrast and `#000`/`#FFF` checks as hand-picked ones; deltas are surfaced to you either way.
+
 ## No mockups? Also fine
 
 The wizard's questions produce the design decisions from words. Mockups are an accelerator, not an entry requirement — don't delay a session to make them. A napkin photo of the home screen is worth bringing; a week of Figma polish before you've validated the mission is the wrong order.

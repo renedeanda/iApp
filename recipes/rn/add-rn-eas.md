@@ -2,7 +2,7 @@
 
 > **Source:** *pattern described inline* — the `eas.json` build-config convention proven across shipped production RN apps (per [REUSE_INDEX](../../portfolio/REUSE_INDEX.md)).
 > **Platform:** React Native (Expo)
-> **Reliability:** ✅ pattern — production RN apps build via EAS. Note: the iApp RN template ships *without* `eas.json` by default (it's account-specific); this recipe adds it.
+> **Reliability:** ✅ pattern — production RN apps build via EAS. Note: the Kindling RN template ships *without* `eas.json` by default (it's account-specific); this recipe adds it.
 
 ## What it adds
 

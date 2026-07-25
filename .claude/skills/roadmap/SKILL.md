@@ -1,17 +1,17 @@
 ---
 name: roadmap
-description: Session starter — reads CLAUDE.md, the active build phase, recent git history, and open PRs. Outputs a prioritized work list for the current session. Use as the first thing in a fresh iApp session.
+description: Session starter — reads CLAUDE.md, the active build phase, recent git history, and open PRs. Outputs a prioritized work list for the current session. Use as the first thing in a fresh Kindling session.
 ---
 
 > SOURCE: pattern proven in a shipped production app's skill set
 
 # /roadmap
 
-Reconstruct what to work on next in a fresh iApp session. Output is a short prioritized list with one-tap kick-off suggestions.
+Reconstruct what to work on next in a fresh Kindling session. Output is a short prioritized list with one-tap kick-off suggestions.
 
 ## When to use
 
-- Fresh session in the iApp repo.
+- Fresh session in the Kindling repo.
 - After a long gap and you need to remember what phase is in flight.
 - Before deciding to start `/new-app` vs. continuing internal Phase work.
 
@@ -36,7 +36,7 @@ Reconstruct what to work on next in a fresh iApp session. Output is a short prio
 ## Output shape
 
 ```
-iApp status — <date>
+Kindling status — <date>
 
 Current phase: <active phase from the plan doc>
 Recent commits:

@@ -1,6 +1,6 @@
-# Contributing to iApp
+# Contributing to Kindling
 
-Thanks for wanting to make iApp better. Contributions take three forms:
+Thanks for wanting to make Kindling better. Contributions take three forms:
 
 1. **From one of your apps back to the template** — sync a proven improvement upstream.
 2. **From a new lesson to the docs** — add a learning, a delight pattern, an identity, a recipe.

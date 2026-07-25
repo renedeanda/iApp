@@ -3,7 +3,7 @@ name: test
 description: Run the jest test suite. Optionally filter by file name or test name. Reports pass/fail with structured output and suggests fixes for failures. Use after every non-trivial change.
 ---
 
-> SOURCE: pattern adapted from `iApp:.claude/skills/phase` (the test subset).
+> SOURCE: pattern adapted from `Kindling:.claude/skills/phase` (the test subset).
 
 # /test
 

@@ -19,7 +19,7 @@
 # Requires macOS + Xcode + xcodegen. On a non-macOS host (Linux CI,
 # sandboxes) it exits 0 with a SKIPPED note — the static-shape checks
 # that CAN run on Linux live in the `verify-recipes` job and in
-# validate-template's iApp-specific checks; the compile/test
+# validate-template's Kindling-specific checks; the compile/test
 # loop genuinely needs a Mac.
 
 set -euo pipefail

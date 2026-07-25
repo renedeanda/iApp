@@ -1,4 +1,4 @@
-// SOURCE: iApp template — verifies the rolling-window math in
+// SOURCE: Kindling template — verifies the rolling-window math in
 //         NotificationService stays inside iOS's 64-notification cap
 //         across realistic reminder counts.
 

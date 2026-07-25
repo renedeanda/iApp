@@ -2,11 +2,11 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-19
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 - **Wizard step:** /new-app step 0 — Spec intake
 
-> iApp's own spec, written retroactively as the worked example child apps copy from. The numbered ADRs 000–015 were drafted before this template existed; 016 is the front-door spec the wizard will elicit *first* for every future app. For iApp itself, the answers are derived from [README.md](../README.md), [000-mission.md](000-mission.md), and [013-anti-list.md](013-anti-list.md).
+> Kindling's own spec, written retroactively as the worked example child apps copy from. The numbered ADRs 000–015 were drafted before this template existed; 016 is the front-door spec the wizard will elicit *first* for every future app. For Kindling itself, the answers are derived from [README.md](../README.md), [000-mission.md](000-mission.md), and [013-anti-list.md](013-anti-list.md).
 
 ## 1. Problem
 
@@ -43,14 +43,14 @@ Within six months of adopting the wizard: at least two apps have shipped via the
 ## 5. Out-of-scope
 
 - **Not a SaaS.** No backend, no signup, no per-user state. Repeated from 013 because the temptation to add "the wizard remembers you" recurs every few months — it stays out.
-- **Not multi-tenant.** iApp is one portfolio's brain at a time. Fork it and make it yours; it isn't *built* to serve N portfolios from one instance.
+- **Not multi-tenant.** Kindling is one portfolio's brain at a time. Fork it and make it yours; it isn't *built* to serve N portfolios from one instance.
 - **No web UI.** Slash commands and ADRs only. The day there's a "wizard frontend" is the day it stops being AI-first.
-- **No telemetry on the wizard itself.** Child apps ship TelemetryDeck; iApp does not phone home. The maintainer reads the git log to understand usage.
+- **No telemetry on the wizard itself.** Child apps ship TelemetryDeck; Kindling does not phone home. The maintainer reads the git log to understand usage.
 - **No supporting third-party AI APIs.** Foundation Models for the on-device gating pattern, Claude as the wizard runner. No OpenAI/Cohere/etc. — anti-vendor-sprawl.
 
 ## 6. Anti-vision
 
-iApp is **not** a published library-with-a-release-cycle, **not** a SaaS, **not** a multi-tenant parameterized template, and **not** something with a marketing site. The drift mode to fear: seeing the wizard work end-to-end and thinking "let's add a CLI installer, a docs site, a Discord." The day iApp has a Discord is the day it has stopped serving the work and started serving an audience. The mission is the portfolio. The MIT license and public repo are for honesty and reuse — fork it, don't wait for a roadmap.
+Kindling is **not** a published library-with-a-release-cycle, **not** a SaaS, **not** a multi-tenant parameterized template, and **not** something with a marketing site. The drift mode to fear: seeing the wizard work end-to-end and thinking "let's add a CLI installer, a docs site, a Discord." The day Kindling has a Discord is the day it has stopped serving the work and started serving an audience. The mission is the portfolio. The MIT license and public repo are for honesty and reuse — fork it, don't wait for a roadmap.
 
 ## Cross-references
 

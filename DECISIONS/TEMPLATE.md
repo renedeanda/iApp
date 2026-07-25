@@ -4,7 +4,7 @@
 
 ADRs in this folder are **the receipts for taste choices**. Each one captures what the choice was, what we considered, and why we picked what we picked. Never delete an ADR — supersede it with a later-numbered one if a decision changes.
 
-iApp's own ADRs (000–016 in this folder) are also the **worked examples** every child app starts from. The `/new-app --commit` skill copies the template into each new app's repo with the values substituted.
+Kindling's own ADRs (000–016 in this folder) are also the **worked examples** every child app starts from. The `/new-app --commit` skill copies the template into each new app's repo with the values substituted.
 
 ---
 
@@ -15,7 +15,7 @@ iApp's own ADRs (000–016 in this folder) are also the **worked examples** ever
 
 - **Status:** Accepted | Superseded by NNN | Draft
 - **Date:** YYYY-MM-DD
-- **App:** <app name> | iApp
+- **App:** <app name> | Kindling
 - **Authors:** <who decided>
 - **Wizard step (if applicable):** /new-app step N — <step name>
 ```
@@ -112,7 +112,7 @@ Things ruled out by this decision. Short list, no prose.
 
 `NNN-<kebab-slug>.md` where:
 
-- `NNN` is 3 digits, zero-padded. The iApp canonical set is 000–016. Children may add 017+ for app-specific decisions.
+- `NNN` is 3 digits, zero-padded. The Kindling canonical set is 000–016. Children may add 017+ for app-specific decisions.
 - `<kebab-slug>` is short, descriptive, lowercase, hyphen-separated. Aim for ≤4 words.
 
 Never reuse a number. If 002 is superseded, the new ADR is 017 (or later); 002 stays in place with `Status: Superseded by 017`.

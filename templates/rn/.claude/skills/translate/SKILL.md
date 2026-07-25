@@ -3,7 +3,7 @@ name: translate
 description: Translate missing localization keys for a specific tier-1 language. Diffs en.json against the target locale, translates only the missing values, validates format specifiers (`{{var}}` and `%@`/`%lld` parity), and writes back. Use before App Store submission and any time new keys land in en.
 ---
 
-> SOURCE: pattern adapted from `iApp:.claude/skills/translate` (originally for `Localizable.xcstrings`); retargeted to flat-JSON i18next.
+> SOURCE: pattern adapted from `Kindling:.claude/skills/translate` (originally for `Localizable.xcstrings`); retargeted to flat-JSON i18next.
 
 # /translate
 

@@ -2,8 +2,8 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp (portfolio-wide strategy)
-- **Authors:** iApp maintainers
+- **App:** Kindling (portfolio-wide strategy)
+- **Authors:** Kindling maintainers
 - **Supersedes:** prior draft (misframing) + first portfolio-strategy rewrite (lacked tier granularity)
 
 ## Context
@@ -122,9 +122,9 @@ Every Swift template ships a cross-app contract for testing premium features in 
 
 This pattern is documented in [docs/HOUSEKEEPING.md](../docs/HOUSEKEEPING.md) and as a recipe in `recipes/swift/dev-premium-toggle.md`. The dev easter egg is explicitly *not* a delight moment — see [docs/DELIGHT_REEL.md](../docs/DELIGHT_REEL.md) "Forbidden delights" clarification.
 
-## iApp's own status
+## Kindling's own status
 
-**N/A.** iApp is infrastructure for a portfolio, not a portfolio app. It has no App Store presence and no shipping channel that takes money. The repo is MIT-licensed (see [LICENSE](../LICENSE)). iApp doesn't participate in any monetization mix.
+**N/A.** Kindling is infrastructure for a portfolio, not a portfolio app. It has no App Store presence and no shipping channel that takes money. The repo is MIT-licensed (see [LICENSE](../LICENSE)). Kindling doesn't participate in any monetization mix.
 
 ## Options considered
 
@@ -139,7 +139,7 @@ This pattern is documented in [docs/HOUSEKEEPING.md](../docs/HOUSEKEEPING.md) an
 
 - **Unlocks:** `/pick-monetization` becomes a 5-tier pre-positioner. New apps land in a likely tier before the user is asked. Strategy is grounded in citable data, not vibes.
 - **Forecloses:** monetization drift toward whatever's trendy. Every pricing choice is now also a tier-fit choice + portfolio-mix choice.
-- **Cost to revisit:** small. Mix evolves with each app shipped; the current-portfolio table in MONETIZATION_MATRIX.md refreshes with each `/new-app --commit` PR back to iApp.
+- **Cost to revisit:** small. Mix evolves with each app shipped; the current-portfolio table in MONETIZATION_MATRIX.md refreshes with each `/new-app --commit` PR back to Kindling.
 
 ## Cross-references
 
@@ -149,4 +149,4 @@ This pattern is documented in [docs/HOUSEKEEPING.md](../docs/HOUSEKEEPING.md) an
 - [docs/HOUSEKEEPING.md](../docs/HOUSEKEEPING.md) — Dev/Debug Premium Toggle template pattern
 - [ADR 001](001-tech-choice.md) — parallel portfolio tech-mix rationale (Swift native + RN deliberate diversification)
 - [ADR 015](015-visual-identity.md) — parallel portfolio-diversity logic for visual identity
-- [LICENSE](../LICENSE) — iApp's MIT license (its non-participation in any monetization mix)
+- [LICENSE](../LICENSE) — Kindling's MIT license (its non-participation in any monetization mix)

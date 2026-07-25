@@ -3,7 +3,7 @@ name: simplify
 description: Review changed code/docs for reuse, quality, and efficiency. Flags duplication, over-abstraction, and rules that would benefit from cross-referencing instead of restating. Fixes the obvious cuts.
 ---
 
-> SOURCE: universal simplify skill, adapted for iApp's docs-and-templates frame
+> SOURCE: universal simplify skill, adapted for Kindling's docs-and-templates frame
 
 # /simplify
 

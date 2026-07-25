@@ -3,7 +3,7 @@ name: generate-icons
 description: Regenerate the AppIcon.appiconset (plus splash, notification, and store icons) from the SVG source at Seed/Resources/icon_master.svg. Use when the user wants to update, regenerate, or modify app icons.
 ---
 
-> SOURCE: pattern adapted from the iApp root skill `generate-icons`.
+> SOURCE: pattern adapted from the Kindling root skill `generate-icons`.
 
 # /generate-icons
 

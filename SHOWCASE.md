@@ -1,6 +1,6 @@
 # Showcase — Built With This System
 
-Apps shipped from iApp's templates and discipline — or built with its approach. Add yours; seeing real shipped apps is what convinces the next person that theirs is possible.
+Apps shipped from Kindling's templates and discipline — or built with its approach. Add yours; seeing real shipped apps is what convinces the next person that theirs is possible.
 
 ## The founding portfolio
 

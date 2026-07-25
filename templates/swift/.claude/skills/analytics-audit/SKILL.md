@@ -5,7 +5,7 @@ argument-hint: "[scope|repo-path] [--fix]"
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 
-> SOURCE: portfolio standard from the iApp root skill `analytics-audit`; safe for repo-local `.agents` or `.claude` use.
+> SOURCE: portfolio standard from the Kindling root skill `analytics-audit`; safe for repo-local `.agents` or `.claude` use.
 
 # Analytics Audit
 

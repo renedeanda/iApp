@@ -2,20 +2,20 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
 Typography is the second-most-important felt decision after motion. The Swift template ships **three specimens** (rounded-system, serif, mono-leaning) at `Theme/_TypographySpecimens/` and the wizard picks one to land at `Theme/Typography.swift` based on the visual identity.
 
-This ADR documents iApp's typography choice (for README + docs) and templates the structure for child apps.
+This ADR documents Kindling's typography choice (for README + docs) and templates the structure for child apps.
 
 ## Decision
 
-**iApp repo (README, docs):** GitHub-rendered Markdown. GitHub picks the typeface; iApp doesn't override. The rendered docs use GitHub's default sans (system UI font on each platform). No custom CSS.
+**Kindling repo (README, docs):** GitHub-rendered Markdown. GitHub picks the typeface; Kindling doesn't override. The rendered docs use GitHub's default sans (system UI font on each platform). No custom CSS.
 
-For a future GitHub Pages site (if iApp ever has one): match the warm-minimal template default → the rounded-system specimen (SF Pro Rounded). Consistent with ADR 002.
+For a future GitHub Pages site (if Kindling ever has one): match the warm-minimal template default → the rounded-system specimen (SF Pro Rounded). Consistent with ADR 002.
 
 ### Child app ADR 011 shape
 
@@ -70,7 +70,7 @@ Specimen (pick one — filtered by visual identity per VISUAL_IDENTITIES.md):
 
 ## Options considered
 
-For iApp itself:
+For Kindling itself:
 
 - **Custom typography for the README** — rejected. GitHub's default is honest for the audience. Custom Markdown CSS is over-engineering.
 - **Ship a GitHub Pages site immediately** — rejected. README does the job.

@@ -22,8 +22,8 @@ Jargon is decoded in the [Glossary](GLOSSARY.md) — keep it open in a tab.
 Prove your toolchain works before personalizing anything.
 
 ```sh
-git clone <this-repo-url> iApp
-cd iApp/templates/swift
+git clone <this-repo-url> Kindling
+cd Kindling/templates/swift
 xcodegen generate
 open Seed.xcodeproj
 ```
@@ -44,12 +44,12 @@ First build takes a couple of minutes. Then a Simulator boots and you should see
 
 ## Part 2 — Make it yours (10 minutes)
 
-Never build a real app on the `Seed` name. Copy the template out and rename it in one step:
+Never build a real app on the `Seed` name — and never build *inside* the Kindling repo. Your app gets its own folder (and its own repo) next to Kindling ([why](YOUR_OWN_REPO.md)). Copy the template out and rename it in one step:
 
 ```sh
-cd ../..                          # back to the iApp repo root
-cp -r templates/swift ~/MyFirstApp
-cd ~/MyFirstApp
+cd ../..                          # back to the Kindling repo root
+cp -r templates/swift ../my-first-app
+cd ../my-first-app
 make bootstrap NAME=Sprout BUNDLE=com.yourname.sprout
 open Sprout.xcodeproj
 ```
@@ -58,10 +58,12 @@ open Sprout.xcodeproj
 
 `make bootstrap` runs `bin/rename-template.sh`, which rewrites every `Seed` token — file names, target names, bundle IDs, App Group, iCloud container, strings — then regenerates the project. Press **⌘R** again: same app, now called **Sprout**, yours.
 
-Also make it a fresh git repo:
+Make it a real repo of its own (create a blank **private** repo on GitHub first, then):
 
 ```sh
-git init && git add -A && git commit -m "Sprout: initial scaffold from iApp"
+git init && git add -A && git commit -m "Sprout: initial scaffold from Kindling"
+git remote add origin git@github.com:<you>/my-first-app.git
+git push -u origin main
 ```
 
 ## Part 3 — Your first real change: the palette (15 minutes)
@@ -71,12 +73,12 @@ git init && git add -A && git commit -m "Sprout: initial scaffold from iApp"
    static let surface = dynamic(light: 0xF7F2EA, dark: 0x1B1712)
    ```
    Colors are hex *integers*: a catalog value like `#EAEBE0` becomes `0xEAEBE0`.
-2. Pick a seed from [`portfolio/PALETTE_CATALOG.md`](../portfolio/PALETTE_CATALOG.md) (back in the iApp repo) — say **Sage**.
+2. Pick a seed from [`portfolio/PALETTE_CATALOG.md`](../portfolio/PALETTE_CATALOG.md) (back in the Kindling repo) — say **Sage**.
 3. Replace the accent and surface tokens with the seed's values (light *and* dark — every token carries both), then *change something on purpose* — nudge the accent's saturation or hue. That's the "departure delta" habit: the catalog proposes, you decide.
 4. **⌘R.** The whole app re-skins — buttons, links, onboarding — because every view reads tokens instead of hardcoding colors.
 5. Run the tests: **⌘U** (Product → Test). `ThemeContrastTests` will *fail your build* if your new text/background pairing dropped below AAA contrast. If it fails, darken the text token or lighten the surface until it passes. This is the guardrail system working for you.
 
-Write down what you picked and why — two sentences is plenty. The template copy doesn't include a `DECISIONS/` folder (the wizard normally creates it), so make one: copy `DECISIONS/002-palette.md` from the iApp repo into `~/MyFirstApp/DECISIONS/` and fill in your values. Future-you will thank you.
+Write down what you picked and why — two sentences is plenty. The template copy doesn't include a `DECISIONS/` folder (the wizard normally creates it), so make one: copy `DECISIONS/002-palette.md` from the Kindling repo into your app's `DECISIONS/` folder and fill in your values. Future-you will thank you.
 
 ## Part 4 — Turn on your first service (10 minutes)
 
@@ -94,7 +96,7 @@ The same move-up-and-enable ritual applies to notifications, CloudKit, analytics
 If JavaScript is home, the same first hour looks like:
 
 ```sh
-cd iApp/templates/rn
+cd Kindling/templates/rn
 npm install
 npx expo start          # press "i" for the iOS Simulator
 ```
@@ -104,7 +106,7 @@ Then personalize: edit `app.json` (name, slug, `bundleIdentifier`), restart Expo
 ## Part 6 — Where to go next
 
 - **Put it on your actual iPhone** — free, ten minutes, and the single most motivating step: [ON_YOUR_IPHONE.md](ON_YOUR_IPHONE.md). (Stuck on tooling or accounts at any point? [SETUP.md](SETUP.md) is the full environment guide.)
-- **Have an app idea?** Go back to the iApp repo and run the wizard — `/new-app --draft` in an AI session, or fill in `DECISIONS/` by hand (start at `000-mission.md`). The design questions are the highest-value hour in this repo.
+- **Have an app idea?** Go back to the Kindling repo and run the wizard — `/new-app --draft` in an AI session, or fill in `DECISIONS/` by hand (start at `000-mission.md`). The design questions are the highest-value hour in this repo.
 - **Want a feature?** Find it in [`recipes/`](../recipes/) — widgets, iCloud sync, paywall, notifications, App Intents — and read its "When NOT to use" first.
 - **Ready to ship?** [`docs/APP_STORE_CHECKLIST.md`](APP_STORE_CHECKLIST.md) is the path from working app to submitted app.
 - **Learning Swift properly?** Apple's [Develop in Swift](https://developer.apple.com/tutorials/develop-in-swift) then [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui).

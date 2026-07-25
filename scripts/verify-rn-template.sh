@@ -3,7 +3,7 @@
 # verify-rn-template.sh
 #
 # End-to-end check that templates/rn/ produces a working app. Used by
-# CI on every iApp PR that touches templates/rn/, and locally
+# CI on every Kindling PR that touches templates/rn/, and locally
 # before flipping the Phase 6 box in DECISIONS/005-launch-readiness.md.
 #
 # Steps:

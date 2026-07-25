@@ -46,7 +46,7 @@ sips -s format png "$TMP/icon-flat.jpg" --out "$TMP/icon-1024.png" >/dev/null
 sips -Z 1024 "$TMP/icon-1024.png" >/dev/null
 
 # Step 3 — seven sips resizes producing every pixel size referenced
-# by the iApp-standard Contents.json. Two files share the
+# by the Kindling-standard Contents.json. Two files share the
 # 120px size by design (iPhone 60@2x and iPhone 40@3x).
 declare -a SIZES=(
   "1024:icon-1024.png"

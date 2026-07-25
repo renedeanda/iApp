@@ -20,7 +20,7 @@ type Props = {
 /**
  * Standard primary CTA. Haptic-on-press (light impact) gated by the
  * platform's Reduce Motion preference, since RN's `AccessibilityInfo`
- * doesn't surface Reduce Haptics directly. iApp convention:
+ * doesn't surface Reduce Haptics directly. Kindling convention:
  * `expo-haptics` calls should always be wrapped in a check the app
  * can disable centrally — for the template, we ship the simplest
  * shape and the wizard's `/earn-haptic` skill controls when more

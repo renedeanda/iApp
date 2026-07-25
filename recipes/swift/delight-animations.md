@@ -42,7 +42,7 @@ Open the cited file, read the whole animation, adapt it to this app's palette an
 - **Duration discipline:** 200–400 ms for transitions, 400–600 ms for state changes, longer only for genuine *celebration* completions. Never exceed 600 ms otherwise.
 - **`motionSafeAnimation()`:** every animation goes through the motion-safe wrapper (in `Theme/MotionSafe.swift`) — never a bare `.animation()`. The wrapper resolves to a static state under Reduce Motion.
 - **Theme-driven:** colors from the `theme` environment, never literals. A delight moment is a *brand* moment — it must honor the palette.
-- **Record it:** when a *new* delight moment ships (not from the reel), add a row to `docs/DELIGHT_REEL.md` with the file path, per the iApp CLAUDE.md "evolve iApp" rule.
+- **Record it:** when a *new* delight moment ships (not from the reel), add a row to `docs/DELIGHT_REEL.md` with the file path, per the Kindling CLAUDE.md "evolve Kindling" rule.
 
 ### 3. Verify
 

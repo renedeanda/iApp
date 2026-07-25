@@ -2,8 +2,8 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
@@ -13,9 +13,9 @@ This ADR has the same bandwidth problem as haptics: more than 5 delight moments 
 
 ## Decision
 
-**iApp has zero delight moments** (no UI).
+**Kindling has zero delight moments** (no UI).
 
-There is **one** quietly-delightful infrastructure moment that wasn't on the reel: the `/new-app --commit` workflow opens a PR back to iApp that updates PORTFOLIO + PALETTE_CATALOG + MONETIZATION_MATRIX in a single commit — the new child app *claims its territory* atomically. That's a developer-facing delight, not user-facing, so it doesn't go on DELIGHT_REEL.
+There is **one** quietly-delightful infrastructure moment that wasn't on the reel: the `/new-app --commit` workflow opens a PR back to Kindling that updates PORTFOLIO + PALETTE_CATALOG + MONETIZATION_MATRIX in a single commit — the new child app *claims its territory* atomically. That's a developer-facing delight, not user-facing, so it doesn't go on DELIGHT_REEL.
 
 ### Child app ADR 014 shape
 
@@ -63,10 +63,10 @@ If this app ships a moment not in the reel yet:
 
 ## Options considered
 
-For iApp itself:
+For Kindling itself:
 
-- **Pretend to have delights for consistency** — rejected. iApp has no UI; faking would dilute the ADR's meaning for child apps.
-- **Skip this ADR entirely** — rejected. The ADR isn't optional in the child-app sequence; iApp's "zero" is honest.
+- **Pretend to have delights for consistency** — rejected. Kindling has no UI; faking would dilute the ADR's meaning for child apps.
+- **Skip this ADR entirely** — rejected. The ADR isn't optional in the child-app sequence; Kindling's "zero" is honest.
 
 For the *shape* of child app ADR 014:
 

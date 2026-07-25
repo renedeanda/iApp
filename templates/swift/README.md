@@ -1,6 +1,6 @@
 # Seed (Swift template)
 
-This is the Swift / SwiftUI starter scaffold consumed by iApp's `/new-app --commit` wizard. It is also runnable standalone for debugging.
+This is the Swift / SwiftUI starter scaffold consumed by Kindling's `/new-app --commit` wizard. It is also runnable standalone for debugging.
 
 Each `Seed` token in this tree (file names, bundle id, App Group, iCloud container, type names, strings) is rewritten by `bin/rename-template.sh` to the new app's chosen name. Don't ship the template with `Seed` strings — always rename before opening Xcode.
 

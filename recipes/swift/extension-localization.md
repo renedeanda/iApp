@@ -71,7 +71,7 @@ name shown in the Files app).
 
 4. **Add a parity test.** Mirror `WidgetLocalizationParityTests.swift`: assert
    the extension catalog covers every app-locale present in the host catalog,
-   with matching format specifiers. This is the *enforcer* (per the iApp
+   with matching format specifiers. This is the *enforcer* (per the Kindling
    maturity matrix, the rule must have an artifact, not just a SKILL line).
 
 5. **Translate** with `/translate <lang>` for each tier-1 locale

@@ -61,10 +61,14 @@ There are **no wrong answers** — vague ones are fine, the session will sharpen
 
 You'll pair with an AI coding agent that knows this repo's system. Setup, from absolute zero:
 
-1. **Get the repo.** Install [git](https://git-scm.com), then in Terminal:
+1. **Get the repo — and make yours.** Install [git](https://git-scm.com). On GitHub, create a **new private repository** named after your app (check "Add a README"). Then in Terminal:
    ```sh
-   git clone <this-repo-url> iApp && cd iApp
+   mkdir -p ~/code && cd ~/code
+   git clone <this-repo-url> kindling
+   git clone <your-private-repo-url>
+   cd kindling
    ```
+   Your app's code will land in *your* repo, next to Kindling — never inside it ([why + details](YOUR_OWN_REPO.md)).
 2. **Get an agent.** Either [Claude Code](https://claude.com/claude-code) (`claude` in the repo folder) or [Codex](https://openai.com/codex) — both understand this repo (Claude reads `CLAUDE.md`; Codex reads `AGENTS.md`).
 3. **Open with this:**
    > "I'm new. Run /start. Here's my filled-in worksheet: …" *(paste your answers)*

@@ -1,9 +1,9 @@
 ---
 name: init
-description: Re-seed this app's CLAUDE.md when `{{PLACEHOLDERS}}` leaked through, or after a major ADR addendum that changes the inherited frame. Inherits taste rules from iApp + substitutes per-app values (mission, palette, motion, haptics, etc.) from DECISIONS/.
+description: Re-seed this app's CLAUDE.md when `{{PLACEHOLDERS}}` leaked through, or after a major ADR addendum that changes the inherited frame. Inherits taste rules from Kindling + substitutes per-app values (mission, palette, motion, haptics, etc.) from DECISIONS/.
 ---
 
-> SOURCE: pattern adapted from `iApp:.claude/skills/init`.
+> SOURCE: pattern adapted from `Kindling:.claude/skills/init`.
 
 # /init
 
@@ -21,7 +21,7 @@ Render `CLAUDE.md` from the template + the ADR values captured in `DECISIONS/`.
 
 ## Steps
 
-1. Locate the upstream template (the iApp repo's `templates/rn/CLAUDE.md`, or the locally cached copy if working offline).
+1. Locate the upstream template (the Kindling repo's `templates/rn/CLAUDE.md`, or the locally cached copy if working offline).
 2. Read every `DECISIONS/000-*.md` … `DECISIONS/015-*.md` to collect the substitution map:
 
    | Placeholder | Source ADR |
@@ -55,4 +55,4 @@ Diff: `git diff CLAUDE.md` to review before committing.
 
 ## Forbidden
 
-- Do NOT pull live values from `https://` while substituting — use the cached template only. Otherwise an iApp template revision silently changes this app's CLAUDE.md.
+- Do NOT pull live values from `https://` while substituting — use the cached template only. Otherwise an Kindling template revision silently changes this app's CLAUDE.md.

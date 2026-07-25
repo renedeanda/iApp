@@ -6,7 +6,7 @@
  * a neutral warm-minimal so the template is visually coherent
  * standalone.
  *
- * Code-quality rule (from iApp CLAUDE.md): no pure #000000 or
+ * Code-quality rule (from Kindling CLAUDE.md): no pure #000000 or
  * #FFFFFF. Use the palette's surface tokens. The "off-black" /
  * "off-white" pair below is the warm-minimal default.
  */

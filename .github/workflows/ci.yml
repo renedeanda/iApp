@@ -1,6 +1,6 @@
 name: CI
 
-# iApp repo-level CI. Distinct from the CI that ships *inside*
+# Kindling repo-level CI. Distinct from the CI that ships *inside*
 # each template (templates/{swift,rn}/.github/workflows/) — that one
 # runs in the generated child app. This one verifies the templates
 # themselves still produce working apps.

@@ -1,6 +1,6 @@
 # Seed — RN template
 
-> This is the iApp Expo / React Native starter. The `/new-app`
+> This is the Kindling Expo / React Native starter. The `/new-app`
 > wizard renders it into a new repo, substituting `Seed` →
 > `<YourApp>`, the bundle id, app group, and the 16 `DECISIONS/`
 > values you captured in the design-first sprint.
@@ -42,9 +42,9 @@ Universal between iOS and Android is **not** supported by Apple StoreKit 2 — R
 
 Every file with a `// SOURCE:` header is a verbatim or near-verbatim harvest from a shipped production app — that's why it works.
 
-- iCloud bridge + data deletion: **`modules/icloud-sync/`** + **`src/services/DataDeletionService.ts`** (see the iApp repo's `docs/ICLOUD_DATA_DELETION.md`).
+- iCloud bridge + data deletion: **`modules/icloud-sync/`** + **`src/services/DataDeletionService.ts`** (see the Kindling repo's `docs/ICLOUD_DATA_DELETION.md`).
 - Yearly-reminder notifications (rolling 64-limit pattern): **`src/services/NotificationService.ts`**.
 - Widget extension config plugins: **`plugins/withAppGroup.js`** + **`plugins/withICloudEntitlements.js`**.
-- Widget i18n (multi-language `.lproj` setup): follow the iApp repo's `docs/WIDGETS.md` recipe.
+- Widget i18n (multi-language `.lproj` setup): follow the Kindling repo's `docs/WIDGETS.md` recipe.
 
-See the iApp repo's `portfolio/REUSE_INDEX.md` for the full feature → path map.
+See the Kindling repo's `portfolio/REUSE_INDEX.md` for the full feature → path map.

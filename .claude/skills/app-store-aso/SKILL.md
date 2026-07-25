@@ -1,6 +1,6 @@
 ---
 name: app-store-aso
-description: Draft, revamp, or validate App Store listing metadata (description, subtitle, promotional text, keywords) for any portfolio app, using the iApp launch-packet convention. Use before App Store submission, when a listing reads thin or jargon-heavy, or when refreshing ASO copy. Produces rich, on-brand, emoji-free copy within Apple's field limits and validates it.
+description: Draft, revamp, or validate App Store listing metadata (description, subtitle, promotional text, keywords) for any portfolio app, using the Kindling launch-packet convention. Use before App Store submission, when a listing reads thin or jargon-heavy, or when refreshing ASO copy. Produces rich, on-brand, emoji-free copy within Apple's field limits and validates it.
 argument-hint: "<app-repo-path> [locale|all]"
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---
@@ -10,7 +10,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 Write App Store listings that are **rich, on-brand, ASO-optimized, delightful to
 read, jargon-free, and emoji-free** — and provably within Apple's limits. The
 canonical home for every app's listing is the JSON at
-`<repo>/Marketing/AppStoreMetadata/<app>-app-store-metadata.json` (the iApp
+`<repo>/Marketing/AppStoreMetadata/<app>-app-store-metadata.json` (the Kindling
 launch-packet convention; schema vendored at `docs/schemas/launch-packet.v1.schema.json`).
 **Always edit that JSON** — never invent a parallel `docs/*.md` listing. The house
 style in section 3 is the quality bar.

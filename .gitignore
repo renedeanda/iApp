@@ -82,6 +82,6 @@ google-services.json
 .claude/settings.local.json
 .claude/cache/
 
-# iApp-specific
+# Kindling-specific
 drafts/
 *.draft.md

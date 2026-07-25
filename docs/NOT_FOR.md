@@ -1,4 +1,4 @@
-# What iApp Is Not For
+# What Kindling Is Not For
 
 > Read alongside [WHATS_ALLOWED.md](WHATS_ALLOWED.md). This doc rejects **manipulative** patterns, not engagement itself. Streaks, reminders, notifications, gamification are welcome when framed as care, celebration, or utility — see the sibling doc for explicit positive examples.
 

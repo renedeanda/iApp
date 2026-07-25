@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/iapp/docs/schemas/launch-packet.v1.schema.json",
-  "title": "iApp launch packet (v1)",
-  "description": "The typed handoff between an app scaffold (iApp /new-app --commit) and your release tooling. Everything a launch needs, in one versioned document, so the ideate-to-ship seam is a contract instead of a folder convention. Lives in iApp at docs/schemas/. Evolve behind schemaVersion.",
+  "$id": "https://example.com/kindling/docs/schemas/launch-packet.v1.schema.json",
+  "title": "Kindling launch packet (v1)",
+  "description": "The typed handoff between an app scaffold (Kindling /new-app --commit) and your release tooling. Everything a launch needs, in one versioned document, so the ideate-to-ship seam is a contract instead of a folder convention. Lives in Kindling at docs/schemas/. Evolve behind schemaVersion.",
   "type": "object",
   "required": ["schemaVersion", "app", "commands", "paths"],
   "additionalProperties": false,
@@ -18,7 +18,7 @@
     },
     "generatedBy": {
       "type": "string",
-      "description": "Tool + version that wrote the packet, e.g. 'iApp /new-app --commit'."
+      "description": "Tool + version that wrote the packet, e.g. 'Kindling /new-app --commit'."
     },
     "app": {
       "type": "object",
@@ -68,7 +68,7 @@
       "properties": {
         "metadata": {
           "type": "string",
-          "description": "Repo-relative path to the app-store metadata JSON (the iApp launch-packet convention: Marketing/AppStoreMetadata/<app>-app-store-metadata.json)."
+          "description": "Repo-relative path to the app-store metadata JSON (the Kindling launch-packet convention: Marketing/AppStoreMetadata/<app>-app-store-metadata.json)."
         },
         "screenshots": {
           "type": "string",

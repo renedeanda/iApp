@@ -2,16 +2,16 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
-The Swift template ships 20+ services on disk; a typical new app enables 4–6. The taste rule (CLAUDE.md #1: "services default off") only works if every new app explicitly opts each service in. This ADR is where that opt-in lives for the child app — and for iApp itself.
+The Swift template ships 20+ services on disk; a typical new app enables 4–6. The taste rule (CLAUDE.md #1: "services default off") only works if every new app explicitly opts each service in. This ADR is where that opt-in lives for the child app — and for Kindling itself.
 
 ## Decision
 
-**iApp as a docs-only repo enables zero native features.** No CloudKit, no widgets, no StoreKit, no Live Activities — there's no app to enable them on. The `templates/swift/` directory *contains* every gold-standard service in `Services/_Disabled/`, but iApp itself never instantiates any of them.
+**Kindling as a docs-only repo enables zero native features.** No CloudKit, no widgets, no StoreKit, no Live Activities — there's no app to enable them on. The `templates/swift/` directory *contains* every gold-standard service in `Services/_Disabled/`, but Kindling itself never instantiates any of them.
 
 For each child app, this ADR is the explicit yes/no list. The wizard's `/reliability-check` step runs in parallel — for each ✅ here, it confirms the gold-standard source per REUSE_INDEX is harvested correctly.
 

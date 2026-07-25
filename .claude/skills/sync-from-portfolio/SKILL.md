@@ -1,6 +1,6 @@
 ---
 name: sync-from-portfolio
-description: Propagate an improvement from one of your shipped portfolio apps back into the iApp template. Diffs the child app's file against the corresponding template file and prepares a reviewable PR. Sync is opt-in and explicit — children never silently inherit template changes.
+description: Propagate an improvement from one of your shipped portfolio apps back into the Kindling template. Diffs the child app's file against the corresponding template file and prepares a reviewable PR. Sync is opt-in and explicit — children never silently inherit template changes.
 ---
 
 # /sync-from-portfolio
@@ -48,10 +48,10 @@ When a template has evolved and a child app wants the new version:
 
 ```
 # inside the child app:
-/sync-from-portfolio --reverse <owner>/iApp templates/swift/Seed/Utilities/HapticManager.swift
+/sync-from-portfolio --reverse <owner>/Kindling templates/swift/Seed/Utilities/HapticManager.swift
 ```
 
-Same diff-and-confirm pattern, but reversed. The reverse path is always opt-in because children diverge freely; iApp never silently overwrites them.
+Same diff-and-confirm pattern, but reversed. The reverse path is always opt-in because children diverge freely; Kindling never silently overwrites them.
 
 ## Constraints
 

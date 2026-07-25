@@ -76,7 +76,7 @@ The skill targets **3 `AskUserQuestion` calls total**, matching the cadence of `
 
    > **The ADR is the spec, not the end.** At `/new-app --commit`, `/wire-first-screen` turns this ADR into code — it writes `Theme/SignatureMotion.swift` and applies `.signatureMotion()` to the first screen. The template ships a working Breathing default, so an app that picks Breathing needs no rewrite; any other principle has its modifier body rewritten there. An ADR 009 with no corresponding `.signatureMotion()` call site is the classic "ADR that produced no code" gap — the loop must close.
 
-10. After Phase B commit: the back-PR to iApp adds this motion to PORTFOLIO.md "Claimed signature motions."
+10. After Phase B commit: the back-PR to Kindling adds this motion to PORTFOLIO.md "Claimed signature motions."
 
 ## Cross-references
 

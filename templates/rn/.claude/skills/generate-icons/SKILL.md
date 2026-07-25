@@ -3,7 +3,7 @@ name: generate-icons
 description: Regenerate all app icon assets (iOS, Android adaptive, splash, favicon, notification) from the SVG source at assets/icon_master.svg. Use when the user wants to update, regenerate, or modify app icons.
 ---
 
-> SOURCE: pattern adapted from `iApp:.claude/skills/generate-icons` (originally for AppIcon.appiconset); retargeted to Expo's flat `assets/images/` layout.
+> SOURCE: pattern adapted from `Kindling:.claude/skills/generate-icons` (originally for AppIcon.appiconset); retargeted to Expo's flat `assets/images/` layout.
 
 # /generate-icons
 

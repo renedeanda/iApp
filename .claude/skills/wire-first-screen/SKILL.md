@@ -15,7 +15,7 @@ The gap the end-to-end smoke test surfaced: the rendered templates compile, but 
 ## When NOT to use
 
 - For an app whose ADR 010 explicitly elected "no onboarding" — this skill detects that and exits cleanly with no edits.
-- For non-portfolio apps — the patterns this wires assume the iApp Swift template's structure.
+- For non-portfolio apps — the patterns this wires assume the Kindling Swift template's structure.
 
 ## Forbidden agent behavior
 

@@ -1,6 +1,6 @@
 # Widgets — First-Class Surface
 
-Widgets in iApp are not an afterthought. They're a primary surface. The template treats them with the same care as the home screen.
+Widgets in Kindling are not an afterthought. They're a primary surface. The template treats them with the same care as the home screen.
 
 ## Why widgets matter
 

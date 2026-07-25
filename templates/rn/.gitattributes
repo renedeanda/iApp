@@ -1,4 +1,4 @@
-# Force LF line endings on every file iApp ships, regardless of
+# Force LF line endings on every file Kindling ships, regardless of
 # the developer's local autocrlf setting. CI is Linux-only; shells
 # (xcodegen, prebuild, etc.) refuse CRLF.
 

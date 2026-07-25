@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-App Store Graphics Generator  —  iApp portfolio tool
+App Store Graphics Generator  —  Kindling portfolio tool
 ====================================================
 
 Single source of truth for every app in your portfolio's App Store
@@ -904,7 +904,7 @@ render();
 """.replace("__ALL__", json.dumps(allcfg, ensure_ascii=False))
 
     html = (PAGE
-        .replace("__TITLE__", "iApp")
+        .replace("__TITLE__", "Kindling")
         .replace("__SUBTITLE__", "Portfolio App Store graphics — every app, one engine")
         .replace("__MACNOTE__", " · Mac 2880×1800")
         .replace("__FONTLINK__", fontlinks)
@@ -914,8 +914,8 @@ render();
         .replace("__JS__", JS)
         .replace("__BOOT__", boot))
     # mega title tweak
-    html = html.replace("<title>iApp — App Store Graphics</title>",
-                        "<title>iApp — Portfolio App Store Graphics</title>")
+    html = html.replace("<title>Kindling — App Store Graphics</title>",
+                        "<title>Kindling — Portfolio App Store Graphics</title>")
     return html
 
 # ---------------------------------------------------------------------------

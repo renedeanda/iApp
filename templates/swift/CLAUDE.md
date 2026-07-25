@@ -15,7 +15,7 @@
 
 ## Palette
 
-The bespoke departure from the **{{PALETTE_SEED}}** seed (per `portfolio/PALETTE_CATALOG.md` in the iApp repo this app was generated from). Full hex tokens live in [`Seed/Theme/AppTheme.swift`](Seed/Theme/AppTheme.swift); rationale + ΔE2000 matrix in [`DECISIONS/002-palette.md`](DECISIONS/002-palette.md).
+The bespoke departure from the **{{PALETTE_SEED}}** seed (per `portfolio/PALETTE_CATALOG.md` in the Kindling repo this app was generated from). Full hex tokens live in [`Seed/Theme/AppTheme.swift`](Seed/Theme/AppTheme.swift); rationale + ΔE2000 matrix in [`DECISIONS/002-palette.md`](DECISIONS/002-palette.md).
 
 {{PALETTE_TOKENS}}
 
@@ -53,9 +53,9 @@ The dev premium toggle is wired through [`Seed/Services/SubscriptionManager.swif
 
 {{UNIVERSAL}}
 
-## Taste rules — inherited from iApp
+## Taste rules — inherited from Kindling
 
-(See the root `CLAUDE.md` of the iApp repo this app was generated from for the canonical seven rules.)
+(See the root `CLAUDE.md` of the Kindling repo this app was generated from for the canonical seven rules.)
 
 1. **Services default off.** Every service ships in `Seed/Services/_Disabled/` and is graduated by `/new-app --commit` per `DECISIONS/004-native-feature-checklist.md`.
 2. **Haptics are earned.** 3 starter; 4th+ via `/earn-haptic`. Soft cap 8.
@@ -63,7 +63,7 @@ The dev premium toggle is wired through [`Seed/Services/SubscriptionManager.swif
 4. **Visual identity novelty is a feature.** This app's `{{VISUAL_IDENTITY}}` is the choice.
 5. **Palettes are departure points.** Final hex tokens in `Theme/AppTheme.swift`.
 6. **Sleep is required** before major decisions.
-7. **NOT_FOR rejects manipulative patterns, not engagement.** Read `docs/NOT_FOR.md` AND `docs/WHATS_ALLOWED.md` in the iApp repo this app was generated from.
+7. **NOT_FOR rejects manipulative patterns, not engagement.** Read `docs/NOT_FOR.md` AND `docs/WHATS_ALLOWED.md` in the Kindling repo this app was generated from.
 
 ## Code-quality rules
 
@@ -112,7 +112,7 @@ Each command edits `Seed/Version.xcconfig`, creates a commit, and tags `v<versio
 
 1. **Mission** — can you state it in one sentence?
 2. **Restraint** — does this feature earn its weight?
-3. **Reliability** — is the source you're harvesting from production-grade? (See `portfolio/REUSE_INDEX.md` in the iApp repo this app was generated from.)
+3. **Reliability** — is the source you're harvesting from production-grade? (See `portfolio/REUSE_INDEX.md` in the Kindling repo this app was generated from.)
 4. **Taste** — would Jobs/Ive approve of the seam being invisible?
 5. **Sleep** — have you slept on the decision?
 

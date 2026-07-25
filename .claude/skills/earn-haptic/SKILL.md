@@ -9,7 +9,7 @@ Every new app starts with 3 starter haptics. Adding more requires *earning* the 
 
 ## When to use
 
-- Inside an existing portfolio app (not iApp itself).
+- Inside an existing portfolio app (not Kindling itself).
 - After shipping the app for ≥2 weeks (some patterns prove themselves only with real users).
 - When a specific user action genuinely deserves a distinct haptic that isn't covered by the current 3.
 

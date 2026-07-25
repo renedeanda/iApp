@@ -2,16 +2,16 @@
 
 - **Status:** Accepted
 - **Date:** 2026-05-08
-- **App:** iApp
-- **Authors:** iApp maintainers
+- **App:** Kindling
+- **Authors:** Kindling maintainers
 
 ## Context
 
-iApp itself is mostly Markdown (docs, ADRs, recipes) plus a few shell scripts. But it ships **two templates** — one Swift, one RN — and the tech for each template is its own decision.
+Kindling itself is mostly Markdown (docs, ADRs, recipes) plus a few shell scripts. But it ships **two templates** — one Swift, one RN — and the tech for each template is its own decision.
 
 ## Decision
 
-**iApp repo:** Markdown + shell scripts. No app code.
+**Kindling repo:** Markdown + shell scripts. No app code.
 
 **Swift template (`templates/swift/`):**
 - XcodeGen for project generation (no checked-in `.xcodeproj`)
@@ -60,7 +60,7 @@ For the templates:
 ## Consequences
 
 - **Unlocks:** every recipe, every template service decision, every CI workflow.
-- **Forecloses:** Android. The templates are iOS-only. If you ever target Android, the RN template is the starting point — but no iApp doc currently considers Android.
+- **Forecloses:** Android. The templates are iOS-only. If you ever target Android, the RN template is the starting point — but no Kindling doc currently considers Android.
 - **Cost to revisit:** swapping XcodeGen for Tuist is medium. Adding Android is large. Swapping Expo for bare RN is large.
 
 ## Cross-references

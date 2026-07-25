@@ -1,4 +1,4 @@
-# AGENTS.md — iApp
+# AGENTS.md — Kindling
 
 > Instructions for AI coding agents (Codex, and any agent that reads AGENTS.md).
 > Claude Code reads [CLAUDE.md](CLAUDE.md) natively — that file is the **canonical constitution** for this repo. This file tells every other agent to honor the same contract.

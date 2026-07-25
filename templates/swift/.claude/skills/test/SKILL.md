@@ -3,7 +3,7 @@ name: test
 description: Run the Swift Testing suite via xcodebuild. Optionally filter by suite or test name. Reports pass/fail with structured output and suggests fixes. Includes the 8 housekeeping tests. Use after every non-trivial change.
 ---
 
-> SOURCE: pattern adapted from the iApp root skill `phase` (the test subset).
+> SOURCE: pattern adapted from the Kindling root skill `phase` (the test subset).
 
 # /test
 

@@ -202,7 +202,7 @@ Six unconditional + two widget/Live-Activity conditional:
 - `WidgetEdgeToEdgeTests.swift` *(if widgets enabled)* — every widget uses `containerBackground(for: .widget)`.
 - `LiveActivityViewTests.swift` *(if Live Activities enabled)* — all five Live Activity regions render localized.
 
-## iApp launch-packet conventions
+## Kindling launch-packet conventions
 
 Every generated app carries its launch data in a predictable shape, so release tooling (yours or an agent's) can find everything without spelunking:
 

@@ -1,7 +1,7 @@
-// SOURCE: iApp portfolio/CROSS_PROMO_REGISTRY.json
+// SOURCE: Kindling portfolio/CROSS_PROMO_REGISTRY.json
 //
 // Loads the studio's cross-promotion list from a bundled JSON copy of
-// iApp's `portfolio/CROSS_PROMO_REGISTRY.json`. Vendor that file into
+// Kindling's `portfolio/CROSS_PROMO_REGISTRY.json`. Vendor that file into
 // the app's Resources (Copy Bundle Resources) as `CrossPromoRegistry.json`
 // and refresh it when the portfolio changes.
 //

@@ -3,7 +3,7 @@ name: roadmap
 description: Session starter for the Swift child app. Reads CLAUDE.md, DECISIONS/005-launch-readiness.md, recent git history, and open PRs. Outputs a prioritized work list. Use as the first thing in a fresh session.
 ---
 
-> SOURCE: pattern adapted from the iApp root skill `roadmap`, Swift/Xcode-flavored.
+> SOURCE: pattern adapted from the Kindling root skill `roadmap`, Swift/Xcode-flavored.
 
 # /roadmap
 
@@ -18,7 +18,7 @@ Reconstruct what to work on next in a fresh session inside this child app. Outpu
 ## When NOT to use
 
 - Mid-task — `roadmap` resets context; you don't want that when you're in flow.
-- Inside the iApp repo itself — use that repo's `/roadmap` instead.
+- Inside the Kindling repo itself — use that repo's `/roadmap` instead.
 
 ## Steps
 

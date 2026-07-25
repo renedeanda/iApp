@@ -1,4 +1,4 @@
-// SOURCE: iApp template — placeholder example.
+// SOURCE: Kindling template — placeholder example.
 //
 // Pure value-type domain models — the inputs/outputs a Sendable
 // engine works with (see recipes/swift/add-sendable-engine.md).

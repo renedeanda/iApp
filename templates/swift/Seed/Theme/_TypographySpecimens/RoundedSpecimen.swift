@@ -1,4 +1,4 @@
-// SOURCE: iApp template
+// SOURCE: Kindling template
 // Warm-minimal default specimen; swap in via /pick-typography. Excluded from compile.
 
 import SwiftUI

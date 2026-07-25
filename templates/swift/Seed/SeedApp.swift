@@ -1,4 +1,4 @@
-// SOURCE: iApp template
+// SOURCE: Kindling template
 // App-specific entry; the /new-app wizard rewrites this struct.
 
 import SwiftUI

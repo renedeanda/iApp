@@ -3,11 +3,11 @@ name: security-review
 description: Security audit of pending changes on the current branch. Scans for secrets, dependency risks, manifest leaks, and template-generated code that could ship vulnerabilities. Use before pushing or PR'ing.
 ---
 
-> SOURCE: universal security-review skill, adapted for iApp's template-generation responsibilities
+> SOURCE: universal security-review skill, adapted for Kindling's template-generation responsibilities
 
 # /security-review
 
-Audit-only pass focused on what a template repo can leak. iApp doesn't ship runtime code, but it ships *patterns* that propagate into every child app. A vulnerable pattern here = N vulnerable apps later.
+Audit-only pass focused on what a template repo can leak. Kindling doesn't ship runtime code, but it ships *patterns* that propagate into every child app. A vulnerable pattern here = N vulnerable apps later.
 
 ## When to use
 

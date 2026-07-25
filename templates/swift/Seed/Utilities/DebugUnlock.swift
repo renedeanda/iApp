@@ -1,4 +1,4 @@
-// SOURCE: iApp template
+// SOURCE: Kindling template
 // Dev premium toggle (24h auto-expiry + reviewer suppression) per docs/HOUSEKEEPING.md.
 
 import Foundation

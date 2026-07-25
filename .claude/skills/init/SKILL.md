@@ -1,13 +1,13 @@
 ---
 name: init
-description: Seed CLAUDE.md in a newly-generated child app repo. Inherits taste rules from iApp + substitutes per-app values (mission, palette tokens, signature motion, chosen haptics). Used by /new-app --commit during repo creation.
+description: Seed CLAUDE.md in a newly-generated child app repo. Inherits taste rules from Kindling + substitutes per-app values (mission, palette tokens, signature motion, chosen haptics). Used by /new-app --commit during repo creation.
 ---
 
-> SOURCE: universal init skill, scoped to iApp's child-app CLAUDE.md template assembly
+> SOURCE: universal init skill, scoped to Kindling's child-app CLAUDE.md template assembly
 
 # /init
 
-Seed a child app's `CLAUDE.md` from iApp's template + the ADR values the user picked during `/new-app --draft`.
+Seed a child app's `CLAUDE.md` from Kindling's template + the ADR values the user picked during `/new-app --draft`.
 
 ## When to use
 
@@ -16,7 +16,7 @@ Seed a child app's `CLAUDE.md` from iApp's template + the ADR values the user pi
 
 ## When NOT to use
 
-- Inside iApp itself — iApp's CLAUDE.md is bespoke (the constitution).
+- Inside Kindling itself — Kindling's CLAUDE.md is bespoke (the constitution).
 - For non-portfolio apps — `init` substitutes claimed-portfolio values.
 
 ## Inputs
@@ -47,7 +47,7 @@ Seed a child app's `CLAUDE.md` from iApp's template + the ADR values the user pi
    ```
    The script does sed substitution and validates no unfilled `{{KEY}}` remains. If any do, it exits nonzero with the missing names — fix the ADR or the invocation.
 
-4. Commit message: `init: seed CLAUDE.md from iApp template`.
+4. Commit message: `init: seed CLAUDE.md from Kindling template`.
 
 ## Cross-references
 

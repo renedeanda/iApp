@@ -2,7 +2,7 @@
 
 A dated changelog of lessons learned across the portfolio. One entry per lesson: date, one-sentence summary, then the detail. Newest first. Skills and docs cross-reference entries here instead of restating them.
 
-iApp ships this file **pre-seeded with the distilled, app-agnostic lessons** that shaped the templates — each one was paid for by a real shipped bug or a real App Store rejection somewhere. Keep them; add your own on top with dates.
+Kindling ships this file **pre-seeded with the distilled, app-agnostic lessons** that shaped the templates — each one was paid for by a real shipped bug or a real App Store rejection somewhere. Keep them; add your own on top with dates.
 
 ---
 

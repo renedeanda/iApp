@@ -3,7 +3,7 @@ name: review
 description: Auto-healing code review for this RN app. Scans 12 RN-flavored categories (hardcoded strings, theme leaks, a11y on Pressable, hook deps, etc.), fixes what can be auto-fixed, reports what remains. Use after completing a feature or before opening a PR.
 ---
 
-> SOURCE: pattern adapted from `iApp:.claude/skills/review`, retargeted from Swift/SwiftUI to Expo/RN/TS.
+> SOURCE: pattern adapted from `Kindling:.claude/skills/review`, retargeted from Swift/SwiftUI to Expo/RN/TS.
 
 # /review
 
@@ -18,7 +18,7 @@ Auto-healing audit pass. After a feature's commits land, run `/review` to catch 
 ## When NOT to use
 
 - Mid-feature — wait until the feature is logically complete.
-- Inside iApp itself — use that repo's `/review`.
+- Inside Kindling itself — use that repo's `/review`.
 
 ## The 12 audit categories
 

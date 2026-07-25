@@ -1,4 +1,4 @@
-// SOURCE: iApp template
+// SOURCE: Kindling template
 // Placeholder root view; /new-app --commit replaces with the app-specific entry surface.
 
 import SwiftUI
