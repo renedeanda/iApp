@@ -24,8 +24,10 @@ It is **AI-first**: open this repo in a [Claude Code](https://claude.com/claude-
 - [Adding features with recipes](#adding-features-with-recipes)
 - [The portfolio layer](#the-portfolio-layer)
 - [The philosophy: what we don't build](#the-philosophy-what-we-dont-build)
+- [Your phone, your friends' phones, the App Store](#your-phone-your-friends-phones-the-app-store)
 - [Shipping to the App Store](#shipping-to-the-app-store)
 - [FAQ](#faq)
+- [Built with this system](#built-with-this-system)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -257,6 +259,14 @@ iApp is opinionated. The templates and wizard will actively resist:
 
 …and is explicitly *for* streaks-as-celebration, reminders that serve the user, rich notifications, honest paywalls, and gamification framed as care. The line between the two lists is the whole game — [docs/NOT_FOR.md](docs/NOT_FOR.md) and [docs/WHATS_ALLOWED.md](docs/WHATS_ALLOWED.md) draw it with worked examples so features don't get vetoed (or approved) by vibes.
 
+## Your phone, your friends' phones, the App Store
+
+The Simulator is where apps are built; phones are where they become real. Three guides cover the whole arc:
+
+- **[docs/SETUP.md](docs/SETUP.md)** — the complete toolchain and accounts path: Xcode, Homebrew/XcodeGen, Node, your free Apple ID, and exactly when (and when not) to pay for the $99 Apple Developer Program, including the individual-vs-organization enrollment choice.
+- **[docs/ON_YOUR_IPHONE.md](docs/ON_YOUR_IPHONE.md)** — run your app on your own iPhone **free** (no Developer Program), then put it on your friends' phones with TestFlight: internal vs external testers, the public-link flow, and what beta review expects.
+- **[tools/landing-page/](tools/landing-page/)** — the App Store requires a support URL and privacy-policy URL before you can submit; this is a three-page, no-build-step site starter you can deploy free on GitHub Pages in ten minutes.
+
 ## Shipping to the App Store
 
 The repo carries release muscle, not just build muscle:
@@ -292,6 +302,10 @@ The Swift template targets iOS (with Mac Catalyst opt-in). The RN template is iO
 
 **What iOS/tooling versions?**
 The Swift template assumes current-generation Xcode and a recent iOS minimum; the RN template tracks a recent Expo SDK. Check each template's README for the exact pins.
+
+## Built with this system
+
+This isn't theoretical: iApp was distilled from **[Delightful Apps](https://delightfulapps.com)** — a real indie portfolio of shipped native and React Native iOS apps whose services, taste rules, and paid-for lessons became these templates. Apps built by the community live in **[SHOWCASE.md](SHOWCASE.md)** — when you ship, add yours.
 
 ## Contributing
 

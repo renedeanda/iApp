@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{APP_NAME}} — Privacy Policy</title>
+<style>
+  :root { --surface:#F7F2EA; --text:#2C2520; --muted:#756A5E; --accent:#B4753A; }
+  @media (prefers-color-scheme: dark){ :root { --surface:#1B1712; --text:#F0EBE3; --muted:#C4BCB2; --accent:#D4956A; } }
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;background:var(--surface);color:var(--text);line-height:1.6;margin:0}
+  main{max-width:680px;margin:0 auto;padding:48px 24px}
+  h1,h2{letter-spacing:-0.02em} h2{margin-top:28px;font-size:1.1rem} p,li{color:var(--muted);margin:10px 0} a{color:var(--accent)}
+</style>
+</head>
+<body><main>
+<h1>{{APP_NAME}} Privacy Policy</h1>
+<p><em>Last updated: {{DATE}}</em></p>
+<p><strong>This is a template.</strong> Start from your app template's fuller draft (the templates ship a PRIVACY_POLICY.md) and keep only what is true for YOUR app. A privacy policy that overpromises is worse than none.</p>
+<h2>What we collect</h2>
+<p>{{APP_NAME}} stores your data on your device{{AND_ICLOUD_IF_APPLICABLE}}. We do not collect, sell, or share your personal data. {{IF_ANALYTICS: We collect anonymous usage analytics (no identifiers, no tracking across apps) to understand which features matter; you can opt out in Settings.}}</p>
+<h2>Where your data lives</h2>
+<p>On your device{{AND_ICLOUD_SENTENCE: , and in your personal iCloud account if you enable sync — storage we cannot access}}.</p>
+<h2>Deleting your data</h2>
+<p>Delete the app, or use {{DELETE_PATH: Settings → Data → Delete All Data}} inside the app, which removes everything{{AND_ICLOUD_IF_APPLICABLE}}.</p>
+<h2>Contact</h2>
+<p><a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a></p>
+<p><a href="index.html">← Back</a></p>
+</main></body></html>

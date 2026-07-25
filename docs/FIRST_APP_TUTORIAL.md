@@ -103,6 +103,7 @@ Then personalize: edit `app.json` (name, slug, `bundleIdentifier`), restart Expo
 
 ## Part 6 — Where to go next
 
+- **Put it on your actual iPhone** — free, ten minutes, and the single most motivating step: [ON_YOUR_IPHONE.md](ON_YOUR_IPHONE.md). (Stuck on tooling or accounts at any point? [SETUP.md](SETUP.md) is the full environment guide.)
 - **Have an app idea?** Go back to the iApp repo and run the wizard — `/new-app --draft` in an AI session, or fill in `DECISIONS/` by hand (start at `000-mission.md`). The design questions are the highest-value hour in this repo.
 - **Want a feature?** Find it in [`recipes/`](../recipes/) — widgets, iCloud sync, paywall, notifications, App Intents — and read its "When NOT to use" first.
 - **Ready to ship?** [`docs/APP_STORE_CHECKLIST.md`](APP_STORE_CHECKLIST.md) is the path from working app to submitted app.
