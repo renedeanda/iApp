@@ -79,6 +79,7 @@ iApp/
 
 Never built an iOS app before? You can still use this repo — it's arguably *most* useful before habits form. Two companions were written specifically for you:
 
+- **[docs/BRING_YOUR_IDEA.md](docs/BRING_YOUR_IDEA.md)** — a plain-English worksheet to fill in *before you touch a computer*: what your app is, who it's for, how it should feel. Send it to a friend with an app idea; a filled worksheet makes their first session twice as productive.
 - **[docs/FIRST_APP_TUTORIAL.md](docs/FIRST_APP_TUTORIAL.md)** — a complete walkthrough from clone to your own renamed, re-themed app running on the Simulator (60–90 min, zero experience assumed).
 - **[docs/GLOSSARY.md](docs/GLOSSARY.md)** — every piece of iOS jargon you'll meet, decoded.
 
@@ -221,7 +222,7 @@ Each step writes a numbered decision doc. The docs are short. Their power is tha
 
 ## Adding features with recipes
 
-`recipes/` is a cookbook of nearly 50 feature guides, each with the same skeleton: **What it adds → When to use → When NOT to use → How (harvest / wire / verify) → Gotchas.**
+`recipes/` is a cookbook of 50+ feature guides — including the ingredients idea-stage apps most often need (photo capture, structured collections, timers, sharing/export) — each with the same skeleton: **What it adds → When to use → When NOT to use → How (harvest / wire / verify) → Gotchas.**
 
 The "When NOT to use" section is always first-class. A few examples:
 

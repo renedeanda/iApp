@@ -47,6 +47,10 @@ See [`_TEMPLATE.md`](_TEMPLATE.md) for the canonical skeleton.
 | [add-share-extension](swift/add-share-extension.md) | Share Extension | ⚠️ pattern-only (no shipped source yet) |
 | [add-quicklook](swift/add-quicklook.md) | QuickLook previews + thumbnails | ⚠️ pattern-only (no shipped source yet) |
 | [add-xcodegen](swift/add-xcodegen.md) | Working with `project.yml` (discipline) | `templates/swift/project.yml` |
+| [add-collections-data-model](swift/add-collections-data-model.md) | Lists of structured things (parent/child SwiftData) | `templates/swift/Seed/Models/Item.swift` |
+| [add-photo-capture](swift/add-photo-capture.md) | Photo library pick + camera capture | ⚠️ pattern-only (production-proven) |
+| [add-timers](swift/add-timers.md) | Countdown/elapsed timers that survive backgrounding | `templates/swift/Seed/Services/_Disabled/NotificationService.swift` |
+| [add-share-export](swift/add-share-export.md) | Outbound share cards + data export | ⚠️ pattern-only (production-proven) |
 | [delight-animations](swift/delight-animations.md) | Copy-ready delight snippets (wizard-seeded) | `docs/DELIGHT_REEL.md` |
 
 ### React Native (`rn/`)
@@ -58,6 +62,7 @@ See [`_TEMPLATE.md`](_TEMPLATE.md) for the canonical skeleton.
 | [add-rn-icloud-sync](rn/add-rn-icloud-sync.md) | iCloud sync via Expo module | `templates/rn/modules/icloud-sync/` |
 | [add-rn-onboarding](rn/add-rn-onboarding.md) | Multi-screen onboarding | pattern inline (production-proven) |
 | [add-rn-storage](rn/add-rn-storage.md) | Type-safe AsyncStorage wrapper | pattern inline (production-proven) |
+| [add-rn-photo-capture](rn/add-rn-photo-capture.md) | Photo library pick + camera capture | ⚠️ pattern-only (Expo first-party modules) |
 | [add-rn-reminders](rn/add-rn-reminders.md) | Reminder scheduling | pattern inline (production-proven) |
 | [add-rn-rating](rn/add-rn-rating.md) | Store-review prompts | pattern inline (production-proven) |
 | [add-rn-theme-registry](rn/add-rn-theme-registry.md) | Multi-theme registry | pattern inline (production-proven) |

@@ -37,6 +37,10 @@ Per-feature lookup. ✅ = gold-standard; ⚠️ = WIP / known issue.
 | **Milestone catalog** (Sendable enum pattern) | `templates/swift/Seed/Services/_Disabled/MilestoneCatalog.swift` | Milestone-as-acknowledgment (see WHATS_ALLOWED.md). |
 | **Home-screen quick actions** | `templates/swift/Seed/Services/_Disabled/QuickActionService.swift` | The long-press menu on the app icon. |
 | **Interactive onboarding + About replay** | `templates/swift/Seed/Views/OnboardingView.swift` + `AdaptiveOnboardingPage.swift` | Promise → input → payoff → trust, deferred permissions, replay from About. See `recipes/swift/add-interactive-onboarding.md`. |
+| **Collections data model** (parent/child, ordered) | `templates/swift/Seed/Models/Item.swift` shape + `recipes/swift/add-collections-data-model.md` | Explicit `sortIndex`, explicit relationship inverses — CloudKit-ready from day 1. |
+| **Photo capture + library** | `recipes/swift/add-photo-capture.md` | `PhotosPicker` (no permission needed) + camera-at-intent + external-storage attribute + downsampling. |
+| **Timers** (countdown/elapsed) | `recipes/swift/add-timers.md` | End-`Date` pattern, never tick accumulation; completion via `NotificationService`; optional Live Activity. |
+| **Outbound share + export** | `recipes/swift/add-share-export.md` | `ImageRenderer` share cards + `Transferable` JSON/CSV/PDF export; system share sheet only. |
 | **Sound design** | `templates/swift/Seed/Services/_Disabled/SoundService.swift` | Optional; bake in only if the wizard says yes. |
 | **Cross-promo section** | `templates/swift/Seed/Services/PortfolioRegistry.swift` + `Views/Settings/MoreFromStudioSection.swift` | Reads `CROSS_PROMO_REGISTRY.json`; live-apps-only, self-excluding, Apple-compliant plain links. |
 | **Icon generation from SVG** | `templates/swift/bin/generate-icons.sh` + the `generate-icons` skill | Regenerates AppIcon.appiconset + splash + notification + store icons from `icon_master.svg`. |
@@ -57,6 +61,7 @@ Per-feature lookup. ✅ = gold-standard; ⚠️ = WIP / known issue.
 | **RN rating prompts** | `recipes/rn/add-rn-rating.md` | Native `expo-store-review` with throttling. |
 | **RN theme registry (multi-theme)** | `templates/rn/contexts/ThemeContext.tsx` + `theme/` | Registry pattern that scales to a dozen themes with per-theme accents. |
 | **RN i18next + expo-localization** | `recipes/rn/add-rn-i18n.md` | Tier-1 locales day one. |
+| **RN photo capture + library** | `recipes/rn/add-rn-photo-capture.md` | `expo-image-picker` + copy-to-documents + downsample; permission at intent. |
 | **Expo config plugins (App Group, iCloud entitlements)** | `templates/rn/plugins/` | `withAppGroup.js`, `withICloudEntitlements.js`. |
 
 ---
