@@ -1,0 +1,87 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Xcode (XcodeGen apps don't check in the .xcodeproj)
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.dSYM.zip
+*.ipa
+*.app
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Packages/
+Package.pins
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
+# CocoaPods (we don't use it, but ignore anyway)
+Pods/
+
+# Carthage (we don't use it, but ignore anyway)
+Carthage/Build
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Node / RN / Expo
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+*.log
+.npm
+.yarn-integrity
+.expo/
+.expo-shared/
+web-build/
+dist/
+ios/Pods/
+ios/build/
+android/build/
+android/.gradle/
+android/app/build/
+android/local.properties
+android/keystore.properties
+*.jks
+*.p12
+*.key
+*.mobileprovision
+*.cer
+
+# EAS
+.easignore.local
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+secrets.json
+GoogleService-Info.plist
+google-services.json
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.cursor/
+
+# Claude Code
+.claude/settings.local.json
+.claude/cache/
+
+# iApp-specific
+drafts/
+*.draft.md
