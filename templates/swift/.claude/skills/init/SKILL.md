@@ -70,5 +70,5 @@ Diff: `git diff CLAUDE.md` to review before committing.
 
 ## Forbidden
 
-- Do NOT pull live values from `https://` while substituting — use the cached template only, so an Kindling revision doesn't silently change this app's CLAUDE.md.
+- Do NOT pull live values from `https://` while substituting — use the cached template only, so a Kindling revision doesn't silently change this app's CLAUDE.md.
 - Do NOT call `sed` directly to substitute placeholders — use `bin/init-claude-md.sh` so the validation step runs.

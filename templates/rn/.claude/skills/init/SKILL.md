@@ -55,4 +55,4 @@ Diff: `git diff CLAUDE.md` to review before committing.
 
 ## Forbidden
 
-- Do NOT pull live values from `https://` while substituting — use the cached template only. Otherwise an Kindling template revision silently changes this app's CLAUDE.md.
+- Do NOT pull live values from `https://` while substituting — use the cached template only. Otherwise a Kindling template revision silently changes this app's CLAUDE.md.

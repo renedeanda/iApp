@@ -10,7 +10,7 @@ The end-to-end check that a generated repo actually works. Runs the Swift OR RN 
 ## When to use
 
 - Automatic — inside `/new-app --commit` step 5, after templates are rendered into the new repo.
-- Manual — when an Kindling PR touches `templates/` and you want to verify the change before push.
+- Manual — when a Kindling PR touches `templates/` and you want to verify the change before push.
 - Periodically — the end-to-end smoke test re-runs this.
 
 ## When NOT to use

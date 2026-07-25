@@ -106,8 +106,8 @@ You do **not** need: a paid developer account to learn, an iPhone (the Simulator
 
 1. **Clone this repo** (install [git](https://git-scm.com) if you don't have it):
    ```sh
-   git clone https://github.com/<owner>/Kindling.git
-   cd Kindling
+   git clone https://github.com/<owner>/kindling.git
+   cd kindling
    ```
 2. **Pick a lane.** If you want to learn Apple's native stack (recommended if you only care about iOS), take the Swift template. If you know some JavaScript or want Android later, take the React Native template. See [Choosing Swift vs React Native](#choosing-swift-vs-react-native).
 3. **Make the Swift template run:**

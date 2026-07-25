@@ -22,8 +22,8 @@ Jargon is decoded in the [Glossary](GLOSSARY.md) — keep it open in a tab.
 Prove your toolchain works before personalizing anything.
 
 ```sh
-git clone <this-repo-url> Kindling
-cd Kindling/templates/swift
+git clone <this-repo-url> kindling
+cd kindling/templates/swift
 xcodegen generate
 open Seed.xcodeproj
 ```
@@ -96,7 +96,7 @@ The same move-up-and-enable ritual applies to notifications, CloudKit, analytics
 If JavaScript is home, the same first hour looks like:
 
 ```sh
-cd Kindling/templates/rn
+cd kindling/templates/rn
 npm install
 npx expo start          # press "i" for the iOS Simulator
 ```
