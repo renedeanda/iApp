@@ -1,0 +1,14 @@
+{
+  "appId": "sprout",
+  "displayName": "Sprout",
+  "bundleId": "com.example.sprout",
+  "platforms": ["ios"],
+  "shippingBranch": "main",
+  "buildCommand": "make build",
+  "testCommand": "make test",
+  "archiveCommand": "make archive",
+  "metadataPath": "Marketing/AppStoreMetadata/sprout-app-store-metadata.json",
+  "screenshotsPath": "Marketing/AppStoreScreenshots/graphics",
+  "appStoreConnectAppId": "",
+  "expectedArchiveProducts": ["Sprout.app"]
+}

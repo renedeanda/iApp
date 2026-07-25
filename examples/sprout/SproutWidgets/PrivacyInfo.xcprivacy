@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Privacy manifest for the Sprout widget extension.
+
+  Extensions load their privacy manifest from their OWN bundle, so every
+  embedded target ships one (the same reason widget l10n is per-extension
+  — a trap we hit in production). Declares only what the compiled widget code uses:
+
+  - UserDefaults (CA92.1) — App Group bridge (WidgetSharedData, WidgetTheme).
+
+  No file timestamps, disk space, or boot time. No tracking. Per NOT_FOR.md §7.
+  Pinned as an explicit resource in project.yml's widget target so it ships
+  in the .appex (XcodeGen's default .xcprivacy classification is unreliable).
+-->
+<plist version="1.0">
+<dict>
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<string>CA92.1</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSPrivacyTracking</key>
+	<false/>
+	<key>NSPrivacyTrackingDomains</key>
+	<array/>
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array/>
+</dict>
+</plist>

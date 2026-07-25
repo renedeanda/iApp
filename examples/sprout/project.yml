@@ -1,0 +1,201 @@
+# XcodeGen spec for the Sprout template.
+#
+# The wizard substitutes Sprout → <AppName> + example.seed → example.<appname>
+# throughout this file via bin/rename-template.sh at /new-app --commit time.
+#
+# Version + build come from Version.xcconfig — never bump them here.
+# Pattern proven in shipped production apps.
+
+name: Sprout
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "26.0"
+    macOS: "15.0"
+  developmentLanguage: en
+  defaultConfig: Debug
+  generateEmptyDirectories: true
+  groupSortPosition: top
+  xcodeVersion: "16.0"
+
+configs:
+  Debug: debug
+  Release: release
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    SWIFT_STRICT_CONCURRENCY: complete
+    SWIFT_EMIT_LOC_STRINGS: true
+    SWIFT_TREAT_WARNINGS_AS_ERRORS: true
+    GCC_TREAT_WARNINGS_AS_ERRORS: true
+    # Your Apple Developer team ID (placeholder — set your own). Team IDs
+    # are not secrets; checking the real one in makes physical-device builds work.
+    DEVELOPMENT_TEAM: YOURTEAMID
+    CODE_SIGN_STYLE: Automatic
+    CURRENT_PROJECT_VERSION: $(CURRENT_PROJECT_VERSION)
+    MARKETING_VERSION: $(MARKETING_VERSION)
+  configs:
+    Debug:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+    Release:
+      SWIFT_COMPILATION_MODE: wholemodule
+      VALIDATE_PRODUCT: YES
+
+configFiles:
+  Debug: Sprout/Version.xcconfig
+  Release: Sprout/Version.xcconfig
+
+# packages:
+#   # TelemetryDeck is the only pre-approved analytics dep (per CLAUDE.md).
+#   # Commented until wizard enables AnalyticsService — uncomment the
+#   # `packages:` key along with the entry below.
+#   TelemetryDeckSwiftSDK:
+#     url: https://github.com/TelemetryDeck/SwiftSDK
+#     exactVersion: "2.9.4"
+
+targets:
+  Sprout:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sprout
+        excludes:
+          # _Disabled/ services don't compile until wizard graduates them.
+          - "Services/_Disabled/**"
+          # The full 24-pattern haptic catalog stays as reference; the
+          # active 3 patterns live in Utilities/HapticPatterns.swift.
+          - "Utilities/_HapticVocabulary/**"
+          # The two unchosen typography specimens stay as reference.
+          - "Theme/_TypographySpecimens/**"
+          # App Intents ship as reference but stay off until the wizard
+          # enables App Intents in DECISIONS/004 (then remove this line
+          # + uncomment com.apple.developer.siri in Sprout.entitlements).
+          - "Intents/**"
+    resources:
+      - path: Sprout/Resources
+      # Pin the privacy manifest explicitly so it bundles regardless of
+      # XcodeGen's default build-phase classification for .xcprivacy.
+      # SproutTests/PrivacyManifestTests asserts this pin is present.
+      - path: Sprout/PrivacyInfo.xcprivacy
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.sprout
+        INFOPLIST_FILE: Sprout/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Sprout/Sprout.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_PREVIEWS: YES
+        TARGETED_DEVICE_FAMILY: "1,2" # iPhone + iPad
+        SUPPORTS_MACCATALYST: NO # wizard flips to YES if Universal Purchase
+        IPHONEOS_DEPLOYMENT_TARGET: "26.0"
+    info:
+      path: Sprout/Info.plist
+      properties:
+        # Tie the generated Info.plist's version keys to Version.xcconfig
+        # — otherwise XcodeGen defaults them to "1.0" / "1", which
+        # mismatches any embedded extension's $(MARKETING_VERSION) once
+        # the wizard enables a widget / Live Activity target.
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        ITSAppUsesNonExemptEncryption: false
+        LSApplicationCategoryType: public.app-category.productivity
+        UIRequiredDeviceCapabilities: [arm64]
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+        # iPad multitasking requires every orientation when TARGETED_DEVICE_FAMILY includes iPad.
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: false
+        UIBackgroundModes: []
+    scheme:
+      testTargets:
+        - SproutTests
+      storeKitConfiguration: Sprout/Sprout.storekit
+      gatherCoverageData: true
+      commandLineArguments:
+        "-com.apple.CoreData.ConcurrencyDebug 1": true
+
+  SproutTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: SproutTests
+    dependencies:
+      - target: Sprout
+    settings:
+      base:
+        BUNDLE_LOADER: $(TEST_HOST)
+        GENERATE_INFOPLIST_FILE: YES
+        IPHONEOS_DEPLOYMENT_TARGET: "26.0"
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/Sprout.app/Sprout
+
+# Widget extension target — commented out by default (taste rule 1:
+# features off until the wizard enables them). The widget SOURCE FILES
+# ship in templates/swift/SproutWidgets/ either way — what's gated is the
+# build target. /new-app --commit uncomments this block (and adds the
+# real bundle id) when DECISIONS/004-native-feature-checklist.md
+# enables widgets. Pattern proven in a shipped production app.
+#
+# When enabling, also:
+#   - host app already has the App Group in Sprout/Sprout.entitlements
+#   - for Live Activities: add NSSupportsLiveActivities = YES to the
+#     host Info.plist above, uncomment SproutLiveActivity() in
+#     SproutWidgets/SproutWidgetBundle.swift, AND add SproutActivityAttributes.swift
+#     to the Sprout app target's sources (see Sprout target's sources
+#     block — uncomment the second list entry; the file ships in
+#     SproutWidgets/ but must compile into BOTH targets because the
+#     attributes type identity must match across the app↔widget IPC).
+#   - SproutWidgets/ sits at the template root (sibling of Sprout/ and of
+#     this project.yml), hence the plain SproutWidgets paths below
+#
+#  SproutWidgets:
+#    type: app-extension
+#    platform: iOS
+#    sources:
+#      - path: SproutWidgets
+#        excludes:
+#          # SproutLiveActivity compiles only when Live Activities are on.
+#          - "SproutLiveActivity.swift"
+#    resources:
+#      # The widget extension's OWN Localizable.xcstrings — widget-
+#      # surface strings load from the extension bundle, not the app's.
+#      # SproutTests/WidgetLocalizationParityTests expects this path.
+#      - path: SproutWidgets/Resources/Localizable.xcstrings
+#      # Each extension bundles its OWN privacy manifest (extensions load it
+#      # from their bundle, not the host's). Pinned so it ships in the .appex.
+#      - path: SproutWidgets/PrivacyInfo.xcprivacy
+#    settings:
+#      base:
+#        PRODUCT_BUNDLE_IDENTIFIER: com.example.sprout.widgets
+#        INFOPLIST_FILE: SproutWidgets/Info.plist
+#        CODE_SIGN_ENTITLEMENTS: SproutWidgets/SproutWidgets.entitlements
+#        SKIP_INSTALL: NO
+#  # ...and add to the Sprout app target's dependencies + sources:
+#  #   dependencies:
+#  #     - target: SproutWidgets
+#  #       embed: true
+#  #   sources:
+#  #     - path: Sprout
+#  #       excludes: [...existing excludes...]
+#  #     - path: SproutWidgets/SproutActivityAttributes.swift  # ← cross-target type
+
+schemes:
+  Sprout:
+    build:
+      targets:
+        Sprout: all
+        SproutTests: [test]
+    test:
+      gatherCoverageData: true
+      targets:
+        - SproutTests
+      configVariants:
+        - Debug

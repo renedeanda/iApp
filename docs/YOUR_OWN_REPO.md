@@ -13,7 +13,7 @@ Kindling is the workshop; your app is the thing you carry out of it. **Never bui
 Why side-by-side instead of fork-and-gut:
 
 - **Clean ownership.** Your app's history starts with your app — not 300 commits of template history that mean nothing to it (and a fork of a public repo stays public-visible in ways people don't expect; your app deserves a genuinely private repo).
-- **Free updates.** `cd kindling && git pull` brings new recipes, template improvements, and lessons — with zero merge conflicts against your app, because your app isn't entangled with it. Template improvements reach your app *deliberately* (via recipes or a sync pass), never as a surprise merge.
+- **Free updates.** `cd kindling && git pull` brings new recipes, template improvements, and lessons — with zero merge conflicts against your app, because your app isn't entangled with it. Skim [CHANGELOG.md](../CHANGELOG.md) after pulling: it flags which changes affect the *next* render vs improvements worth adopting into shipped apps. Template improvements reach your app *deliberately* (via recipes or a sync pass), never as a surprise merge.
 - **The wizard assumes it.** `/new-app --commit` renders your app into a **sibling directory**, not into Kindling.
 
 ## Setup (5 minutes, before your first wizard session)

@@ -8,6 +8,10 @@ Apps shipped from Kindling's templates and discipline — or built with its appr
 |---|---|
 | **[Delightful Apps](https://delightfulapps.com)** | The indie iOS portfolio this whole system was distilled from — the shipped native and React Native apps whose services, taste rules, and hard-won lessons became these templates. If you want to see where the philosophy leads, start here. |
 
+## The worked example
+
+**[Sprout](examples/sprout/EXAMPLE.md)** — the fictional reference app rendered from the Swift template with nine worked ADRs, so you can see exactly what the wizard produces before running it.
+
 ## Community apps
 
 *Yours goes here — be the first.*

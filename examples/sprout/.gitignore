@@ -1,0 +1,41 @@
+# Xcode user-local state — never commit.
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.dSYM.zip
+.DS_Store
+
+# SPM caches.
+.build/
+.swiftpm/
+
+# XcodeGen output — generated on demand by bin/bootstrap.
+# Never commit the .xcodeproj; project.yml is the source of truth.
+*.xcodeproj/
+
+# Pods (not used; SPM only).
+Pods/
+
+# Fastlane runtime state.
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# Bundler runtime state (used by fastlane when active).
+# .bundle/config IS committed (BUNDLE_PATH pin); the rest is local.
+.bundle/cache/
+.bundle/install/
+vendor/bundle/
+fastlane/Gemfile.lock.bak
+
+# IDE caches.
+.idea/
+*.swp
+*.swo
+
+# OS noise.
+Thumbs.db
+.AppleDouble
+.LSOverride

@@ -1,0 +1,15 @@
+# SOURCE: proven in a shipped production app.
+#
+# The app identifier is the single source of truth for fastlane.
+# It mirrors PRODUCT_BUNDLE_IDENTIFIER in Sprout/project.yml — the
+# wizard substitutes `seed` -> `<appname>` at /new-app --commit.
+#
+# apple_id + itc_team_id + team_id stay blank until the developer
+# fills them in for their account (they're machine/account specific,
+# not template values — never commit real ones).
+
+app_identifier("com.example.sprout")
+
+# apple_id("you@example.com")        # Apple Developer account email
+# itc_team_id("")                    # App Store Connect team id
+# team_id("")                        # Developer Portal team id
