@@ -47,6 +47,8 @@ Every specimen produces this 7-token table. Sizes are baseline; specimen-specifi
 
 ## Steps with the user
 
+0. **Mockup check:** if `drafts/<app-name>/mockups/` exists, view the images first and match their type feel to the nearest shipped specimen (rounded-system / serif / mono-leaning). Lead with that match and say what drove it (letterforms, weight contrast, density). If the mockups use a custom brand font, note that the specimen system can host it later — the *hierarchy* decision is what's being made here.
+
 1. Read chosen visual identity from `DECISIONS/015-visual-identity.md`.
 2. Filter the 3 specimens to those matching the identity.
 

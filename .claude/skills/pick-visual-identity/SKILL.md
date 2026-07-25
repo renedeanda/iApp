@@ -46,6 +46,8 @@ Every slot starts open — as you ship, fill this column from your own PORTFOLIO
 
 ## Steps with the user
 
+0. **Mockup check:** if `drafts/<app-name>/mockups/` exists, view the images first and classify which of the eight identities the designs already speak. Present that classification as the lead option with your reasoning ("your screens read as typographic-led because…") — and flag if the mockups mix two identities. The user confirms; mockups propose, they don't decide.
+
 1. Read the mission (`DECISIONS/000-mission.md`), anti-list (`013-anti-list.md`), and spec (`016-spec.md`).
 2. Read current portfolio identity distribution from PORTFOLIO.md (fall back to the snapshot in [DECISIONS/015](../../../DECISIONS/015-visual-identity.md)).
 3. Filter the 8 canonical identities by mission-fit. Compute the current portfolio mix.

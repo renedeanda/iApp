@@ -222,6 +222,8 @@ Whether AI-driven or manual, the sequence is the same, and the ordering is the p
 
 Each step writes a numbered decision doc. The docs are short. Their power is that they exist, they're honest, and the next contributor (or the next you, six months later) can read *why*.
 
+**Already have designs?** If you've mocked your app up — Figma, Sketch, Canva, slides, or paper — export the screens as images and the wizard *looks at them*: your colors propose the palette, your type proposes the specimen, your screen order drafts the first-sixty-seconds flow. [docs/BRING_YOUR_MOCKUPS.md](docs/BRING_YOUR_MOCKUPS.md) has the two-minute export steps for every common tool.
+
 ## Adding features with recipes
 
 `recipes/` is a cookbook of 50+ feature guides — including the ingredients idea-stage apps most often need (photo capture, structured collections, timers, sharing/export) — each with the same skeleton: **What it adds → When to use → When NOT to use → How (harvest / wire / verify) → Gotchas.**

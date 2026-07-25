@@ -55,6 +55,8 @@ There are **no wrong answers** — vague ones are fine, the session will sharpen
 
 > The first three are wonderfully cheap to build — Apple's built-in services handle them with no servers and no sign-ups. The last one is a genuinely bigger commitment (accounts, hosting bills, content moderation). It's absolutely buildable — but read [AMBITIOUS_APPS.md](AMBITIOUS_APPS.md) first, and expect your session to ask: *"does the idea still work if it's invite-only?"* Usually it does, and ships a year sooner.
 
+**13. Already have designs?** Sketches in a notebook, Figma/Canva screens, a slide deck? You're ahead — the wizard can *look at them* and let your designs drive the choices. Export each screen as an image and bring them along (the how-to per tool: [BRING_YOUR_MOCKUPS.md](BRING_YOUR_MOCKUPS.md)). No designs is equally fine — the questions produce the design.
+
 ## Part 4 — Bringing it to a session
 
 You'll pair with an AI coding agent that knows this repo's system. Setup, from absolute zero:

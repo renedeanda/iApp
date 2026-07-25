@@ -49,6 +49,7 @@ All seeds start **unclaimed** — as your portfolio grows, claimed seeds drop ou
 
 ## Steps with the user
 
+0. **Mockup check:** if `drafts/<app-name>/mockups/` exists (see docs/BRING_YOUR_MOCKUPS.md), view the images first and extract the dominant surface + accent colors. Propose the catalog seed *nearest those colors* as the lead option, and offer to record the mockups' actual hexes as the departure delta — running the same AAA-contrast and ΔE2000 checks on them as on any pick. Surface any contrast-forced nudge explicitly; the user decides.
 1. Read chosen visual identity from `DECISIONS/015-visual-identity.md`.
 2. Filter PALETTE_CATALOG seeds to those matching the identity. Drop any seeds already claimed by your shipped apps.
 
