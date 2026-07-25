@@ -3,7 +3,7 @@
 // Every portfolio app picks 3–5 delight moments (DECISIONS/014, via
 // `/pick-delight-moments`). This file is where those moments live as
 // *code* — the parallel of `SignatureMotion.swift` for the signature
-// motion. RECENT_LEARNINGS 2026-05-21 named the gap: the wizard filed
+// motion. RECENT_LEARNINGS ("An ADR that produces no code is a gap") named it: the wizard filed
 // the delight ADR and never closed the loop to code, so moments #2–5
 // produced nothing. They have a home now.
 //

@@ -3,7 +3,7 @@ import Testing
 
 /// Hard gate for the signature-motion ADR→code loop.
 ///
-/// RECENT_LEARNINGS 2026-05-21: a motion ADR (`DECISIONS/009`) that
+/// RECENT_LEARNINGS "An ADR that produces no code is a gap": a motion ADR (`DECISIONS/009`) that
 /// produces no `.signatureMotion()` call site is the Phase-1 bug — the
 /// decision exists, the felt motion does not. `Theme/SignatureMotion.swift`
 /// is the modifier's code home; this test fails the build unless
@@ -37,7 +37,7 @@ struct SignatureMotionWiredTests {
         }
         #expect(
             applied,
-            "No .signatureMotion() call site under Seed/Views — DECISIONS/009 produced an ADR but no wired code (RECENT_LEARNINGS 2026-05-21)"
+            "No .signatureMotion() call site under Seed/Views — DECISIONS/009 produced an ADR but no wired code (see RECENT_LEARNINGS: an ADR that produces no code is a gap)"
         )
     }
 

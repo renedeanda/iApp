@@ -19,7 +19,7 @@ struct HapticPatternTests {
     @Test func patternCountIsWithinDiscipline() throws {
         let count = HapticPatterns.Named.allCases.count
         // Soft cap 8, hard cap 10 (CLAUDE.md taste rule 2 +
-        // RECENT_LEARNINGS 2026-03-14 bandwidth lesson). Anything
+        // RECENT_LEARNINGS "Haptic vocabulary is a finite resource" lesson). Anything
         // beyond requires explicit reviewer sign-off.
         #expect(count <= 10, "Too many haptic patterns: \(count). Hard cap is 10. Use /earn-haptic for additions.")
     }
